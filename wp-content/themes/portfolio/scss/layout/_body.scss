@@ -1,0 +1,153 @@
+
+.CTA{
+    display: flex;
+    background-color: $dark;
+    align-items: center;
+    justify-content: space-around;
+    height: auto;
+
+    &__1{
+        flex-direction: row;
+        &--image, &--text{
+            padding: 20px;
+        }
+
+        &--image{
+            width: 40%;
+            margin: 6vw;
+        }
+        &--text{
+            width: 60%;
+            margin: 0 11vw 0 0;
+            & * {
+                @include no-margin;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &__2{
+        justify-content: center;
+        flex-direction: column;
+        background-image: url('../content/images/CTA-bkg.jpg');
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover;
+        height: 80vh;
+
+        &--title{
+            display: flex;
+            flex-direction: column;
+            height: 150px;
+        }
+
+        &--fl{
+            position: relative;
+            top: -177px;
+            width: 30vw;
+            left: 10px;
+        }
+    }
+}
+
+
+.color__light{
+    color: $light;
+}
+
+.color__white{
+    color: $white;
+}
+
+.button{
+    position: relative;
+    top: 10vh;
+    border: none;
+    background-color: $light;
+    color: $dark;
+    padding: 16.5px 36.5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: $button-font;
+    font-size: 16px;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $white;
+    }
+}
+
+@media all and (max-width: 1200px) {
+
+}
+
+
+
+@media all and (max-width: 992px)
+{
+
+}
+
+@media all and (max-width: 768px)
+{
+
+}
+
+
+@media all and (max-width: 600px)
+{
+    .CTA{
+        align-items: center;
+        justify-content: center;
+        background-color: $light;
+
+        &>h2, p, a{
+            margin: 4vh 4vw;
+        }
+
+        &>h2{
+            font-size: $fontbig;
+        }
+    
+        &__1{
+            flex-direction: column;
+            &--image, &--text{
+                padding: 20px;
+            }
+    
+            &--image{
+                width: 100%;
+                margin: 0;
+                padding: 6vw 6vw 34vw 6vw;
+                background-color: $dark;
+            }
+            &--text{
+                width: 100%;
+                margin: 0;
+                & * {
+                    @include no-margin;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+            }
+            &>.button{
+                position: relative;
+                top: -71vw;
+            }
+        }
+        &__2{
+            height: 100vh;
+
+            &--title{
+                &>.centered-text{
+                    font-size: $fontbig;
+                }
+            }
+            &>.button{
+                position: relative;
+                top: 21vw;
+            }
+        }  
+    }
+}

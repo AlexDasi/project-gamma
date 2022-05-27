@@ -1,0 +1,47 @@
+//SPACE Variables
+$unit: 10px;
+$space: $unit * 2;
+$space--medium: $space * 1.5;
+$padding: $unit;
+$pagemaxwidth: 1024px;
+$navheight: 70px;
+
+//COLORS
+$dark: #01003C;
+$dark50: hsla(241, 100%, 12%, 0.5);
+$white: #FFFFFF;
+$light: #E6F6B7;
+$light-grey: #F2F2F2;;
+$mid-grey: #BABABA;;
+
+
+//FONTS
+$main-font: 'Yeseva One', cursive;
+$secondary-font: 'Roboto', sans-serif;
+$secondary-font-cursive: 'Roboto', sans-serif, cursive;
+$tag-font: 'Roboto Condensed', sans-serif;
+$button-font: 'Roboto Condensed', sans-serif, 300;
+$fontbig: 15vw;
+$fontmedium: 4vw;
+$fontsmall: 2vw;
+
+$psmall: 1.4*$unit;
+$pmedium: 2.4*$unit;
+$plarge: 3.6*$unit;
+
+$hsmall: 2.5*$unit;
+$hmedium: 4*$unit;
+$hlarge: 7*$unit;
+
+
+$psmallDesktop: 1.4*$unit;
+$pmediumDesktop: 2.4*$unit;
+$plargeDesktop: 3.6*$unit;
+
+
+
+    //mquery
+    $fontbig-large: 9*$unit;
+    $fontmedium-large: 5*$unit;
+    $fontsection-large: 4*$unit;
+    $fontsmall-large: 1.5*$unit;

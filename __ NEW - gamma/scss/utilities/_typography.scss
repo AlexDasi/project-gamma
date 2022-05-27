@@ -1,0 +1,107 @@
+//-----> $TYPOGRAPHY
+
+h1,h2,h3,h4,h5{
+    @include main-text;
+}
+p,a
+{
+    @include secondary-text;
+} 
+
+
+h1{
+
+    font-size: $fontbig;
+}
+
+h2{
+    font-size: $hmedium;
+}
+
+h3{
+    font-size: $hsmall;
+}
+
+h4{
+    font-size: 5.5vw;
+}
+
+h5{
+    text-transform: none;
+    text-align: right;
+    font-size: 7vw;
+}
+
+.h2-mobile{
+    font-size: 32px;
+}
+
+.p-small{
+    font-size: $psmall;
+}
+
+.p-medium{
+    font-size: $pmedium;
+}
+
+.p-large{
+    font-size: $plarge;
+}
+
+.centered-text{
+    text-align: center;
+}
+
+.yesevaSmall, .yesevaLarge{
+
+    @include main-text;
+    text-transform: none;
+}
+
+.yesevaSmall{
+    font-size: $pmedium;
+    margin-bottom: 20px;
+}
+
+.yesevaLarge{
+    font-size: $plarge;
+    margin-bottom: 20px;
+}
+
+.intro__text--paragraph{
+    font-size: 5vw;
+}
+
+@media all and (min-width: 1200px){
+
+
+    
+    .intro__text--paragraph{
+        font-size: 60px;
+    }
+
+    .p-small{
+        font-size: $psmall;
+    }
+    
+    .p-medium{
+        font-size: $pmedium;
+    }
+    
+    .p-large{
+        font-size: $plarge;
+    }
+}
+
+@media all and (min-width: 600px){
+    h3{
+        font-size: 2vw;
+    }
+    h2{
+        font-size: 4vw;
+    }
+    h1{
+        font-size: 15vw;
+    }
+}
+

@@ -1,0 +1,142 @@
+.stl {
+    &__body{
+        justify-content: flex-start;;
+    }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    &__filters {
+        display: flex;
+        justify-content: flex-start;
+        width: 80vw;
+
+    
+        &--tags{
+            margin: 10px;
+            font-family: $tag-font;
+            font-size: 14px;
+            border: 2px solid $dark;
+            background-color: $light;
+            z-index: 3;
+            cursor: pointer;
+            padding: 10px 20px 10px 20px;
+        }
+    }
+
+    &__list{
+        list-style: none;
+        display: flex;
+        width: 80vw;
+        flex-wrap: wrap;
+        justify-content:flex-start;
+        padding-inline-start: 0px;
+        margin-block-start: 0;
+        margin-block-end: 0;
+
+        &--1{
+            margin-left: -200px;
+        }
+        &--2{
+            margin-left: -900px;
+        }
+
+        &--home{
+            flex-wrap: nowrap;
+        }
+    }
+
+    &__block{
+        margin: 10px;
+        margin-top: -70px;
+        &--home{
+            margin: 10px;
+        }
+    }
+
+    &__img{
+        width: 235px;
+        height: 235px;
+        object-fit: cover;
+        padding-bottom: 10px;
+
+        &--home{
+            overflow: hidden;
+        }
+    }
+
+    &__name, &__tags{
+        padding: 4px;
+        font-size: 14px;
+    }
+
+    &__name{
+        font-family: $main-font;
+    }
+
+    &__tags{
+        font-family: $tag-font;
+    }
+
+    &__paragraph{
+        margin: 120px 0px 35px 120px;
+    }
+
+    &__promotext{
+        margin-bottom: 120px;
+    }
+}
+
+.intro--text{
+    margin: 150px 0px 10px;
+    font-size: 24px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+
+    &>*{
+        width: 80vw;
+        margin: 15px 0px 15px 10px;
+    }
+}
+
+.active{
+    background-color: $dark;
+    color: $light;
+    display: block;
+}
+
+
+
+// HEART BUTTON
+
+.heart {
+    width: 100px;
+    height: 100px;
+    background: url("https://cssanimation.rocks/images/posts/steps/heart.png") no-repeat;
+    background-position: 0 0;
+    cursor: pointer;
+    transition: background-position 1s steps(28);
+    transition-duration: 0s;
+
+    //Placement
+    position: relative;
+    top: 130px;
+    right: -200px;
+    transform: translate(-50%, -50%);
+    
+    &.is-active {
+        transition-duration: 1s;
+        background-position: -2800px 0;
+    }
+}

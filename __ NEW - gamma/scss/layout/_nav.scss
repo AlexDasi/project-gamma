@@ -1,0 +1,36 @@
+//FLEX
+.nav{
+    position: fixed;
+    padding: 20px;
+    justify-content: space-between;
+    display: flex;
+    width: 100vw;
+    font-family: $main-font; 
+    background-color: $light;
+    z-index: 10;
+    top: 0;
+    height: auto;
+
+    &__left{
+        z-index: 5;
+        width: 80px;
+    }
+
+    &__left, &__right {
+        display: flex;
+    }
+
+    a{
+        text-decoration: none;
+        
+        &:hover{
+            text-decoration: none;
+        }
+    }
+    &--transparent{
+        background-color: transparent;
+    }
+}
+
+
+

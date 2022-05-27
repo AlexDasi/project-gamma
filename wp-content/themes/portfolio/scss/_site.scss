@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+  
+}
+
+
+html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+body{
+    background-color: $light;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    position: initial;
+    
+}
+
+p {
+  display: block;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+ul{
+  padding-inline-start: 0;
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+
+
+
+
+
+
+

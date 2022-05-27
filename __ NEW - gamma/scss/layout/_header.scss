@@ -1,0 +1,145 @@
+header{
+    display: block;
+    flex:1;
+    min-height: 100vw;
+    max-height: 150vw;
+    flex-basis: auto;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.container{
+    display: block;
+}
+.intro__text{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    //position: absolute;
+    width: 80vw;
+    height: 100%;
+    margin-left: 20px;
+    margin-block: 2vh;
+    top: 54vh;
+    margin-bottom: 120px;
+
+    &>h1, p{
+        @include no-margin;
+    }
+
+    &>h1, &>p{
+        position: relative;
+    }
+
+
+
+    &>p {
+        top: 3vw;
+        left: 6vw;
+        width: 55vw;
+    }
+}
+
+//@include parallax-init;
+
+.hero{
+    position: absolute;
+    margin-left: 60vw;
+    top: -16vh;
+    width: 30vw;
+    z-index: -2;
+    overflow: hidden;
+}
+
+
+.fl-header{
+    position: relative;
+    width: 1.2*$fontbig;
+    top: -89vh;
+    left: 49vw;
+    z-index: -1;
+}
+
+
+@media all and (max-width: 1200px) {
+
+}
+
+
+
+@media all and (max-width: 992px)
+{
+    .fl-header{
+        width: 1*$fontbig;
+        top: -39vh;
+    }
+}
+
+@media all and (max-width: 768px)
+{
+    .fl-header{
+        width: 1*$fontbig;
+        top: -39vh;
+
+    }
+
+    header{
+        margin-bottom: 80px;
+    }
+}
+
+
+@media all and (max-width: 600px)
+{
+
+    header{
+        display: block;
+        flex:auto;
+        min-height: none;
+        max-height: none;
+        margin-bottom: -300px;
+
+    }
+
+    .intro__text{
+        position: static !important;
+        display: flex;
+        align-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        //position: absolute;
+        width: 100%;
+        padding: 20vh 4vw 0 4vw;
+        margin-bottom: 0vh;
+        margin-left: 0;
+
+        
+        &>h1, p{
+            @include no-margin;
+        }
+    
+        &>h1, &>p{
+            position: static;
+            margin: 4vh 0;
+        }
+    
+        &>p {
+            top: 0;
+            left: 0;
+            width: inherit;
+        }
+    }
+
+    .fl-header{
+        width: 28vw;
+        top: -117vh;
+        left: 30vw;
+    }
+
+    .hero{
+        width: 100%;
+        z-index: -2;
+        margin: 0;
+        position: static;
+    }
+}

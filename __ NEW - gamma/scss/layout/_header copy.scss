@@ -1,0 +1,48 @@
+.h1-offset{
+    position: absolute;
+    margin-left: 20vw;
+    margin-top: -3vh;
+    display: block;
+}
+
+.intro-text{
+    position: absolute;
+    width: 170px;
+
+    &_:before, &_:after {
+    margin-left: 40px;
+    position: relative;
+    top:350px;
+    align-items: flex-start;
+    z-index: 5;
+    }
+
+    &_:before{
+        background-image: url("http://placekitten.com/200/300");
+        color: $light;
+    }
+    &_:after{
+        background-color: $light;
+        color: $accent;
+    }
+}
+
+.hero{
+    position: relative;
+    left: 37vw;
+    top: 12vh;
+
+    &_top, &_bottom{
+        position: absolute;
+        height: auto;
+    }
+    &_bottom{ 
+        z-index: 2;
+        left: 53px;
+        top: 53px;
+    }
+    &_top{
+        z-index: 3;
+    }
+}
+

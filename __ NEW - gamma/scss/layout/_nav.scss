@@ -1,36 +1,39 @@
-//FLEX
 .nav{
-    position: fixed;
     padding: 20px;
-    justify-content: space-between;
-    display: flex;
     width: 100vw;
-    font-family: $main-font; 
-    background-color: $light;
     z-index: 10;
-    top: 0;
-    height: auto;
 
-    &__left{
-        z-index: 5;
-        width: 80px;
-    }
+    //FLEX
+    @include flexbox;
+    flex-wrap: wrap;
 
-    &__left, &__right {
-        display: flex;
-    }
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
 
-    a{
-        text-decoration: none;
-        
-        &:hover{
-            text-decoration: none;
+
+    &--top, &--bottom{
+        position: fixed;
+        width: 100%;
+
+        &>ul{
+            @include flexbox;
+            width: 100%;
+            justify-content: space-between;
         }
+        
     }
-    &--transparent{
-        background-color: transparent;
+
+    &--top{
+        top: 0px;
+    }
+
+    &--bottom{
+        bottom: 0px;
     }
 }
+
+
 
 
 

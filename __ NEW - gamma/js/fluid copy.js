@@ -24,11 +24,35 @@ SOFTWARE.
 
 'use strict';
 
+// Mobile promo section
 
+const promoPopup = document.getElementsByClassName('promo')[0];
+const promoPopupClose = document.getElementsByClassName('promo-close')[0];
+
+if (isMobile()) {
+    setTimeout(() => {
+        promoPopup.style.display = 'table';
+    }, 20000);
+}
+
+promoPopupClose.addEventListener('click', e => {
+    promoPopup.style.display = 'none';
+});
+
+const appleLink = document.getElementById('apple_link');
+appleLink.addEventListener('click', e => {
+    ga('send', 'event', 'link promo', 'app');
+    window.open('https://apps.apple.com/us/app/fluid-simulation/id1443124993');
+});
+
+const googleLink = document.getElementById('google_link');
+googleLink.addEventListener('click', e => {
+    ga('send', 'event', 'link promo', 'app');
+    window.open('https://play.google.com/store/apps/details?id=games.paveldogreat.fluidsimfree');
+});
 
 // Simulation section
 
-// const canvas = document.getElementById("c--fluid");
 const canvas = document.getElementsByTagName('canvas')[0];
 resizeCanvas();
 
@@ -36,26 +60,26 @@ let config = {
     SIM_RESOLUTION: 128,
     DYE_RESOLUTION: 1024,
     CAPTURE_RESOLUTION: 512,
-    DENSITY_DISSIPATION: 3,
-    VELOCITY_DISSIPATION: 1.5,
-    PRESSURE: 0,
+    DENSITY_DISSIPATION: 1,
+    VELOCITY_DISSIPATION: 0.2,
+    PRESSURE: 0.8,
     PRESSURE_ITERATIONS: 20,
-    CURL: 3,
-    SPLAT_RADIUS: 0.7,
-    SPLAT_FORCE: 2000,
-    SHADING: false,
-    COLORFUL: false,
-    COLOR_UPDATE_SPEED: 0,
+    CURL: 30,
+    SPLAT_RADIUS: 0.25,
+    SPLAT_FORCE: 6000,
+    SHADING: true,
+    COLORFUL: true,
+    COLOR_UPDATE_SPEED: 10,
     PAUSED: false,
-    BACK_COLOR: { r:199, g: 199, b: 197 },
+    BACK_COLOR: { r: 0, g: 0, b: 0 },
     TRANSPARENT: false,
-    BLOOM: false,
-    BLOOM_ITERATIONS: 0,
+    BLOOM: true,
+    BLOOM_ITERATIONS: 8,
     BLOOM_RESOLUTION: 256,
     BLOOM_INTENSITY: 0.8,
     BLOOM_THRESHOLD: 0.6,
     BLOOM_SOFT_KNEE: 0.7,
-    SUNRAYS: false,
+    SUNRAYS: true,
     SUNRAYS_RESOLUTION: 196,
     SUNRAYS_WEIGHT: 1.0,
 }
@@ -89,7 +113,7 @@ if (!ext.supportLinearFiltering) {
     config.SUNRAYS = false;
 }
 
-// startGUI();
+startGUI();
 
 function getWebGLContext (canvas) {
     const params = { alpha: true, depth: false, stencil: false, antialias: false, preserveDrawingBuffer: false };
@@ -109,7 +133,7 @@ function getWebGLContext (canvas) {
         supportLinearFiltering = gl.getExtension('OES_texture_half_float_linear');
     }
 
-    gl.clearColor(0.0, 0.0, 0.0, 0.0);
+    gl.clearColor(0.0, 0.0, 0.0, 1.0);
 
     const halfFloatTexType = isWebGL2 ? gl.HALF_FLOAT : halfFloat.HALF_FLOAT_OES;
     let formatRGBA;
@@ -304,7 +328,6 @@ function clamp01 (input) {
 
 function textureToCanvas (texture, width, height) {
     let captureCanvas = document.createElement('canvas');
-    g.id = 'c--fluid';
     let ctx = captureCanvas.getContext('2d');
     captureCanvas.width = width;
     captureCanvas.height = height;
@@ -1144,7 +1167,7 @@ function updateKeywords () {
 
 updateKeywords();
 initFramebuffers();
-// multipleSplats(parseInt(Math.random() * 20) + 5);
+multipleSplats(parseInt(Math.random() * 20) + 5);
 
 let lastUpdateTime = Date.now();
 let colorUpdateTimer = 0.0;
@@ -1180,7 +1203,7 @@ function resizeCanvas () {
     }
     return false;
 }
-//HERE?
+
 function updateColors (dt) {
     if (!config.COLORFUL) return;
 
@@ -1438,33 +1461,26 @@ function correctRadius (radius) {
     return radius;
 }
 
-// canvas.addEventListener('mousedown', e => {
-//     let posX = scaleByPixelRatio(e.offsetX);
-//     let posY = scaleByPixelRatio(e.offsetY);
-//     let pointer = pointers.find(p => p.id == -1);
-//     if (pointer == null)
-//         pointer = new pointerPrototype();
-//     updatePointerDownData(pointer, -1, posX, posY);
-// });
+canvas.addEventListener('mousedown', e => {
+    let posX = scaleByPixelRatio(e.offsetX);
+    let posY = scaleByPixelRatio(e.offsetY);
+    let pointer = pointers.find(p => p.id == -1);
+    if (pointer == null)
+        pointer = new pointerPrototype();
+    updatePointerDownData(pointer, -1, posX, posY);
+});
 
-let posX = scaleByPixelRatio(0);
-let posY = scaleByPixelRatio(0);
-let pointer = pointers.find(p => p.id == -1);
-if (pointer == null)
-    pointer = new pointerPrototype();
-updatePointerDownData(pointer, -1, posX, posY);
-
-document.body.addEventListener('mousemove', e => {
+canvas.addEventListener('mousemove', e => {
     let pointer = pointers[0];
     if (!pointer.down) return;
-    let posX = scaleByPixelRatio(e.x);
-    let posY = scaleByPixelRatio(e.y);
+    let posX = scaleByPixelRatio(e.offsetX);
+    let posY = scaleByPixelRatio(e.offsetY);
     updatePointerMoveData(pointer, posX, posY);
 });
 
-// window.addEventListener('mouseup', () => {
-//     updatePointerUpData(pointers[0]);
-// });
+window.addEventListener('mouseup', () => {
+    updatePointerUpData(pointers[0]);
+});
 
 canvas.addEventListener('touchstart', e => {
     e.preventDefault();

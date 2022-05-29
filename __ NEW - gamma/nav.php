@@ -1,11 +1,14 @@
-<nav>
+<nav class="nav nav--top">
+    <ul>
+        <li class="nav--items left"> <a href="">home</a>
+        <li class="nav--items right"> <a href="">works</a>
+    </ul>
+</nav>
 
-<h1 class="hidden">Main navigation</h1>
-
-
-    <li class="menu-items"> <a href="">home</a>
-    <li class="menu-items"> <a href="">works</a>
-    <li class="menu-items"> <a href="">about</a>
-    <li class="menu-items"> <a href="">contact</a>
+<nav class="nav nav--bottom"">
+    <ul>
+        <li class="nav--items left"> <a href="">about</a>
+        <li class="nav--items right"> <a href="">contact</a>
+    </ul>
 </nav>
 

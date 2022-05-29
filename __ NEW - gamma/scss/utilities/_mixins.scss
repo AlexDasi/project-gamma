@@ -1,15 +1,12 @@
 @mixin main-text {
-    color: $dark;
+    color: $main-color;
     font-family: $main-font;
-    font-weight: 300;
-    line-height: 75%;
-    text-transform: uppercase;
+    line-height: 80%;
 }
 
 @mixin secondary-text {
-    color: $dark;
+    color: $main-color;
     font-family: $secondary-font;
-    font-weight: 300;
 }
 
 @mixin no-margin {

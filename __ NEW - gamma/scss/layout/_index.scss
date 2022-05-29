@@ -1,0 +1,81 @@
+.categories{
+
+    @include flexbox;
+    flex-direction: column;
+
+    position: absolute;
+    left: 10vw;
+    top: 30vh;
+    z-index: 1;
+
+
+    &>ul>li>a{
+        filter: blur(1px);
+
+        &:hover{
+            filter: blur(0px);
+        }
+    }
+
+    &--designer{
+        margin-top: 4rem;
+        text-transform: lowercase;
+    }
+
+}
+
+// .messages{
+//     position: absolute;
+//     left: 50vw;
+//     top: 60vh;
+//     width: 30vw;
+// }
+
+.message{
+    position: absolute;
+    left: 50vw;
+    top: 40vh;
+    width: 30vw;
+    text-align: right;
+    display: none;
+}
+
+#graphic:hover + #message-graphic{
+    display: block;
+    transition:visibility 0.3s linear,opacity 0.3s linear;
+}
+
+.floor{
+    width: 60px;
+    height: 100px;
+    @include flexbox;
+    flex-direction: column;
+
+    &--container{
+        height: 100vh;
+        position: fixed;
+        right: 20px;
+        @include flexbox;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &--1{top: 0;}
+    &--2{top: -20px;}
+    &--3{top: -40px;}
+    &--4{top: -60px;}
+
+    &--1, &--2, &--3, &--4{
+        width: 40px;
+        height: 40px;
+        position: relative;
+        background: $accent-color;
+        opacity: 0.4;
+        transform: rotate(135deg) skew(20deg, 20deg);
+
+        &:active{
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.02);
+            opacity: 1;
+        }
+    }
+}

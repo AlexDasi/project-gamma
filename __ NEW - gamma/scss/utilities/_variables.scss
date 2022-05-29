@@ -7,17 +7,19 @@ $pagemaxwidth: 1024px;
 $navheight: 70px;
 
 //COLORS
-$dark: #01003C;
-$dark50: hsla(241, 100%, 12%, 0.5);
-$white: #FFFFFF;
-$light: #E6F6B7;
-$light-grey: #F2F2F2;;
-$mid-grey: #BABABA;;
+
+//basic colors
+$main-color: hsla(227, 3%, 8%, 1);
+$bkg-color: hsla(54, 18%, 97%, 1);
+$accent-color: hsla(68, 100%, 80%, 1);
+$grey-bkg-color: hsla(60, 2%, 78%, 1);
 
 
 //FONTS
-$main-font: 'Yeseva One', cursive;
-$secondary-font: 'Roboto', sans-serif;
+$main-font: 'Inter', sans-serif;
+$secondary-font: 'Inter', sans-serif;
+
+
 $secondary-font-cursive: 'Roboto', sans-serif, cursive;
 $tag-font: 'Roboto Condensed', sans-serif;
 $button-font: 'Roboto Condensed', sans-serif, 300;

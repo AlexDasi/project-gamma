@@ -8,15 +8,16 @@ html {
     box-sizing: border-box;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    font-size: 12px;
   }
 
 body{
-    background-color: $light;
+    background-color: $bkg-color;
     min-height: 100vh;
     width: 100%;
     max-width: 100%;
     margin: 0px;
-    display: flex;
+    @include flexbox;
     flex-direction: column;
     position: initial;
     
@@ -28,10 +29,21 @@ p {
   margin-block-end: 0em;
 }
 
+a{
+  text-decoration: none;
+}
+
 ul{
   padding-inline-start: 0;
   margin-block-end: 0;
   margin-block-start: 0;
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
+
+.hidden{
+  display: none;
 }
 
 

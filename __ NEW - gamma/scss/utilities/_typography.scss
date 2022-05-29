@@ -1,107 +1,26 @@
 //-----> $TYPOGRAPHY
 
-h1,h2,h3,h4,h5{
+.main-text,h1,h2{
     @include main-text;
+    font-size: 6rem;
+    text-transform: uppercase;
+    font-weight: 600;
 }
-p,a
-{
+
+.secondary-text,p,a,h3,h4,h5{
     @include secondary-text;
+    font-size: 1.5rem;
+    font-weight: 300;
 } 
 
-
-h1{
-
-    font-size: $fontbig;
-}
-
-h2{
-    font-size: $hmedium;
-}
-
-h3{
-    font-size: $hsmall;
-}
-
-h4{
-    font-size: 5.5vw;
-}
-
-h5{
-    text-transform: none;
-    text-align: right;
-    font-size: 7vw;
-}
-
-.h2-mobile{
-    font-size: 32px;
-}
-
-.p-small{
-    font-size: $psmall;
-}
-
-.p-medium{
-    font-size: $pmedium;
-}
-
-.p-large{
-    font-size: $plarge;
-}
-
-.centered-text{
-    text-align: center;
-}
-
-.yesevaSmall, .yesevaLarge{
-
-    @include main-text;
-    text-transform: none;
-}
-
-.yesevaSmall{
-    font-size: $pmedium;
-    margin-bottom: 20px;
-}
-
-.yesevaLarge{
-    font-size: $plarge;
-    margin-bottom: 20px;
-}
-
-.intro__text--paragraph{
-    font-size: 5vw;
-}
-
-@media all and (min-width: 1200px){
+a{
+    box-shadow: inset 0 0 0 0 $accent-color;
+    padding: 0 .25rem;
+    transition: box-shadow .3s ease-in-out;
+  }
+  a:hover {
+    box-shadow: inset 100px 0 0 0 $accent-color;
+  }
 
 
-    
-    .intro__text--paragraph{
-        font-size: 60px;
-    }
-
-    .p-small{
-        font-size: $psmall;
-    }
-    
-    .p-medium{
-        font-size: $pmedium;
-    }
-    
-    .p-large{
-        font-size: $plarge;
-    }
-}
-
-@media all and (min-width: 600px){
-    h3{
-        font-size: 2vw;
-    }
-    h2{
-        font-size: 4vw;
-    }
-    h1{
-        font-size: 15vw;
-    }
-}
 

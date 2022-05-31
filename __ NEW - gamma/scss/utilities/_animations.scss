@@ -51,72 +51,19 @@
 
 
 
-
-
-//SUPPORT FOR BROWSERS
-
-// @-moz-keyframes scale-1 {
-//     0% {
-//         transform: scale(0);
-//         z-index: 2;
-//     }
-//     50%, 100% {
-//         transform: scale(1);
-//     }
-// }
-// @-webkit-keyframes scale-1 {
-//     0% {
-//         transform: scale(0);
-//         z-index: 2;
-//     }
-//     50%, 100% {
-//         transform: scale(1);
-//     }
-// }
-// @-o-keyframes scale-1 {
-//     0% {
-//         transform: scale(0);
-//         z-index: 2;
-//     }
-//     50%, 100% {
-//         transform: scale(1);
-//     }
-// }
-
-// @-moz-keyframes scale-2 {
-//     0%, 50% {
-//         transform: scale(0);
-//     }
-//     100% {
-//         transform: scale(1);
-//     }
-// }
-// @-webkit-keyframes scale-2 {
-//     0%, 50% {
-//         transform: scale(0);
-//     }
-//     100% {
-//     transform: scale(1);
-//     }
-// }
-// @-o-keyframes scale-2 {
-//     0%, 50% {
-//         transform: scale(0);
-//     }
-//     100% {
-//         transform: scale(1);
-//     }
-// }
-
-
-//ARROW
+//ARROW 
 
 .arrow {
 
-    width: 100px;
-    height: 100px;
+    font-size: 45px;
+    line-height: 90px;
+    cursor: none;
     margin: 20px;
-    display: inline-block;
+    width: 90px;
+    height: 90px;
+    text-align: center;
+    position: relative;
+    text-decoration: none;
 
     &-container{
         width: 100vw;
@@ -124,57 +71,93 @@
         justify-content: center;
         position: fixed;
         bottom: 40px;
-    }
-
-    &::before {
-        content: '';
-        display: block;
-        width: 30px;
-        height: 30px;
-        top: 50%;
-        left: 50%;
-        border-style: solid;
-        border-color: #000;
-        border-width: 2px 2px 0 0;
-        position: absolute;
-        transform-origin: 50% 50%;
-    }
-    
-    &.down::before { 
-        transform: rotate(135deg); 
-        margin: -20px 0 0 -15px;
-    }
-
-    
-    &::after {
-        content: '';
-        display: block;
-        top: 50%;
-        left: 50%;
-        border-style: solid;
-        border-color: $main-color;
-        position: absolute;
-        transform-origin: 50% 50%;
-    }
-
-    &.down::after { 
-        width: 0;
-        height: 40px;
-        border-width: 0 2px 0 0;
-        transform: translate(0px, -23px);
-    }
-    
-
-    &.circle {
-        background: $accent-color;
-        border-radius: 50px;
-    }
-    
-    &.debug {
-            outline: 1px solid darkblue;
         
-            &::before {
-                outline: 1px solid red;
-            }
-        }
     }
+
+    &:after {
+        pointer-events: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        content:'';
+        box-sizing: content-box;
+        top: -2px;
+        left: -2px;
+        padding: 2px;
+        z-index: -1;
+        background: $accent-color;
+        transform: scale(0);
+        transition: transform 0.2s;
+    }
+
+    &:before {
+        display: block;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    &:hover:after {
+        transform: scale(1);
+        transition: transform 0.4s;
+    }
+}
+
+
+
+
+//////////ARROW SVG//////////
+
+    // &::before {
+    //     content: '';
+    //     display: block;
+    //     width: 30px;
+    //     height: 30px;
+    //     top: 50%;
+    //     left: 50%;
+    //     border-style: solid;
+    //     border-color: #000;
+    //     border-width: 2px 2px 0 0;
+    //     position: absolute;
+    //     transform-origin: 50% 50%;
+    // }
+
+    // &::after {
+    //     content: '';
+    //     display: block;
+    //     top: 50%;
+    //     left: 50%;
+    //     border-style: solid;
+    //     border-color: $main-color;
+    //     position: absolute;
+    //     transform-origin: 50% 50%;
+    // }
+        
+    // &::after {
+    //     content: '';
+    //     display: block;
+    //     top: 50%;
+    //     left: 50%;
+    //     border-style: solid;
+    //     border-color: $main-color;
+    //     position: absolute;
+    //     transform-origin: 50% 50%;
+    // }
+    
+    // &.down::before { 
+    //     transform: rotate(135deg); 
+    //     margin: -20px 0 0 -15px;
+    // }
+
+    // &.down::after { 
+    //     transform: rotate(135deg); 
+    //     width: 0;
+    //     height: 40px;
+    //     border-width: 0 2px 0 0;
+    //     transform: translate(0px, -23px);
+    // }
+
+
+
+    
+    
+

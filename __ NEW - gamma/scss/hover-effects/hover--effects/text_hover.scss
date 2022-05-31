@@ -1,0 +1,13 @@
+@import "base/imports";
+.#{$name-of-the-class} {
+  @include transition-options;
+}
+
+
+/* FILLS */
+
+
+.#{$name-of-the-class}-fill-goes-right {
+  @include transition-options($hovered-color: $accent-color);
+  @include fill-goes-right;
+}

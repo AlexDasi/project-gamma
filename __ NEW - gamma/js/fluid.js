@@ -32,33 +32,63 @@ SOFTWARE.
 const canvas = document.getElementsByTagName('canvas')[0];
 resizeCanvas();
 
+//CLEAN CONFIG
+
 let config = {
     SIM_RESOLUTION: 128,
     DYE_RESOLUTION: 1024,
     CAPTURE_RESOLUTION: 512,
     DENSITY_DISSIPATION: 3,
     VELOCITY_DISSIPATION: 1.5,
-    PRESSURE: 0,
+    PRESSURE: 0.8,
     PRESSURE_ITERATIONS: 20,
     CURL: 3,
-    SPLAT_RADIUS: 0.7,
-    SPLAT_FORCE: 2000,
-    SHADING: false,
+    SPLAT_RADIUS: 0.25,
+    SPLAT_FORCE: 6000,
+    SHADING: true,
     COLORFUL: false,
-    COLOR_UPDATE_SPEED: 0,
+    COLOR_UPDATE_SPEED: 10,
     PAUSED: false,
     BACK_COLOR: { r:199, g: 199, b: 197 },
     TRANSPARENT: false,
     BLOOM: false,
-    BLOOM_ITERATIONS: 0,
+    BLOOM_ITERATIONS: 8,
     BLOOM_RESOLUTION: 256,
-    BLOOM_INTENSITY: 0.8,
+    BLOOM_INTENSITY: 0.5,
     BLOOM_THRESHOLD: 0.6,
     BLOOM_SOFT_KNEE: 0.7,
     SUNRAYS: false,
     SUNRAYS_RESOLUTION: 196,
     SUNRAYS_WEIGHT: 1.0,
 }
+
+// let config = {
+//     SIM_RESOLUTION: 128,
+//     DYE_RESOLUTION: 1024,
+//     CAPTURE_RESOLUTION: 512,
+//     DENSITY_DISSIPATION: 3,
+//     VELOCITY_DISSIPATION: 1.5,
+//     PRESSURE: 0,
+//     PRESSURE_ITERATIONS: 20,
+//     CURL: 3,
+//     SPLAT_RADIUS: 0.7,
+//     SPLAT_FORCE: 2000,
+//     SHADING: false,
+//     COLORFUL: false,
+//     COLOR_UPDATE_SPEED: 0,
+//     PAUSED: false,
+//     BACK_COLOR: { r:199, g: 199, b: 197 },
+//     TRANSPARENT: false,
+//     BLOOM: false,
+//     BLOOM_ITERATIONS: 0,
+//     BLOOM_RESOLUTION: 256,
+//     BLOOM_INTENSITY: 0.8,
+//     BLOOM_THRESHOLD: 0.6,
+//     BLOOM_SOFT_KNEE: 0.7,
+//     SUNRAYS: false,
+//     SUNRAYS_RESOLUTION: 196,
+//     SUNRAYS_WEIGHT: 1.0,
+// }
 
 function pointerPrototype () {
     this.id = -1;

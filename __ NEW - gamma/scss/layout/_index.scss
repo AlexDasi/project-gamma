@@ -45,6 +45,9 @@
     transition:visibility 0.3s linear,opacity 0.3s linear;
 }
 
+
+//FLOORS//
+
 .floor{
     width: 60px;
     height: 100px;
@@ -60,10 +63,10 @@
         justify-content: center;
     }
 
-    &--1{top: 0;}
-    &--2{top: -20px;}
-    &--3{top: -40px;}
-    &--4{top: -60px;}
+    &--1{top: 0; z-index: 4;}
+    &--2{top: -20px; z-index: 3;}
+    &--3{top: -40px; z-index: 2;}
+    &--4{top: -60px; z-index: 1;}
 
     &--1, &--2, &--3, &--4{
         width: 40px;
@@ -72,6 +75,11 @@
         background: $accent-color;
         opacity: 0.4;
         transform: rotate(135deg) skew(20deg, 20deg);
+
+        &:hover{
+            box-shadow: 0px 0px 4px 0px $accent-color;
+            opacity: .6;
+        }
 
         &:active{
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.02);

@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "magnet-mouse": "github:fluffy-factory/magnet-mouse",
+    "parcel-bundler": "^1.12.5"
+  },
+  "name": "project-gamma",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexDasi/project-gamma.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexDasi/project-gamma/issues"
+  },
+  "homepage": "https://github.com/AlexDasi/project-gamma#readme",
+  "description": ""
+}

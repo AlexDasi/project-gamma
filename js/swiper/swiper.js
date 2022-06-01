@@ -1,14 +1,14 @@
 var swiper = new Swiper(".mySwiper", {
   grabCursor: true,
-  effect: "coverflow",
+  // effect: "coverflow",
   mousewheel: true,
   centeredSlides: true,
   slidesPerView: "auto",
-  spaceBetween: 50,
+  spaceBetween: 20,
   coverflowEffect: {
     rotate: 0,
     stretch: 0,
-    depth: 80,
+    depth: 300,
     modifier: 2,
     slideShadows: false,
   },
@@ -35,7 +35,7 @@ var swiper = new Swiper(".MainSwiper", {
   //   el: ".swiper-pagination",
   //   clickable: true,
   // },
-  
+
   // navigation: {
   //   nextEl: '.swiper-button-next',
   // },

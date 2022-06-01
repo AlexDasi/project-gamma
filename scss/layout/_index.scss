@@ -57,7 +57,7 @@
 
 
     &--container{
-        height: 100vh;
+        height: 0vh;
         position: fixed;
         right: 20px;
         @include flexbox;

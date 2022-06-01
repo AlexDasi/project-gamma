@@ -20,8 +20,11 @@
         ga('send', 'pageview');
     </script>
     <script async src="https://www.google-analytics.com/analytics.js"></script>
-    <script src="https://keycdn.layerjs.org/libs/layerjs/layerjs-0.6.4.min.js"></script>
-    <link href="https://keycdn.layerjs.org/libs/layerjs/layerjs-0.6.4.css" type="text/css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="scss/js-style/swiper-bundle.min.css"/>
+    
+    <link rel="stylesheet" href="css/style.css">
+
 
 
     </head>

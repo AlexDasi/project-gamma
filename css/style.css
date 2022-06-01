@@ -318,6 +318,7 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 100;
 }
 
 .floor {
@@ -333,19 +334,19 @@ header {
 }
 .floor--1 {
   top: 0;
-  z-index: 4;
+  z-index: 104;
 }
 .floor--2 {
   top: -20px;
-  z-index: 3;
+  z-index: 103;
 }
 .floor--3 {
   top: -40px;
-  z-index: 2;
+  z-index: 102;
 }
 .floor--4 {
   top: -60px;
-  z-index: 1;
+  z-index: 101;
 }
 .floor:hover {
   -webkit-box-shadow: 0px 0px 4px 0px hsl(68deg, 100%, 80%);
@@ -395,6 +396,84 @@ header {
 }
 .nav--bottom {
   bottom: 0px;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  z-index: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.swiper-wrapper {
+  height: 40vh;
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 40vw;
+}
+.swiper-slide img {
+  height: inherit;
+  display: block;
+  max-width: 100%;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  opacity: 50%;
+}
+.swiper-slide-active > img {
+  -webkit-filter: none;
+          filter: none;
+  opacity: 100%;
+  -webkit-transform: filter(0);
+          transform: filter(0);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.MainSwiper {
+  width: 100%;
+  height: 100vh;
+}
+
+.MainSwiper-slide {
+  height: 100vh;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.MainSwiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.slide-works {
+  background-color: aqua;
 }
 
 /* CANVAS */

@@ -1,7 +1,7 @@
 <div id="works">
 
     <!-- Swiper -->
-    <div class="swiper mySwiper">
+    <div class="swiper WorksSwiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
             <img src="https://swiperjs.com/demos/images/nature-1.jpg" />

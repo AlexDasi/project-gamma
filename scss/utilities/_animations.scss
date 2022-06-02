@@ -5,7 +5,7 @@
     background-color: $main-color;
     width: 100%;
     height: 100vh;
-    z-index: 100;
+    z-index: $z-top;
 
     @include flexbox;
     align-items: center;
@@ -54,7 +54,6 @@
 //ARROW 
 
 .arrow {
-
     font-size: 45px;
     line-height: 90px;
     cursor: none;
@@ -66,6 +65,7 @@
     text-decoration: none;
 
     &-container{
+        z-index: $z-top+100;
         width: 100vw;
         @include flexbox;
         justify-content: center;
@@ -85,7 +85,7 @@
         top: -2px;
         left: -2px;
         padding: 2px;
-        z-index: -1;
+        z-index: $z-back;
         background: $accent-color;
         transform: scale(0);
         transition: transform 0.2s;

@@ -6,7 +6,7 @@
     position: absolute;
     left: 10vw;
     top: 30vh;
-    z-index: 1;
+    z-index: $z-null;
 
 
     &>ul>li>a{
@@ -57,44 +57,45 @@
 
 
     &--container{
-        height: 0vh;
+        height: 100vh;
         position: fixed;
         right: 20px;
         @include flexbox;
         flex-direction: column;
         justify-content: center;
-        z-index: 100;
+        z-index: $z-top;
     }
 }
 
 .floor{
 
-    &--1{top: 0; z-index: 104;}
-    &--2{top: -20px; z-index: 103;}
-    &--3{top: -40px; z-index: 102;}
-    &--4{top: -60px; z-index: 101;}
+    &--1{top: 0; z-index: $z-top+4;}
+    &--2{top: -20px; z-index: $z-top+3;}
+    &--3{top: -40px; z-index: $z-top+2;}
+    &--4{top: -60px; z-index: $z-top+1;}
 
 
-        width: 40px;
-        height: 40px;
-        position: relative;
-        background: $accent-color;
-        opacity: 0.4;
-        transform: rotate(135deg) skew(20deg, 20deg);
-        border: none;
-        border-radius: 0;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    background: $accent-color;
+    opacity: 0.4;
+    transform: rotate(135deg) skew(20deg, 20deg);
+    border: none;
+    border-radius: 0;
 
-        &:hover{
-            box-shadow: 0px 0px 4px 0px $accent-color;
-            opacity: .6;
-        }
+    &:hover{
+        box-shadow: 0px 0px 4px 0px $accent-color;
+        opacity: .6;
+    }
 
-        &:active, .active{
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.02);
-            opacity: 1;
-        }
-
+    &:active, .active{
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.02);
+        opacity: 1;
+    }
 }
+
+
 
 // .active{
 //     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.02);

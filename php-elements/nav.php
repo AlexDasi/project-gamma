@@ -1,7 +1,7 @@
 <nav class="nav nav--top">
     <ul>
-        <li class="nav--items left"> <a href="index.php">home</a>
-        <li class="nav--items right"> <a href="works.php">works</a>
+        <li class="nav--items left"> <a href="#home">home</a>
+        <li class="nav--items right"> <a href="#works">works</a>
     </ul>
 </nav>
 

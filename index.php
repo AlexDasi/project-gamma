@@ -6,11 +6,7 @@ include 'php-elements/header.php'
 
 <body>
 
-    <?php
-
-    include 'php-elements/nav.php'
-
-    ?>
+    <?php include 'php-elements/nav.php'?>
 
     <!-- <?php include 'php-elements/preloader.php'?> -->
 
@@ -18,15 +14,18 @@ include 'php-elements/header.php'
 
 <!-- MAIN CONTENT SWIPER-->
 
-<div class="MainSwiper myMainSwiper">
-    <div class="MainSwiper-wrapper">
-        <div class="MainSwiper-slide slide-index">
+<div class="swiper MainSwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide slide-index">
             <?php include 'php-pages/home.php'?>
         </div>
-        <div class="MainSwiper-slide slide-works">
+        <div class="swiper-slide slide-works">
             <?php include 'php-pages/works.php'?>   
         </div>
     </div>
+
+    <div class="swiper-pagination"></div>
+    <div class="swiper-pagination-nav"></div>
 </div>
 
 
@@ -34,11 +33,11 @@ include 'php-elements/header.php'
 
     <?php include 'php-elements/arrow.php'?>
 
-        <?php
+    <?php
 
-        include 'php-elements/js.php'
+    include 'php-elements/js.php'
 
-        ?>
+    ?>
         
     <footer>
 

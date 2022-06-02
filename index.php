@@ -19,8 +19,8 @@ include 'php-elements/header.php'
         <div class="swiper-slide slide-index">
             <?php include 'php-pages/home.php'?>
         </div>
-        <div class="swiper-slide slide-works">
-            <?php include 'php-pages/works.php'?>   
+        <div class="swiper-slide slide-works-new">
+            <?php include 'php-pages/works-new.php'?>   
         </div>
     </div>
 

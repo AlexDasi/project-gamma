@@ -49,6 +49,19 @@
     display: block;
     transition:visibility 0.3s linear,opacity 0.3s linear;
 }
+#ui:hover + #message-ui{
+    display: block;
+    transition:visibility 0.3s linear,opacity 0.3s linear;
+}
+#web:hover + #message-web{
+    display: block;
+    transition:visibility 0.3s linear,opacity 0.3s linear;
+}
+
+section.categories{
+    overflow: visible;
+}
+
 
 
 //FLOORS//
@@ -83,14 +96,14 @@
     width: 40px;
     height: 40px;
     position: relative;
-    background: $accent-color;
+    background: var(--accent-color);
     opacity: 0.4;
     transform: rotate(135deg) skew(20deg, 20deg);
     border: none;
     border-radius: 0;
 
     &:hover{
-        box-shadow: 0px 0px 4px 0px $accent-color;
+        box-shadow: 0px 0px 4px 0px var(--accent-color);
         opacity: .6;
     }
 

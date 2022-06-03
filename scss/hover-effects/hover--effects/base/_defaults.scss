@@ -9,9 +9,9 @@ $event: "hover"; // event that will trigger the effect, you can choose between '
 $name-of-the-class: text-hover; // prefix all the effects with your class
 $name-of-the-class-on-click: "active"; // use only when $event is set to "click", element with an effect will get the 'active' class on click that will trigger the effect
 
-$hovered-text-color: $accent-color; // color of the text on hover
-$after-bg-color: $accent-color;
-$before-bg-color: $accent-color;
+$hovered-text-color: var(--accent-color); // color of the text on hover
+$after-bg-color: var(--accent-color);
+$before-bg-color: var(--accent-color);
 $transition-speed: 0.1s; // transition-duration
 $transition-easing: ease-in-out; // transition-timing-function
 $transition-delay: 0s; // transition-delay

@@ -1184,7 +1184,7 @@ function update () {
     const dt = calcDeltaTime();
     if (resizeCanvas())
         initFramebuffers();
-    updateColors(dt);
+    // updateColors(dt);
     applyInputs();
     if (!config.PAUSED)
         step(dt);
@@ -1210,7 +1210,7 @@ function resizeCanvas () {
     }
     return false;
 }
-//HERE?
+//CAMBIAR COLOR AQUI?
 function updateColors (dt) {
     if (!config.COLORFUL) return;
 
@@ -1431,12 +1431,13 @@ function splatPointer (pointer) {
     splat(pointer.texcoordX, pointer.texcoordY, dx, dy, pointer.color);
 }
 
+//CAMBIAR COLOR AQUI?
 function multipleSplats (amount) {
     for (let i = 0; i < amount; i++) {
         const color = generateColor();
-        color.r *= 10.0;
-        color.g *= 10.0;
-        color.b *= 10.0;
+        // color.r *= 10.0;
+        // color.g *= 10.0;
+        // color.b *= 10.0;
         const x = Math.random();
         const y = Math.random();
         const dx = 1000 * (Math.random() - 0.5);

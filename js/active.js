@@ -1,14 +1,30 @@
-// Get the container element
-var btnContainer = document.getElementById("building");
+// Get the root element
+var r = document.querySelector(':root');
 
-// Get all buttons with class="btn" inside the container
-var btns = btnContainer.getElementsByClassName("floor");
-
-// Loop through the buttons and add the active class to the current/clicked button
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
+// Create a function for getting a variable value
+function myFunction_get() {
+  // Get the styles (properties and values) for the root
+  var rs = getComputedStyle(r);
 }
+
+// Create a function for setting a variable value
+function myFunction_set() {
+  // Set the value of variable --blue to another value (in this case "lightblue")
+  r.style.setProperty('--main-color', '--bkg-color');
+
+};
+
+
+// const btn = document.getElementById('arrow');
+
+// btn.addEventListener('click', function myFunction_set() {
+
+  // const box = document.getElementById('box');
+
+  // box.style.backgroundColor = 'coral';
+
+  // 👇️ optionally change text color
+  // box.style.color = 'white';
+
+
+

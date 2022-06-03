@@ -5,7 +5,7 @@
 
     position: absolute;
     left: 10vw;
-    top: 30vh;
+    top: 20vh;
     z-index: $z-null;
 
 
@@ -22,14 +22,19 @@
         text-transform: lowercase;
     }
 
+    &--items{
+        &-graphic{
+            z-index: 3;
+        }
+        &-ui{
+            z-index: 2;
+        }
+        &-web{
+            z-index: 1;
+        }
+    }
 }
 
-// .messages{
-//     position: absolute;
-//     left: 50vw;
-//     top: 60vh;
-//     width: 30vw;
-// }
 
 .message{
     position: absolute;
@@ -101,5 +106,29 @@
 //     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.02);
 //     opacity: 1;
 // }
+
+
+//BACKGROUNDS
+
+[data-sld="1"] {
+	.container,
+	.header {
+		background-color: var(--savanna-bg);
+	}
+}
+
+[data-sld="2"] {
+	.container,
+	.header {
+		background-color: var(--glacier-bg);
+	}
+}
+
+[data-sld="3"] {
+	.container,
+	.header {
+		background-color: var(--coral-bg);
+	}
+}
 
 

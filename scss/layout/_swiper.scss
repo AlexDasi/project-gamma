@@ -143,6 +143,8 @@ body {
 
 
   &-slide{
+    @include flexbox;
+    align-items: center;
     background-position: center;
     background-size: cover;
     width: 40vw;

@@ -1,7 +1,7 @@
 .nav{
     padding: 20px;
     width: 100vw;
-    z-index: $z-top;
+    z-index: $z-top+100;
 
     //FLEX
     @include flexbox;
@@ -31,6 +31,11 @@
     &--bottom{
         bottom: 0px;
     }
+}
+
+ul, ol, dl {
+    list-style-position: outside;
+    margin-bottom: 0;
 }
 
 

@@ -106,15 +106,14 @@
 
 a{
     box-shadow: inset 0 0 0 0 $accent-color;
-    padding: 0 .25rem;
-    transition: box-shadow .3s ease-in-out;
+    transition: box-shadow .5s ease-in-out;
 
     &.graphic:hover {
-        box-shadow: inset 400px 0 0 0 $accent-color;
+        box-shadow: inset 320px 0 0 0 $accent-color;
     }
 
     &.ui:hover {
-        box-shadow: inset 650px 0 0 0 $accent-color;
+        box-shadow: inset 600px 0 0 0 $accent-color;
     }
 
     &.web:hover {

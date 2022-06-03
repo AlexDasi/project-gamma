@@ -4,7 +4,7 @@ include 'php-elements/header.php'
 
 ?>
 
-<body>
+<body class="">
 
     <?php include 'php-elements/nav.php'?>
 
@@ -13,6 +13,8 @@ include 'php-elements/header.php'
 <!-- MAIN CONTENT -->
 
 <!-- MAIN CONTENT SWIPER-->
+<body>
+    
 
 <div class="swiper MainSwiper">
     <div class="swiper-wrapper">
@@ -20,7 +22,7 @@ include 'php-elements/header.php'
             <?php include 'php-pages/home.php'?>
         </div>
         <div class="swiper-slide slide-works-new">
-            <?php include 'php-pages/works-new.php'?>   
+            <?php include 'php-pages/works-new/works-new.php'?>   
         </div>
     </div>
 

@@ -61,7 +61,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-a,
+/* a,
 a:active,
 a:focus {
   color: #6f6f6f;
@@ -72,7 +72,7 @@ a:hover,
 a:active {
   color: #ff214f;
   text-decoration: none;
-}
+} */
 
 a:focus,
 a:active,
@@ -165,7 +165,7 @@ ul,
 ol,
 dl {
   list-style-position: outside;
-  margin-bottom: 25px
+  margin-bottom: 0px
 }
 
 * {

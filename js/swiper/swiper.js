@@ -1,28 +1,35 @@
 var swiper = new Swiper(".WorksSwiper", {
   allowTouchMove: true,
-  grabCursor: false,
+  grabCursor: true,
   preventClicks: false,
-  // effect: "coverflow",
   mousewheel: true,
   centeredSlides: true,
   slidesPerView: "auto",
   spaceBetween: 0,
+  speed: 100,
   freeMode: {
     enabled: true,
-
   },
 
-
-  // navigation: {
-  //   nextEl: '.swiper-button-next',
-  //   prevEl: '.swiper-button-prev',
-  // },
+  on: {
+    resize: function () {
+        var windowWidth = $(window).width();
+        if(windowWidth <= 767){
+                swiperBottomScrollbarFull.direction('vertical');
+                swiperBottomScrollbarFull.detachEvents();
+        }else{
+                swiperBottomScrollbarFull.direction('horizontal');
+                swiperBottomScrollbarFull.attachEvents();
+        }
+        swiperBottomScrollbarFull.update();
+    }
+}
 });
 
 var menu = ['HOME', 'WORKS', 'ABOUT', 'CONTACT'];
 var swiper = new Swiper(".MainSwiper", {
   direction: "vertical",
-  spaceBetween: 30,
+  spaceBetween: 0,
   slidesPerView: "auto",
   centeredSlides: true,
   mousewheel: false,
@@ -33,6 +40,11 @@ var swiper = new Swiper(".MainSwiper", {
       return '<span class="' + className + '">' + (menu[index]) + "</span>";
     },
   },
+  navigation: {
+    nextEl: '.slideNext-btn',
+    prevEl: '.slidePrev-btn',
+  },
+  
 
   //TO ADD FLOORS//
 

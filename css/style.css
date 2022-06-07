@@ -443,8 +443,8 @@ body {
   background-position: center;
   background-size: cover;
   width: 40vw;
-  -webkit-transform: scale(0.6);
-          transform: scale(0.6);
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 .WorksSwiper .swiper-slide-active {
   -webkit-transform: scale(1);

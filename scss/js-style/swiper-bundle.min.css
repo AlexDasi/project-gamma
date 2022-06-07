@@ -189,6 +189,7 @@
 }
 
 .swiper-virtual .swiper-slide {
+    backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     transform: translateZ(0)
 }
@@ -470,6 +471,7 @@ button.swiper-pagination-bullet {
 .swiper-scrollbar {
     border-radius: 10px;
     position: relative;
+    touch-action: none;
     -ms-touch-action: none;
     background: rgba(0, 0, 0, .1)
 }

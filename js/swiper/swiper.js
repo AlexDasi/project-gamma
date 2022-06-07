@@ -1,17 +1,14 @@
 var swiper = new Swiper(".WorksSwiper", {
-  grabCursor: true,
+  allowTouchMove: true,
+  grabCursor: false,
+  preventClicks: false,
   // effect: "coverflow",
   mousewheel: true,
+  freeMode: true,
   centeredSlides: true,
   slidesPerView: "auto",
-  spaceBetween: -50,
-  coverflowEffect: {
-    rotate: 0,
-    stretch: 0,
-    depth: 100,
-    modifier: 2,
-    slideShadows: false,
-  },
+  spaceBetween: 0,
+
 
   // navigation: {
   //   nextEl: '.swiper-button-next',

@@ -6,7 +6,7 @@ include 'php-elements/header.php'
 
 <body>
 
-    <?php include 'php-elements/nav.php'?>
+    <?php include 'php-elements/nav new.php'?>
 
     <!-- <?php include 'php-elements/preloader.php'?> -->
 

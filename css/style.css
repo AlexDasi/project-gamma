@@ -388,15 +388,19 @@ header {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .nav--top {
   top: 0px;
 }
 .nav--bottom {
   bottom: 0px;
+}
+
+.single {
+  background-color: hsl(68deg, 100%, 80%);
 }
 
 html,

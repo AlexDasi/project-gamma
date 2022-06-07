@@ -19,7 +19,7 @@
         &>ul{
             @include flexbox;
             width: 100%;
-            justify-content: space-between;
+            justify-content: center;
         }
         
     }
@@ -31,6 +31,10 @@
     &--bottom{
         bottom: 0px;
     }
+}
+
+.single{
+    background-color: $accent-color;
 }
 
 

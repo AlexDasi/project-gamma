@@ -4,10 +4,13 @@ var swiper = new Swiper(".WorksSwiper", {
   preventClicks: false,
   // effect: "coverflow",
   mousewheel: true,
-  freeMode: true,
   centeredSlides: true,
   slidesPerView: "auto",
   spaceBetween: 0,
+  freeMode: {
+    enabled: true,
+
+  },
 
 
   // navigation: {

@@ -1,7 +1,7 @@
 <nav class="nav nav--top">
     <ul>
-        <li class="nav--items left"> <a href="#home">home</a>
-        <li class="nav--items right"> <a href="#works-new">works</a>
+        <li class="nav--items left"> <a onclick="myFunction_setLight()" href="#home">home</a>
+        <li class="nav--items right"> <a onclick="myFunction_setDark()" href="#works-new">works</a>
     </ul>
 </nav>
 

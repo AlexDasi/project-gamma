@@ -1,5 +1,6 @@
 var swiperBottomScrollbarFull = new Swiper('.swiper-bottom-scrollbar-full', {
     allowTouchMove: true,
+    centeredSlides: true,
     mode:'horizontal',
     freeMode: true,
     slidesPerView: 'auto',
@@ -34,7 +35,7 @@ var swiperBottomScrollbarFull = new Swiper('.swiper-bottom-scrollbar-full', {
             },
             spaceBetween: 0,
             autoHeight: true,
-            centeredSlides: false,
+            centeredSlides: true,
             slidesOffsetAfter: 85
         }
     },

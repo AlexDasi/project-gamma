@@ -22,7 +22,7 @@ include 'php-elements/header.php'
             <?php include 'php-pages/home.php'?>
         </div>
         <div class="swiper-slide slide-works-new">
-            <?php include 'php-pages/works-new/works-new.php'?>   
+            <?php include 'php-pages/works-new/works.php'?>   
         </div>
     </div>
 

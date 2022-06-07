@@ -1,16 +1,20 @@
 // Get the root element
 var r = document.querySelector(':root');
 
-// Create a function for getting a variable value
+// Function to get the variable
 function myFunction_get() {
   // Get the styles (properties and values) for the root
   var rs = getComputedStyle(r);
 }
 
-// Create a function for setting a variable value
-function myFunction_set() {
-  // Set the value of variable --blue to another value (in this case "lightblue")
+// Function to change the variable
+function myFunction_setDark() {
   r.style.setProperty('--main-color', '--bkg-color');
+
+};
+
+function myFunction_setLight() {
+  r.style.setProperty('--bkg-color', '--main-color');
 
 };
 

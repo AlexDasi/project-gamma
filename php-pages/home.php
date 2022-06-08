@@ -1,7 +1,7 @@
 <div id="home">
 
     <section class="categories">
-        <div><p class="message message-intro">Hi, I'm <span>Alex Dasi.</span></p></div>
+        <div><p class="message message-intro">Hi, I'm <span>Alex Dasi</span>,</p></div>
         <ul>
             <!--graphic-->
             <li id="graphic" class="categories--items categories--items-graphic text-hover-fill-goes-right"><a class="main-text graphic" href="">GRAPHIC</a><span><p class="message message-comma">,</p></span></li>

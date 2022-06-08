@@ -3,7 +3,7 @@
     <!-- Swiper -->
     <div class="swiper WorksSwiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
+            <div class="swiper-slide works works-1">
                 <img src="images/pictures/camisola.jpg"/>
             </div>
             <div class="swiper-slide">

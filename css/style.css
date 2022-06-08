@@ -468,11 +468,14 @@ body {
 }
 .WorksSwiper .swiper-wrapper {
   height: 40vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .WorksSwiper .swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 40vw;
+  width: auto;
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
 }
@@ -486,12 +489,12 @@ body {
 }
 .WorksSwiper .swiper-slide img {
   height: 100%;
-  width: 100%;
   display: block;
-  max-width: 100%;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
   opacity: 20%;
+  width: auto;
+  max-width: 500px;
 }
 .WorksSwiper .swiper-slide-active img {
   -webkit-filter: none;

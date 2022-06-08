@@ -28,13 +28,14 @@ body {
 
   &-wrapper{
     height: 40vh;
+    display: flex;
   }
 
 
   &-slide{
     background-position: center;
     background-size: cover;
-    width: 40vw;
+    width: auto;
     transform: scale(0.9);
 
     &-active{
@@ -45,11 +46,18 @@ body {
 
     & img {
       height: 100%;
-      width: 100%;
+      // width: 100%;
       display: block;
-      max-width: 100%;
+      // max-width: 100%;
       filter: grayscale(100%);
       opacity: 20%;
+
+      
+      width: auto;
+      max-width: 500px;
+      // height: auto;
+      // max-height: 450px;
+      
     }
 
     &-active img{

@@ -2,7 +2,7 @@
 
 #preloader{
     position: fixed;
-    background-color: $main-color;
+    background-color: var(--main-color);
     width: 100%;
     height: 100vh;
     z-index: $z-top;
@@ -20,11 +20,11 @@
         border-radius: 50%;
     }
     & div:before {
-        background-color: $accent-color;
+        background-color: var(--accent-color);
         animation: scale-1 2400ms linear infinite;
     }
     & div:after {
-        background-color: $main-color;
+        background-color: var(--main-color);
         animation: scale-2 2400ms linear infinite;
     }
 
@@ -86,7 +86,7 @@
         left: -2px;
         padding: 2px;
         z-index: $z-back;
-        background: $accent-color;
+        background: var(--accent-color);
         transform: scale(0);
         transition: transform 0.2s;
     }
@@ -105,20 +105,20 @@
 //LINK HOVER ANIMATION
 
 a{
-    box-shadow: inset 0 0 0 0 $accent-color;
+    box-shadow: inset 0 0 0 0 var(--accent-color);
     padding: 0 .25rem;
     transition: box-shadow .3s ease-in-out;
 
     &.graphic:hover {
-        box-shadow: inset 400px 0 0 0 $accent-color;
+        box-shadow: inset 400px 0 0 0 var(--accent-color);
     }
 
     &.ui:hover {
-        box-shadow: inset 650px 0 0 0 $accent-color;
+        box-shadow: inset 650px 0 0 0 var(--accent-color);
     }
 
     &.web:hover {
-        box-shadow: inset 200px 0 0 0 $accent-color;
+        box-shadow: inset 200px 0 0 0 var(--accent-color);
     }
 
 }
@@ -152,7 +152,7 @@ a{
     //     top: 50%;
     //     left: 50%;
     //     border-style: solid;
-    //     border-color: $main-color;
+    //     border-color: var(--main-color);
     //     position: absolute;
     //     transform-origin: 50% 50%;
     // }
@@ -163,7 +163,7 @@ a{
     //     top: 50%;
     //     left: 50%;
     //     border-style: solid;
-    //     border-color: $main-color;
+    //     border-color: var(--main-color);
     //     position: absolute;
     //     transform-origin: 50% 50%;
     // }

@@ -1,5 +1,12 @@
+:root {
+  --main-color: hsla(227, 3%, 8%, 1);
+  --bkg-color: hsla(54, 18%, 97%, 1);
+  --accent-color: hsla(68, 100%, 80%, 1);
+  --grey-bkg-color: hsla(60, 2%, 78%, 1);
+}
+
 .main-text, h1, h2 {
-  color: hsl(227deg, 3%, 8%);
+  color: var(--main-color);
   font-family: "Inter", sans-serif;
   line-height: 80%;
   font-size: 6rem;
@@ -8,7 +15,7 @@
 }
 
 .secondary-text, p, a, h3, h4, h5 {
-  color: hsl(227deg, 3%, 8%);
+  color: var(--main-color);
   font-family: "Inter", sans-serif;
   font-size: 1.5rem;
   font-weight: 300;
@@ -16,7 +23,7 @@
 
 #preloader {
   position: fixed;
-  background-color: hsl(227deg, 3%, 8%);
+  background-color: var(--main-color);
   width: 100%;
   height: 100vh;
   z-index: 200;
@@ -38,12 +45,12 @@
   border-radius: 50%;
 }
 #preloader div:before {
-  background-color: hsl(68deg, 100%, 80%);
+  background-color: var(--accent-color);
   -webkit-animation: scale-1 2400ms linear infinite;
           animation: scale-1 2400ms linear infinite;
 }
 #preloader div:after {
-  background-color: hsl(227deg, 3%, 8%);
+  background-color: var(--main-color);
   -webkit-animation: scale-2 2400ms linear infinite;
           animation: scale-2 2400ms linear infinite;
 }
@@ -126,7 +133,7 @@
   left: -2px;
   padding: 2px;
   z-index: -100;
-  background: hsl(68deg, 100%, 80%);
+  background: var(--accent-color);
   -webkit-transform: scale(0);
           transform: scale(0);
   -webkit-transition: -webkit-transform 0.2s;
@@ -148,8 +155,8 @@
 }
 
 a {
-  -webkit-box-shadow: inset 0 0 0 0 hsl(68deg, 100%, 80%);
-          box-shadow: inset 0 0 0 0 hsl(68deg, 100%, 80%);
+  -webkit-box-shadow: inset 0 0 0 0 var(--accent-color);
+          box-shadow: inset 0 0 0 0 var(--accent-color);
   padding: 0 0.25rem;
   -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
   transition: -webkit-box-shadow 0.3s ease-in-out;
@@ -157,16 +164,16 @@ a {
   transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
 }
 a.graphic:hover {
-  -webkit-box-shadow: inset 400px 0 0 0 hsl(68deg, 100%, 80%);
-          box-shadow: inset 400px 0 0 0 hsl(68deg, 100%, 80%);
+  -webkit-box-shadow: inset 400px 0 0 0 var(--accent-color);
+          box-shadow: inset 400px 0 0 0 var(--accent-color);
 }
 a.ui:hover {
-  -webkit-box-shadow: inset 650px 0 0 0 hsl(68deg, 100%, 80%);
-          box-shadow: inset 650px 0 0 0 hsl(68deg, 100%, 80%);
+  -webkit-box-shadow: inset 650px 0 0 0 var(--accent-color);
+          box-shadow: inset 650px 0 0 0 var(--accent-color);
 }
 a.web:hover {
-  -webkit-box-shadow: inset 200px 0 0 0 hsl(68deg, 100%, 80%);
-          box-shadow: inset 200px 0 0 0 hsl(68deg, 100%, 80%);
+  -webkit-box-shadow: inset 200px 0 0 0 var(--accent-color);
+          box-shadow: inset 200px 0 0 0 var(--accent-color);
 }
 
 .magnet {
@@ -190,7 +197,7 @@ html {
 }
 
 body {
-  background-color: hsl(54deg, 18%, 97%);
+  background-color: var(--bkg-color);
   min-height: 100vh;
   width: 100%;
   max-width: 100%;
@@ -263,6 +270,15 @@ header {
   top: 30vh;
   z-index: 0;
 }
+.categories .categories-items {
+  display: inline-block;
+}
+.categories .categories-items-web {
+  display: block;
+}
+.categories > ul > li > span {
+  display: inline-block;
+}
 .categories > ul > li > a {
   -webkit-filter: blur(1px);
           filter: blur(1px);
@@ -274,15 +290,29 @@ header {
 .categories--designer {
   margin-top: 4rem;
   text-transform: lowercase;
+  background-color: var(--accent-colour);
 }
 
 .message {
-  position: absolute;
-  left: 50vw;
-  top: 40vh;
-  width: 30vw;
+  position: relative;
+  font-size: 24px;
+}
+.message-description {
+  right: -45vw;
+  bottom: 13vh;
+  width: 35vw;
   text-align: right;
-  display: none;
+}
+.message-intro {
+  bottom: 1rem;
+  padding: 0 0.25rem;
+}
+.message-intro > span {
+  text-decoration: underline;
+}
+.message-intro > span:hover {
+  background-color: var(--accent-color);
+  text-decoration: none;
 }
 
 #graphic:hover + #message-graphic {
@@ -326,7 +356,7 @@ header {
   width: 40px;
   height: 40px;
   position: relative;
-  background: hsl(68deg, 100%, 80%);
+  background: var(--accent-color);
   opacity: 0.4;
   -webkit-transform: rotate(135deg) skew(20deg, 20deg);
           transform: rotate(135deg) skew(20deg, 20deg);
@@ -350,8 +380,8 @@ header {
   z-index: 201;
 }
 .floor:hover {
-  -webkit-box-shadow: 0px 0px 4px 0px hsl(68deg, 100%, 80%);
-          box-shadow: 0px 0px 4px 0px hsl(68deg, 100%, 80%);
+  -webkit-box-shadow: 0px 0px 4px 0px var(--accent-color);
+          box-shadow: 0px 0px 4px 0px var(--accent-color);
   opacity: 0.6;
 }
 .floor:active, .floor .active {
@@ -400,7 +430,7 @@ header {
 }
 
 .single {
-  background-color: hsl(68deg, 100%, 80%);
+  background-color: var(--accent-color);
 }
 
 html,
@@ -512,7 +542,7 @@ body {
   width: 40px;
   height: 40px;
   position: relative;
-  background: hsl(68deg, 100%, 80%);
+  background: var(--accent-color);
   opacity: 0.4;
   -webkit-transform: rotate(135deg) skew(20deg, 20deg);
           transform: rotate(135deg) skew(20deg, 20deg);
@@ -520,8 +550,8 @@ body {
   border-radius: 0;
 }
 .MainSwiper .swiper-pagination-bullet:hover {
-  -webkit-box-shadow: 0px 0px 4px 0px hsl(68deg, 100%, 80%);
-          box-shadow: 0px 0px 4px 0px hsl(68deg, 100%, 80%);
+  -webkit-box-shadow: 0px 0px 4px 0px var(--accent-color);
+          box-shadow: 0px 0px 4px 0px var(--accent-color);
   opacity: 0.6;
 }
 .MainSwiper .swiper-pagination-bullet-active {
@@ -542,7 +572,7 @@ body {
 }
 
 .MainSwiper .swiper-pagination-nav {
-  color: hsl(227deg, 3%, 8%);
+  color: var(--main-color);
   font-family: "Inter", sans-serif;
   padding: 20px;
   width: 100vw;

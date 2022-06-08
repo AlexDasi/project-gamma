@@ -4,6 +4,8 @@
 }
 
 
+
+
 html {
     box-sizing: border-box;
     overflow-x: hidden;
@@ -12,7 +14,7 @@ html {
   }
 
 body{
-    background-color: $bkg-color;
+    background-color: var(--bkg-color);
     min-height: 100vh;
     width: 100%;
     max-width: 100%;

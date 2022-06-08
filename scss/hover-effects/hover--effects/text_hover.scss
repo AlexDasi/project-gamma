@@ -8,6 +8,6 @@
 
 
 .#{$name-of-the-class}-fill-goes-right {
-  @include transition-options($hovered-color: $accent-color);
+  @include transition-options($hovered-color: var(--accent-color));
   @include fill-goes-right;
 }

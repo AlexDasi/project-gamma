@@ -1,3 +1,42 @@
+//MAIN SWIPER
+
+var menu = ['HOME', 'WORKS', 'ABOUT', 'CONTACT'];
+var swiper = new Swiper(".MainSwiper", {
+  direction: "vertical",
+  allowTouchMove: false,
+  spaceBetween: 0,
+  slidesPerView: "auto",
+  centeredSlides: true,
+  mousewheel: false,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (menu[index]) + "</span>";
+    },
+  },
+  navigation: {
+    nextEl: '.slideNext-btn',
+    prevEl: '.slidePrev-btn',
+  },
+
+
+  
+
+  //TO ADD FLOORS//
+
+  // pagination: {
+  //   el: ".swiper-pagination",
+  //   clickable: true,
+  // },
+
+  // navigation: {
+  //   nextEl: '.swiper-button-next',
+  // },
+});
+
+//WORK SWIPER
+
 var swiper = new Swiper(".WorksSwiper", {
   allowTouchMove: true,
   grabCursor: true,
@@ -23,37 +62,7 @@ var swiper = new Swiper(".WorksSwiper", {
         }
         swiperBottomScrollbarFull.update();
     }
-}
+  }
 });
 
-var menu = ['HOME', 'WORKS', 'ABOUT', 'CONTACT'];
-var swiper = new Swiper(".MainSwiper", {
-  direction: "vertical",
-  spaceBetween: 0,
-  slidesPerView: "auto",
-  centeredSlides: true,
-  mousewheel: false,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    renderBullet: function (index, className) {
-      return '<span class="' + className + '">' + (menu[index]) + "</span>";
-    },
-  },
-  navigation: {
-    nextEl: '.slideNext-btn',
-    prevEl: '.slidePrev-btn',
-  },
-  
 
-  //TO ADD FLOORS//
-
-  // pagination: {
-  //   el: ".swiper-pagination",
-  //   clickable: true,
-  // },
-
-  // navigation: {
-  //   nextEl: '.swiper-button-next',
-  // },
-});

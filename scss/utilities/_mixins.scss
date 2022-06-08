@@ -1,11 +1,11 @@
 @mixin main-text {
-    color: $main-color;
+    color: var(--main-color);
     font-family: $main-font;
     line-height: 80%;
 }
 
 @mixin secondary-text {
-    color: $main-color;
+    color: var(--main-color);
     font-family: $secondary-font;
 }
 

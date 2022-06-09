@@ -77,13 +77,14 @@ body {
       & img{
         filter: contrast(130%);
         filter: grayscale(0);
-
         -webkit-filter: contrast(130%);
         -moz-filter: contrast(130%);
         -ms-filter: contrast(130%);
         -o-filter: contrast(130%);
+        transition: filter 0.3s;
+
         opacity: 1;
-        // transition: filter 0.3s;
+        transition: opacity 0.3s;
       }
     }
   }

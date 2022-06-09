@@ -38,32 +38,53 @@ body {
     width: auto;
     transform: scale(0.9);
 
-    &-active{
-      transform: scale(1);
-      transition: transform 0.5s;
-    }
+    transition: transform 0.3s;
 
 
-    & img {
+
+
+    & img{
       height: 100%;
       // width: 100%;
       display: block;
       // max-width: 100%;
-      filter: grayscale(100%);
-      opacity: 20%;
+      filter: contrast(100%);
+      -webkit-filter: contrast(100%);
+      -moz-filter: contrast(100%);
+      -ms-filter: contrast(100%);
+      -o-filter: contrast(100%);
+      filter: grayscale(1);
+      transition: filter 0.3s;
+
+      opacity: .35;
+      transition: opacity 0.3s;
 
       
       width: auto;
       max-width: 500px;
       // height: auto;
       // max-height: 450px;
-      
     }
 
-    &-active img{
-      filter: none;
-      opacity: 100%;
-      transform: filter(0);
+    &:hover{
+      transform: scale(1);
+
+      // transition: transform 0.3s;
+      // transition: opacity 0.3s;
+      // filter: none;
+      // transform: filter(0);
+
+      & img{
+        filter: contrast(130%);
+        filter: grayscale(0);
+
+        -webkit-filter: contrast(130%);
+        -moz-filter: contrast(130%);
+        -ms-filter: contrast(130%);
+        -o-filter: contrast(130%);
+        opacity: 1;
+        // transition: filter 0.3s;
+      }
     }
   }
 }

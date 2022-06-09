@@ -733,6 +733,6 @@ button.swiper-pagination-bullet {
 
 /* OVERWRITE CODE */
 
-.WorksSwiper .swiper-slide-active {
+.WorksSwiper .swiper-slide:hover {
     z-index: 1;
 }

@@ -2,7 +2,17 @@
     color: var(--main-color);
     font-family: $main-font;
     line-height: 80%;
+    font-weight: 600;
 }
+
+@mixin accent-text {
+    text-transform: uppercase;
+    color: var(--accent-color);
+    font-family: $main-font;
+    line-height: 80%;
+    font-weight: 600;
+}
+
 
 @mixin secondary-text {
     color: var(--main-color);
@@ -24,6 +34,15 @@
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+}
+
+
+@mixin transitions{
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
 }
 
 // Magic parallax mixins

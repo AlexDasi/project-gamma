@@ -6,14 +6,25 @@ body {
 
 //WORKS 
 
+  //swiper layout
+
 #works{
   width: 100vw;
+  height: 100vh;
+
 }
 
 .slide-works{
   @include flexbox;
   align-items: center;
-  background-color: aqua;
+  background-color: var(--main-color);
+}
+
+.swiper-pointer-events {
+  touch-action: pan-y;
+  @include flexbox;
+  align-items: center;
+  height: inherit;
 }
 
 .WorksSwiper .swiper {
@@ -31,7 +42,6 @@ body {
     display: flex;
   }
 
-
   &-slide{
     background-position: center;
     background-size: cover;
@@ -39,9 +49,6 @@ body {
     transform: scale(0.9);
 
     transition: transform 0.3s;
-
-
-
 
     & img{
       height: 100%;
@@ -90,11 +97,91 @@ body {
   }
 }
 
-.works{
-  &-1{
-    
+
+//TEXT DETAILS
+
+//TEXT ON SWIPER
+
+.works {
+
+    // DETAIL INFO
+
+  &--details{
+    position: absolute;
+    bottom: 5px;
+    opacity: 0;
+    width: 100px;
+    text-transform: uppercase;
+    left: 315px;
+    font-family: var(--main-font);
+    @include transitions;
+
+    & .yellow-600{
+      @include accent-text;
+      padding-top: 20px;
+    }
+
+    &>p{
+      color: var(--bkg-color);
+      font-size: $psmall;
+      letter-spacing: 2px;
+    }
+  }
+
+  &:hover &--details{
+
+    opacity: .7;
+    left: 500px;
+    padding-left: 10px;
+    width: 100px;
+    text-transform: uppercase;
+    font-family: var(--main-font);
+    @include transitions;
+  }
+
+
+  // MAIN INFO
+
+  &--info{
+    position: absolute;
+    bottom: 5px;
+    opacity: 0;
+    top: 130px;
+    left: -150px;
+    font-family: var(--main-font);
+    @include flexbox;
+    flex-direction: row;
+    @include transitions;
+
+    &>*{
+      display: inline-block;
+    }
+
+    &>h2{
+      @include accent-text;
+      text-align: right;
+      width: auto;
+      margin-right: 20px;
+    }
+
+    &>p{
+      color: var(--bkg-color);
+      font-size: $psmall;
+      text-align: left;
+      width: 35vw;
+    }
+  }
+
+  &:hover &--info{
+
+    opacity: .7;
+    top: 390px;
+    padding-top: 20px;
+    font-family: var(--main-font);
+    @include transitions;
   }
 }
+
 
 //MAIN
 .MainSwiper {
@@ -167,6 +254,11 @@ body {
   }
 }
 
+
+
+
+//swiper pagination vertical
+
 .swiper-pagination-vertical.swiper-pagination-bullets, .swiper-vertical>.swiper-pagination-bullets {
   right: 40px;
   top: 50%;
@@ -177,7 +269,7 @@ body {
   margin: var(--swiper-pagination-bullet-vertical-gap, -20px) 0;
 }
 
-//.swiper-pagination-nav
+//.swiper pagination nav
 
 .MainSwiper .swiper-pagination-nav{
   @include secondary-text;
@@ -206,3 +298,5 @@ body {
     background: #007aff;
   }
 }
+
+

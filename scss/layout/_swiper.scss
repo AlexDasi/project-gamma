@@ -11,7 +11,13 @@ body {
 #works{
   width: 100vw;
   height: 100vh;
+  display: flex;
+  align-items: center;
 
+}
+
+.swiper{
+  height: inherit;
 }
 
 .slide-works{
@@ -68,7 +74,7 @@ body {
 
       
       width: auto;
-      max-width: 500px;
+      // max-width: 500px;
       // height: auto;
       // max-height: 450px;
     }
@@ -107,12 +113,12 @@ body {
     // DETAIL INFO
 
   &--details{
-    position: absolute;
-    bottom: 5px;
+    position: relative;
+    top: -250px;
     opacity: 0;
     width: 100px;
     text-transform: uppercase;
-    left: 315px;
+    left: 20px;
     font-family: var(--main-font);
     @include transitions;
 
@@ -130,7 +136,7 @@ body {
 
   &:hover &--details{
 
-    opacity: .7;
+    opacity: 1;
     left: 500px;
     padding-left: 10px;
     width: 100px;
@@ -144,7 +150,7 @@ body {
 
   &--info{
     position: absolute;
-    bottom: 5px;
+    // bottom: 5px;
     opacity: 0;
     top: 130px;
     left: -150px;
@@ -174,8 +180,8 @@ body {
 
   &:hover &--info{
 
-    opacity: .7;
-    top: 390px;
+    opacity: 1;
+    top: 360px;
     padding-top: 20px;
     font-family: var(--main-font);
     @include transitions;

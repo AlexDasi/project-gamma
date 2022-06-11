@@ -104,16 +104,37 @@ h1 {
   }
 }
 
+.circle {
+  width: 100px;
+  height: 100px;
+  padding: 2px;
+  z-index: -100;
+  position: fixed;
+}
+
 .arrow {
   font-size: 45px;
   line-height: 90px;
   cursor: none;
-  margin: 20px;
   width: 90px;
   height: 90px;
   text-align: center;
-  position: relative;
-  text-decoration: none;
+  background: var(--accent-color);
+  border-radius: 100%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+.arrow :hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 .arrow::before {
   content: "";
@@ -134,6 +155,24 @@ h1 {
           transform: rotate(135deg);
   margin: -20px 0 0 -15px;
 }
+.arrow::after {
+  content: "";
+  display: block;
+  top: 50%;
+  left: 50%;
+  border-style: solid;
+  border-color: #000;
+  position: absolute;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+.arrow.down::after {
+  width: 0;
+  height: 40px;
+  border-width: 0 2px 0 0;
+  -webkit-transform: translate(0px, -24px);
+          transform: translate(0px, -24px);
+}
 .arrow-container {
   z-index: 300;
   width: 100vw;
@@ -145,48 +184,7 @@ h1 {
           justify-content: center;
   position: fixed;
   bottom: 40px;
-}
-.arrow:after {
-  pointer-events: none;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  content: "";
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  top: -2px;
-  left: -2px;
-  padding: 2px;
-  z-index: -100;
-  background: var(--accent-color);
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
-  display: block;
-  position: absolute;
-}
-.arrow.down::after {
-  width: 0;
-  height: 40px;
-  border-width: 0 2px 0 0;
-  -webkit-transform: translate(-1px, -26px);
-          transform: translate(-1px, -26px);
-}
-.arrow:before {
-  display: block;
-  -webkit-font-smoothing: antialiased;
-}
-.arrow:hover:after {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: -webkit-transform 0.4s;
-  transition: -webkit-transform 0.4s;
-  transition: transform 0.4s;
-  transition: transform 0.4s, -webkit-transform 0.4s;
+  height: 100px;
 }
 
 .magnet {

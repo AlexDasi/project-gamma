@@ -53,16 +53,33 @@
 
 //ARROW 
 
+.circle{
+    width: 100px;
+    height: 100px;
+    padding: 2px;
+
+    z-index: $z-back;
+
+    position: fixed;
+
+}
+
 .arrow {
     font-size: 45px;
     line-height: 90px;
     cursor: none;
-    margin: 20px;
     width: 90px;
     height: 90px;
     text-align: center;
-    position: relative;
-    text-decoration: none;
+    background: var(--accent-color);
+    border-radius: 100%;
+    transform: scale(1);
+    transition: transform 0.2s;
+
+    :hover{
+        transform: scale(1);
+        transition: transform 0.2s;
+    }
 
     &::before{
         content: '';
@@ -83,6 +100,24 @@
         margin: -20px 0 0 -15px;
     }
 
+    &::after {
+        content: '';
+        display: block;
+        top: 50%;
+        left: 50%;
+        border-style: solid;
+        border-color: #000;
+        position: absolute;
+        transform-origin: 50% 50%;
+      }
+
+    &.down::after { 
+        width: 0;
+        height: 40px;
+        border-width: 0 2px 0 0;
+        transform: translate(0px, -24px);
+    }
+
     &-container{
         z-index: $z-top+100;
         width: 100vw;
@@ -90,47 +125,12 @@
         justify-content: center;
         position: fixed;
         bottom: 40px;
+        height: 100px;
         
     }
-
-    &:after {
-        pointer-events: none;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        content:'';
-        box-sizing: content-box;
-        top: -2px;
-        left: -2px;
-        padding: 2px;
-        z-index: $z-back;
-        background: var(--accent-color);
-        transform: scale(0);
-        transition: transform 0.2s;
-
-
-        display: block;
-        position: absolute;
-    }
-
-    &.down::after { 
-        width: 0;
-        height: 40px;
-        border-width: 0 2px 0 0;
-        transform: translate(-1px, -26px);
-    }
-
-    &:before {
-        display: block;
-        -webkit-font-smoothing: antialiased;
-    }
-
-    &:hover:after {
-        transform: scale(1);
-        transition: transform 0.4s;
-    }
 }
+
+
 
 
 //LINK HOVER ANIMATION

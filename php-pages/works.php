@@ -3,17 +3,19 @@
     <!-- Swiper -->
     <div class="swiper WorksSwiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide works works-1">
-                <img src="images/pictures/camisola.jpg"/>
-                <div class="works--info">
-                    <h2 >CAMISOLA</h2>
-                    <p class="yellow-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, minima quidem, distinctio nobis magnam repudiandae consectetur perferendis quia dolores consequuntur beatae esse officia ut sed molestias? Aperiam non dicta id!</p>
+            <a href="php-pages/project.php">
+                <div class="swiper-slide works works-1">
+                    <img src="images/pictures/camisola.jpg"/>
+                    <div class="works--info">
+                        <h2 >CAMISOLA</h2>
+                        <p class="yellow-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, minima quidem, distinctio nobis magnam repudiandae consectetur perferendis quia dolores consequuntur beatae esse officia ut sed molestias? Aperiam non dicta id!</p>
+                    </div>
+                    <div class="works--details">
+                        <p>Branding and web design</p>
+                        <p class="yellow-600">2022</p>
+                    </div>
                 </div>
-                <div class="works--details">
-                    <p>Branding and web design</p>
-                    <p class="yellow-600">2022</p>
-                </div>
-            </div>
+            </a>
             <div class="swiper-slide works works-2">
                 <img src="images/pictures/Terralava.jpg"/>
                 <div class="works--info">

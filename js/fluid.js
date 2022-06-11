@@ -49,7 +49,7 @@ let config = {
     COLORFUL: false,
     COLOR_UPDATE_SPEED: 10,
     PAUSED: false,
-    BACK_COLOR: { r:199, g: 199, b: 197 },
+    BACK_COLOR: { r:20, g: 20, b: 21 },
     TRANSPARENT: false,
     BLOOM: false,
     BLOOM_ITERATIONS: 8,

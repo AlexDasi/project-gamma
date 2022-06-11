@@ -4,13 +4,13 @@
         <div><p class="message message-intro">Hi, I'm <span>Alex Dasi</span>,</p></div>
         <ul>
             <!--graphic-->
-            <li id="graphic" class="categories--items categories--items-graphic text-hover-fill-goes-right"><a class="main-text graphic" href="">GRAPHIC</a><span><p class="message message-comma">,</p></span></li>
+            <li id="graphic" class="categories--items categories--items-graphic text-hover-fill-goes-right"><h2 class="main-text graphic">GRAPHIC</h2><span><p class="message message-comma">,</p></span></li>
 
             <!--ui-->
-            <li id="ui" class="categories--items categories--items-ui"><a class="main-text ui" href="">USER INTERFACE</a> <span><p class="message message-and">&</p></span></li>
+            <li id="ui" class="categories--items categories--items-ui"><h2 class="main-text ui">USER INTERFACE</h2> <span><p class="message message-and">&</p></span></li>
 
             <!--web-->
-            <li id="web" class="categories--items categories--items-web"><a class="main-text web" href="">WEB</a></li>
+            <li id="web" class="categories--items categories--items-web"><h2 class="main-text web">WEB</h2></li>
         </ul>
         <p class="main-text categories--designer">designer</p>
         <li id="" class="secondary-text message message-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit repellendus eveniet sequi culpa pariatur, corrupti iure vero impedit temporibus perspiciatis deserunt, placeat voluptate voluptates qui exercitationem, incidunt aliquam totam voluptas.</li>

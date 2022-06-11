@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  cursor: none;
   
 }
 
@@ -8,6 +9,7 @@ html {
     overflow-x: hidden;
     scroll-behavior: smooth;
     font-size: 12px;
+    cursor: none;
   }
 
 body{
@@ -30,6 +32,7 @@ p {
 
 a{
   text-decoration: none;
+  cursor: none;
 }
 
 ul{

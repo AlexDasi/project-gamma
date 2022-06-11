@@ -1,6 +1,6 @@
 :root {
-  --main-color: hsla(227, 3%, 8%, 1);
-  --bkg-color: hsla(54, 18%, 97%, 1);
+  --main-color: hsla(54, 18%, 97%, 1);
+  --bkg-color: hsla(227, 3%, 8%, 1);
   --accent-color: hsla(68, 100%, 80%, 1);
   --grey-bkg-color: hsla(60, 2%, 78%, 1);
 }
@@ -20,7 +20,7 @@
   color: var(--main-color);
   font-family: "Inter", sans-serif;
   font-size: 1.5rem;
-  font-weight: 300;
+  font-weight: 200;
 }
 
 h1 {
@@ -115,6 +115,25 @@ h1 {
   position: relative;
   text-decoration: none;
 }
+.arrow::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  top: 50%;
+  left: 50%;
+  border-style: solid;
+  border-color: #000;
+  border-width: 2px 2px 0 0;
+  position: absolute;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+.arrow.down::before {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  margin: -20px 0 0 -15px;
+}
 .arrow-container {
   z-index: 300;
   width: 100vw;
@@ -147,6 +166,15 @@ h1 {
   transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
   transition: transform 0.2s, -webkit-transform 0.2s;
+  display: block;
+  position: absolute;
+}
+.arrow.down::after {
+  width: 0;
+  height: 40px;
+  border-width: 0 2px 0 0;
+  -webkit-transform: translate(-1px, -26px);
+          transform: translate(-1px, -26px);
 }
 .arrow:before {
   display: block;
@@ -161,28 +189,6 @@ h1 {
   transition: transform 0.4s, -webkit-transform 0.4s;
 }
 
-a {
-  -webkit-box-shadow: inset 0 0 0 0 var(--accent-color);
-          box-shadow: inset 0 0 0 0 var(--accent-color);
-  padding: 0 0.25rem;
-  -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
-  transition: -webkit-box-shadow 0.3s ease-in-out;
-  transition: box-shadow 0.3s ease-in-out;
-  transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
-}
-a.graphic:hover {
-  -webkit-box-shadow: inset 400px 0 0 0 var(--accent-color);
-          box-shadow: inset 400px 0 0 0 var(--accent-color);
-}
-a.ui:hover {
-  -webkit-box-shadow: inset 650px 0 0 0 var(--accent-color);
-          box-shadow: inset 650px 0 0 0 var(--accent-color);
-}
-a.web:hover {
-  -webkit-box-shadow: inset 200px 0 0 0 var(--accent-color);
-          box-shadow: inset 200px 0 0 0 var(--accent-color);
-}
-
 .magnet {
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
@@ -193,6 +199,7 @@ a.web:hover {
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  cursor: none;
 }
 
 html {
@@ -201,6 +208,7 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
   font-size: 12px;
+  cursor: none;
 }
 
 body {
@@ -229,6 +237,7 @@ p {
 
 a {
   text-decoration: none;
+  cursor: none;
 }
 
 ul {
@@ -286,11 +295,12 @@ header {
 .categories > ul > li > span {
   display: inline-block;
 }
-.categories > ul > li > a {
+.categories > ul > li > h2 {
   -webkit-filter: blur(1px);
           filter: blur(1px);
+  display: inline-block;
 }
-.categories > ul > li > a:hover {
+.categories > ul > li > h2:hover {
   -webkit-filter: blur(0px);
           filter: blur(0px);
 }
@@ -468,7 +478,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: var(--main-color);
 }
 
 .swiper-pointer-events {
@@ -557,13 +566,13 @@ body {
   opacity: 0;
   width: 100px;
   text-transform: uppercase;
-  left: 20px;
+  left: 400px;
   font-family: var(--main-font);
-  transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  -webkit-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  -ms-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
 }
 .works--details .yellow-600 {
   text-transform: uppercase;
@@ -574,7 +583,7 @@ body {
   padding-top: 20px;
 }
 .works--details > p {
-  color: var(--bkg-color);
+  color: var(--main-color);
   font-size: 16px;
   letter-spacing: 2px;
 }
@@ -585,15 +594,16 @@ body {
   width: 100px;
   text-transform: uppercase;
   font-family: var(--main-font);
-  transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -webkit-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  -webkit-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  -ms-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
 }
 .works--info {
   position: absolute;
   opacity: 0;
-  top: 130px;
+  top: 300px;
   left: -150px;
   font-family: var(--main-font);
   display: -webkit-box;
@@ -603,11 +613,11 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  -webkit-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  -ms-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
 }
 .works--info > * {
   display: inline-block;
@@ -623,7 +633,7 @@ body {
   margin-right: 20px;
 }
 .works--info > p {
-  color: var(--bkg-color);
+  color: var(--main-color);
   font-size: 16px;
   text-align: left;
   width: 35vw;
@@ -633,10 +643,11 @@ body {
   top: 380px;
   padding-top: 20px;
   font-family: var(--main-font);
-  transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -webkit-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  -webkit-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  -ms-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
 }
 
 .MainSwiper {
@@ -734,7 +745,6 @@ body {
 }
 .MainSwiper .swiper-pagination-nav .pagination-nav .swiper-pagination-bullet-active {
   color: #fff;
-  background: #007aff;
 }
 
 .project-header {
@@ -807,6 +817,20 @@ body {
     padding: 0 10vw;
   }
 }
+.follow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  background-color: var(--accent-color);
+  border-radius: 100%;
+  z-index: 1200;
+}
+.follow-mouse-active {
+  display: none;
+}
+
 /* CANVAS */
 canvas {
   z-index: 0;

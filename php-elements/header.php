@@ -20,6 +20,13 @@
     </script>
     <script async src="https://www.google-analytics.com/analytics.js"></script>
 
+    <!-- cursor -->
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="../js/cursor.js"></script> -->
+
+
+
     <link rel="stylesheet" href="scss/js-style/swiper-bundle.min.css"/>
 
     <link rel="stylesheet" href="../css/style.css">

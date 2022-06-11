@@ -19,8 +19,9 @@
         &>span{
             display:inline-block
         }
-        &>a{
+        &>h2{
             filter: blur(1px);
+            display: inline-block;
     
             &:hover{
                 filter: blur(0px);

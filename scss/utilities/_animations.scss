@@ -64,6 +64,25 @@
     position: relative;
     text-decoration: none;
 
+    &::before{
+        content: '';
+        display: block;
+        width: 30px;
+        height: 30px;
+        top: 50%;
+        left: 50%;
+        border-style: solid;
+        border-color: #000;
+        border-width: 2px 2px 0 0;
+        position: absolute;
+        transform-origin: 50% 50%;
+    }
+
+    &.down::before { 
+        transform: rotate(135deg); 
+        margin: -20px 0 0 -15px;
+    }
+
     &-container{
         z-index: $z-top+100;
         width: 100vw;
@@ -89,6 +108,17 @@
         background: var(--accent-color);
         transform: scale(0);
         transition: transform 0.2s;
+
+
+        display: block;
+        position: absolute;
+    }
+
+    &.down::after { 
+        width: 0;
+        height: 40px;
+        border-width: 0 2px 0 0;
+        transform: translate(-1px, -26px);
     }
 
     &:before {
@@ -102,26 +132,27 @@
     }
 }
 
+
 //LINK HOVER ANIMATION
 
-a{
-    box-shadow: inset 0 0 0 0 var(--accent-color);
-    padding: 0 .25rem;
-    transition: box-shadow .3s ease-in-out;
+// a{
+//     box-shadow: inset 0 0 0 0 var(--accent-color);
+//     padding: 0 .25rem;
+//     transition: box-shadow .3s ease-in-out;
 
-    &.graphic:hover {
-        box-shadow: inset 400px 0 0 0 var(--accent-color);
-    }
+//     &.graphic:hover {
+//         box-shadow: inset 400px 0 0 0 var(--accent-color);
+//     }
 
-    &.ui:hover {
-        box-shadow: inset 650px 0 0 0 var(--accent-color);
-    }
+//     &.ui:hover {
+//         box-shadow: inset 650px 0 0 0 var(--accent-color);
+//     }
 
-    &.web:hover {
-        box-shadow: inset 200px 0 0 0 var(--accent-color);
-    }
+//     &.web:hover {
+//         box-shadow: inset 200px 0 0 0 var(--accent-color);
+//     }
 
-}
+// }
 
 
 //MAGNET

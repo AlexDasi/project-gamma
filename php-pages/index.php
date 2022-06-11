@@ -1,14 +1,14 @@
 <?php
 
-include './php-elements/header.php'
+include '../php-elements/header.php'
 
 ?>
 
 <body>
 
-    <?php include './php-elements/nav new.php'?>
+    <?php include '../php-elements/nav new.php'?>
 
-    <!-- <?php include './php-elements/preloader.php'?> -->
+    <!-- <?php include '../php-elements/preloader.php'?> -->
 
 <!-- MAIN CONTENT -->
 
@@ -26,7 +26,8 @@ include './php-elements/header.php'
 
     <div class="swiper-pagination"></div>
     <div class="swiper-pagination-nav"></div>
-    <?php include './php-elements/arrow.php'?>
+    <?php include '../php-elements/arrow.php'?>
+
 </div>
 
 
@@ -36,7 +37,7 @@ include './php-elements/header.php'
 
     <?php
 
-    include './php-elements/js.php'
+    include '../php-elements/js.php'
 
     ?>
         
@@ -44,7 +45,7 @@ include './php-elements/header.php'
 
     <?php
 
-    include './php-elements/footer.php'
+    include '../php-elements/footer.php'
 
     ?>
 </footer>

@@ -12,11 +12,19 @@
     @include secondary-text;
     font-size: 1.5rem;
     font-weight: 200;
+    margin: 0;
 } 
 
 h1{
     color: var(--accent-color);
     font-size: 8rem;
+}
+
+h3{
+    color: var(--accent-color);
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 

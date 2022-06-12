@@ -253,7 +253,7 @@ body {
               opacity: .6;
   }
 
-    &-bullet-active{
+    &-bullet-active, &-bullet:focus{
           box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.02);
           opacity: 1;
     }

@@ -1,14 +1,25 @@
-// Get the container element
-var btnContainer = document.getElementById("building");
+const arrow = document.querySelectorAll('.arrow-container');
 
-// Get all buttons with class="btn" inside the container
-var btns = btnContainer.getElementsByClassName("floor");
-
-// Loop through the buttons and add the active class to the current/clicked button
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
+function getClicked () {
+  this.classList.add('active');
 }
+
+function offClicked () {
+  this.classList.remove('active');
+  debugger;
+}
+
+div.addEventListener('mouseover', getClicked);
+debugger;
+div.addEventListener('mouseout', offClicked);
+
+
+
+
+// document.querySelectorAll('.filter').forEach(function(button){
+//   button.addEventListener('click', (ev) => {
+//     document.querySelector('.active').classList.remove('.active');
+//     ev.target.classList.add('.active');
+//     showCategorie(products, ev.target);
+//   })
+// })

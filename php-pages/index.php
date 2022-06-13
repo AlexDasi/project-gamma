@@ -28,6 +28,8 @@ include '../php-elements/header.php'
     <div class="swiper-pagination-nav"></div>
     <?php include '../php-elements/arrow.php'?>
 
+    <span class="arrowNew circle down"></span>
+    <span class="arrowNew circle right"></span>
 </div>
 
 

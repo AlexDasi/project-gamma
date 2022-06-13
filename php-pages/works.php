@@ -5,7 +5,7 @@
         <div class="swiper-wrapper">
             <a href="php-pages/project.php">
                 <div class="swiper-slide works works-1">
-                    <img src="images/pictures/camisola.jpg"/>
+                    <img src="content/pictures/camisola.jpg"/>
                     <div class="works--info">
                         <h2 >CAMISOLA</h2>
                         <p class="yellow-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, minima quidem, distinctio nobis magnam repudiandae consectetur perferendis quia dolores consequuntur beatae esse officia ut sed molestias? Aperiam non dicta id!</p>
@@ -17,7 +17,7 @@
                 </div>
             </a>
             <div class="swiper-slide works works-2">
-                <img src="images/pictures/Terralava.jpg"/>
+                <img src="content/pictures/Terralava.jpg"/>
                 <div class="works--info">
                     <h2 >TERRALAVA</h2>
                     <p class="yellow-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, minima quidem, distinctio nobis magnam repudiandae consectetur perferendis quia dolores consequuntur beatae esse officia ut sed molestias? Aperiam non dicta id!</p>
@@ -28,28 +28,28 @@
                 </div>
             </div>
             <div class="swiper-slide">
-                <img src="images/pictures/ROTCPop-up.jpg"/>
+                <img src="content/pictures/ROTCPop-up.jpg"/>
             </div>
             <div class="swiper-slide">
-                <img src="images/pictures/SE.jpg"/>
+                <img src="content/pictures/SE.jpg"/>
             </div>
             <div class="swiper-slide">
-                <img src="images/pictures/SKULL-2.jpg"/>
+                <img src="content/pictures/SKULL-2.jpg"/>
             </div>
             <div class="swiper-slide">
-                <img src="images/pictures/poster conciertos.jpg"/>
+                <img src="content/pictures/poster conciertos.jpg"/>
             </div>
             <div class="swiper-slide">
-                <img src="images/pictures/RoS styleguide.jpg"/>
+                <img src="content/pictures/RoS styleguide.jpg"/>
             </div>
             <div class="swiper-slide">
-                <img src="images/pictures/RoS enviromental.jpg"/>
+                <img src="content/pictures/RoS enviromental.jpg"/>
             </div>
             <div class="swiper-slide">
-                <img src="images/pictures/Pinstripe.jpg"/>
+                <img src="content/pictures/Pinstripe.jpg"/>
             </div>
             <div class="swiper-slide">
-                <img src="images/pictures/burbuja-wood-banner.jpg"/>
+                <img src="content/pictures/burbuja-wood-banner.jpg"/>
             </div>
         </div>
 

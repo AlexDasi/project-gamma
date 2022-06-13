@@ -27,6 +27,7 @@ include 'php-elements/header.php'
     <div class="swiper-pagination"></div>
     <div class="swiper-pagination-nav"></div>
     <?php include 'php-elements/arrow.php'?>
+
 </div>
 
 

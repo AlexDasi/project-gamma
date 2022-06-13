@@ -15,31 +15,41 @@ include '../php-elements/header.php'
 
     
     <header class="project-header" style="transform: translate3d(0px, 0px, 0px) skewY(0deg); opacity: 1; pointer-events: initial;">
-        <img class="project-header__image" src="../images/pictures/projects/camisola header.jpg" alt="" js-main-image="">
+        <div class="project-header__image"><img  src="../content/pictures/projects/camisola header.jpg" alt="" js-main-image=""></div>
         <h1 class="project-header__title title title--project title--black">Camisola</h1>
         <section class="project-description">
             <div class="project-description__main">
             
-                <h2 class="slice-infos__title">MILCK - A PHOTOGRAPHY AND VIDEO STUDIO</h2>
+                <h2 class="slice-infos__title">A BOLD HAWAIIAN BRAND AND WEBSITE</h2>
             
                 <div class="slice-infos__text"><p>We were tasked with creating a clean and minimal logo for a new photography and video studio. The logo, visual language and overall brand identity reflects the feeling of the space itself, a white, open and light studio, the perfect backdrop for creating beautiful work. The use of white space and simplicity of the visual language lends itself as a canvas to display the art produced by photographers and videographers in the studio itself, resulting in a synergy of content and brand identity.</p></div>
             
                 <ul class="slice-infos__columns">
                     <li class="info-column">
                         <h3 class="info-column__title title title--2">client</h3>
-                        <div class="info-column__text"><p>Milck Studios<br>2021</p></div>
+                        <div class="info-column__text"><p>Own work<br>2022</p></div>
                     </li>
                     <li class="info-column">
                         <h3 class="info-column__title title title--2">services</h3>
-                        <div class="info-column__text"><p>Branding<br></p></div>
+                        <div class="info-column__text"><p>Branding & Web development<br></p></div>
                     </li>
                     <li class="info-column">
                         <h3 class="info-column__title title title--2">credits</h3>
-                        <div class="info-column__text"><p>Studio Malvah</p></div>
+                        <div class="info-column__text"><p>Alex Dasi</p></div>
                     </li>
                 </ul>
             </div>
-        </section>    
+        </section>
+        <section class="project-content">
+            <div class="project-content__wrapper">
+                <img class="element project-content__image" src="../content/pictures/projects/camisola/Camisola2.jpg" alt=""> 
+                <video class="element project-content__video" autoplay loop muted> 
+                    <source src="../content/videos/camisola/dsk/1.mp4" type="video/mp4"></source>
+                </video>
+                <img class="element project-content__image" src="../content/pictures/projects/camisola/Camisola1.jpg" alt=""> 
+                <p class="project-content__quote">The site <a href="https://frontend.esatid3-2021.com/alex-beta/index.php">is live</a>  if you fancy explore and play with the editor.</p>
+            </div>
+        </section> 
     </header>
 
 

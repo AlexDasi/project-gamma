@@ -35,6 +35,9 @@
 
 .single{
     background-color: var(--accent-color);
+    &>a{
+        color: var(--bkg-color);
+    }
 }
 
 

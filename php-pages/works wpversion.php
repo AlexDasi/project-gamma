@@ -27,34 +27,34 @@ $works = new WP_Query ( array
 <?php endwhile; ?>
 
             <div class="swiper-slide">
-                <img src="images/pictures/camisola.jpg"/>
+                <img src="content/pictures/camisola.jpg"/>
             </div>
             <div class="swiper-slide">
-                <img src="images/pictures/Terralava.jpg"/>
+                <img src="content/pictures/Terralava.jpg"/>
             </div>
             <div class="swiper-slide">
-                <img src="images/pictures/ROTCPop-up.jpg"/>
+                <img src="content/pictures/ROTCPop-up.jpg"/>
             </div>
             <div class="swiper-slide">
-                <img src="images/pictures/SE.jpg"/>
+                <img src="content/pictures/SE.jpg"/>
             </div>
             <div class="swiper-slide">
-                <img src="images/pictures/SKULL-2.jpg"/>
+                <img src="content/pictures/SKULL-2.jpg"/>
             </div>
             <div class="swiper-slide">
-                <img src="images/pictures/poster conciertos.jpg"/>
+                <img src="content/pictures/poster conciertos.jpg"/>
             </div>
             <div class="swiper-slide">
-                <img src="images/pictures/RoS styleguide.jpg"/>
+                <img src="content/pictures/RoS styleguide.jpg"/>
             </div>
             <div class="swiper-slide">
-                <img src="images/pictures/RoS enviromental.jpg"/>
+                <img src="content/pictures/RoS enviromental.jpg"/>
             </div>
             <div class="swiper-slide">
-                <img src="images/pictures/Pinstripe.jpg"/>
+                <img src="content/pictures/Pinstripe.jpg"/>
             </div>
             <div class="swiper-slide">
-                <img src="images/pictures/burbuja-wood-banner.jpg"/>
+                <img src="content/pictures/burbuja-wood-banner.jpg"/>
             </div>
         </div>
         <div class="swiper-pagination"></div>

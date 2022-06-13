@@ -5,7 +5,7 @@
 
     position: absolute;
     left: 10vw;
-    top: 30vh;
+    top: 20vh;
     z-index: $z-null;
 
 .categories-items{
@@ -29,8 +29,6 @@
         }
     }
 
-
-
     &--designer{
         margin-top: 4rem;
         text-transform: lowercase;
@@ -46,30 +44,8 @@
 //     width: 30vw;
 // }
 
-.message{
-    position: relative;
-    font-size: $pmedium;
-    // display: none;
 
-    &-description{
-        right: -45vw;
-        bottom: 13vh;
-        width: 35vw;
-        text-align: right;
-    }
 
-    &-intro{
-        bottom: 1rem;
-        padding: 0 0.25rem;
-        &>span{
-            text-decoration: underline;
-            &:hover{
-                background-color: var(--accent-color);
-                text-decoration: none;
-            }
-        }
-    }
-}
 
 #graphic:hover + #message-graphic{
     display: block;
@@ -133,4 +109,72 @@
 //     opacity: 1;
 // }
 
+
+
+//MQUERY
+
+@media (max-width:768px){
+
+
+    .categories{
+        width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+
+        &--designer{
+            font-size: 8vw;
+        }
+        &--items{
+            &>ul>li{
+                &>h2{
+                    filter: blur(0px);
+                }
+            }
+        }
+        .message{Z
+            &-description{
+                margin-top: 5vh;
+                width: 80vw;
+                text-align: right;
+            }
+        }
+
+        .slide-index{
+            height: 100%;
+        }
+
+        .categories > ul > li > h2{
+            font-size: 8vw;
+        }
+    }
+}
+
+
+
+@media (min-width:768px){
+    .message{
+        position: relative;
+        font-size: $pmedium;
+        // display: none;
+
+        &-description{
+            right: -45vw;
+            bottom: 13vh;
+            width: 35vw;
+            text-align: right;
+        }
+
+        &-intro{
+            bottom: 1rem;
+            padding: 0 0.25rem;
+            &>span{
+                text-decoration: underline;
+                &:hover{
+                    background-color: var(--accent-color);
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
 

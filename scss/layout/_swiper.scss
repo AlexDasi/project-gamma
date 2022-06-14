@@ -232,30 +232,32 @@ body {
     font-size: 0px;
     z-index: $z-top;
 
-  &-bullet {
-    text-align: center;
-    line-height: 20px;
-    font-size: 0px;
-    color: #000;
-      
-    width: 40px;
-    height: 40px;
-    position: relative;
-    background: var(--accent-color);
-    opacity: 0.4;
-    transform: rotate(135deg) skew(20deg, 20deg);
-    border: none;
-    border-radius: 0;
-  }
+    &-bullet {
+      text-align: center;
+      line-height: 20px;
+      font-size: 0px;
+      color: #000;
+        
+      width: 40px;
+      height: 40px;
+      position: relative;
+      background: var(--accent-color);
+      opacity: 0.4;
+      transform: rotate(135deg) skew(20deg, 20deg);
+      border: none;
+      border-radius: 0;
+    }
 
-  &-bullet:hover{
-                  box-shadow: 0px 0px 4px 0px var(--accent-color);
-              opacity: .6;
-  }
+    &-bullet:hover{
+      box-shadow: 0px 0px 4px 0px var(--accent-color);
+      opacity: .6;
+      @include transitions;
+    }
 
-    &-bullet-active, &-bullet:focus{
-          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.02);
-          opacity: 1;
+    body &-bullet-active, body &-bullet:focus{
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.02);
+        opacity: 1;
+        @include transitions;
     }
   }
 }

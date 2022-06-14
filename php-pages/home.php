@@ -1,7 +1,10 @@
 <div id="home">
 
     <section class="categories">
-        <div><p class="message message-intro">Hi, I'm <span>Alex Dasi</span>,</p></div>
+        <div><p class="message message-intro">Hi, I'm <span>Alex Dasi 
+            <!-- <img src="content/pictures/photome.jpg" alt=""> -->
+        </span>,</p>
+        </div>
         <ul>
             <!--graphic-->
             <li id="graphic" class="categories--items categories--items-graphic text-hover-fill-goes-right"><h2 class="main-text graphic">GRAPHIC</h2><span><p class="message message-comma">,</p></span></li>

@@ -4,8 +4,8 @@
     flex-direction: column;
 
     position: absolute;
-    left: 10vw;
-    top: 20vh;
+    width: 90vw;
+    margin: 10vh 5vw;
     z-index: $z-null;
 
 .categories-items{
@@ -20,6 +20,7 @@
             display:inline-block
         }
         &>h2{
+            font-size: 8vw;
             filter: blur(1px);
             display: inline-block;
     
@@ -131,7 +132,7 @@
                 }
             }
         }
-        .message{Z
+        .message{
             &-description{
                 margin-top: 5vh;
                 width: 80vw;
@@ -144,7 +145,7 @@
         }
 
         .categories > ul > li > h2{
-            font-size: 8vw;
+            font-size: 10vw;
         }
     }
 }
@@ -158,8 +159,9 @@
         // display: none;
 
         &-description{
-            right: -45vw;
-            bottom: 13vh;
+            position: absolute;
+            right: 5vw;
+            bottom: -20vh;
             width: 35vw;
             text-align: right;
         }
@@ -169,9 +171,20 @@
             padding: 0 0.25rem;
             &>span{
                 text-decoration: underline;
+                // & img{
+                //     position: absolute;
+                //     filter: grayscale(1);
+                //     transition: filter 0.3s;
+                // }
+
                 &:hover{
                     background-color: var(--accent-color);
                     text-decoration: none;
+
+                    // & img{
+                    //     filter: grayscale(0);
+                    //     transition: filter 0.3s;
+                    // }
                 }
             }
         }

@@ -14,8 +14,8 @@ include '../php-elements/header.php'
     <!-- MAIN CONTENT -->
 
     
-    <header class="project-header" style="transform: translate3d(0px, 0px, 0px) skewY(0deg); opacity: 1; pointer-events: initial;">
-        <div class="project-header__image"><img  src="../content/pictures/projects/camisola header.jpg" alt="" js-main-image=""></div>
+    <header class="project-header">
+        <div class="project-header__image"><img class="center" src="../content/pictures/projects/camisola header.jpg" alt=""></div>
         <h1 class="project-header__title title title--project title--black">Camisola</h1>
         <section class="project-description">
             <div class="project-description__main">

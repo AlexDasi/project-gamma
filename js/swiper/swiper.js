@@ -3,6 +3,8 @@
 var menu = ['HOME', 'WORKS', 'ABOUT', 'CONTACT'];
 var swiper = new Swiper(".MainSwiper", {
   direction: "vertical",
+  speed: 1000,
+  loop: true,
   allowTouchMove: false,
   spaceBetween: 0,
   slidesPerView: "auto",
@@ -39,6 +41,8 @@ var swiper = new Swiper(".MainSwiper", {
 
 var swiper = new Swiper(".WorksSwiper", {
   allowTouchMove: true,
+  // loop: true,
+  initialSlide : 3,
   grabCursor: true,
   preventClicks: false,
   mousewheel: true,

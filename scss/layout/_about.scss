@@ -85,7 +85,8 @@
     display: block;
     padding: 6rem 0;
     overflow: hidden;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
 }
 
 @media (min-width:768px) {

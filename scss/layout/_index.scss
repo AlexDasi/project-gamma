@@ -170,24 +170,10 @@
             bottom: 1rem;
             padding: 0 0.25rem;
             &>span{
-                text-decoration: underline;
-                // & img{
-                //     position: absolute;
-                //     filter: grayscale(1);
-                //     transition: filter 0.3s;
-                // }
-
-                &:hover{
-                    background-color: var(--accent-color);
-                    text-decoration: none;
-
-                    // & img{
-                    //     filter: grayscale(0);
-                    //     transition: filter 0.3s;
-                    // }
-                }
+                font-weight: 500;
             }
         }
     }
 }
+
 

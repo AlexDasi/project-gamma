@@ -13,6 +13,7 @@
 
 <script src="../js/swiper/swiper-bundle.min.js"></script>
 <script src="../js/swiper/swiper.js"></script>
+<script src="../js/swiper/swiper-projects.js"></script>
 
 
 

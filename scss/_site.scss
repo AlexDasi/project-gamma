@@ -48,8 +48,43 @@ ul{
 }
 
 
+//GENERAL MQUERY 
 
+@media (max-width:768px) {
+    .hiddenMobile{
+      display: none;
+    }
+    .hiddenDesktop{
+      overflow-x: hidden;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
 
+      &>.swiper-wrapper{
+        display: block;
+
+        &>.swiper-slide{
+          min-height: 100vh;
+          height: auto;
+        }
+      }
+    }
+
+    .creditsMobile{
+      position: absolute !important;
+      right: 2vw;
+    }
+
+    .about-description{
+      margin: 4vw;
+    }
+  }
+
+  @media (min-width:768px) {
+    .hiddenDesktop{
+      display: none;
+    }
+  }
 
 
 

@@ -42,6 +42,9 @@ var swiper = new Swiper(".MainSwiper", {
 var swiper = new Swiper(".WorksSwiper", {
   allowTouchMove: true,
   direction: "horizontal",
+  mousewheel: {
+    forceToAxis: true,
+  },
   loop: true,
   initialSlide : 3,
   grabCursor: true,

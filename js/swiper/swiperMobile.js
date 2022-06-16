@@ -7,12 +7,10 @@ var swiper = new Swiper(".MainSwiper", {
   // loop: true,
   allowTouchMove: true,
   spaceBetween: 0,
-  slidesPerView: "auto",
+  slidesPerView: "1",
   centeredSlides: true,
+  grabCursor: true,
   direction: "vertical",
-  mousewheel: {
-    forceToAxis: true,
-  },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -33,7 +31,7 @@ var swiper = new Swiper(".WorksSwiper", {
   loop: true,
   initialSlide : 3,
   grabCursor: true,
-  mousewheel: false,
+  direction: "horizontal",
   preventClicks: false,
   // mousewheel: false,
   centeredSlides: true,

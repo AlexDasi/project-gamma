@@ -5,9 +5,9 @@ var swiper = new Swiper(".MainSwiper", {
   direction: "vertical",
   speed: 1000,
   // loop: true,
-  allowTouchMove: false,
+  allowTouchMove: true,
   spaceBetween: 0,
-  slidesPerView: "auto",
+  slidesPerView: 1,
   centeredSlides: true,
   mousewheel: false,
   pagination: {
@@ -21,20 +21,6 @@ var swiper = new Swiper(".MainSwiper", {
     nextEl: '.slideNext-btn',
     prevEl: '.slidePrev-btn',
   },
-
-
-  
-
-  //TO ADD FLOORS//
-
-  // pagination: {
-  //   el: ".swiper-pagination",
-  //   clickable: true,
-  // },
-
-  // navigation: {
-  //   nextEl: '.swiper-button-next',
-  // },
 });
 
 //WORK SWIPER
@@ -45,8 +31,9 @@ var swiper = new Swiper(".WorksSwiper", {
   loop: true,
   initialSlide : 3,
   grabCursor: true,
+  mousewheel: false,
   preventClicks: false,
-  mousewheel: true,
+  // mousewheel: false,
   centeredSlides: true,
   slidesPerView: "auto",
   spaceBetween: 0,
@@ -55,19 +42,18 @@ var swiper = new Swiper(".WorksSwiper", {
     enabled: true,
   },
 
-  on: {
-    resize: function () {
-        var windowWidth = $(window).width();
-        if(windowWidth <= 767){
-                swiperBottomScrollbarFull.direction('vertical');
-                swiperBottomScrollbarFull.detachEvents();
-        }else{
-                swiperBottomScrollbarFull.direction('horizontal');
-                swiperBottomScrollbarFull.attachEvents();
-        }
-        swiperBottomScrollbarFull.update();
-    }
-  }
+  // on: {
+  //   resize: function () {
+  //       var windowWidth = $(window).width();
+  //       if(windowWidth <= 767){
+  //               swiperBottomScrollbarFull.direction('vertical');
+  //               swiperBottomScrollbarFull.detachEvents();
+  //       }else{
+  //               swiperBottomScrollbarFull.direction('horizontal');
+  //               swiperBottomScrollbarFull.attachEvents();
+  //       }
+  //       swiperBottomScrollbarFull.update();
+  //   }
 });
 
 

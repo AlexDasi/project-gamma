@@ -59,11 +59,7 @@ include 'php-elements/header.php'
 
 
 
-    <?php
-
-    include 'php-elements/js.php'
-
-    ?>
+    <?php include 'php-elements/js.php'?>
         
     <footer>
 

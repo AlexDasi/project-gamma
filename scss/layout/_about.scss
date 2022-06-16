@@ -81,6 +81,9 @@
 //SECTIONS
 
 .about-description {
+    width: 65vw;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
     display: block;
     padding: 6rem 0;
@@ -89,24 +92,17 @@
     height: 100%;
 }
 
-@media (min-width:768px) {
+@media (max-width:1280px) {
     .about-description {
         width: 100%;
-        padding: 4vw 0;
         z-index: 2;
 
         &__main{
             height: 100%;
-            width: 65vw;
-            margin: auto;
+            width: 90vw;
+            margin: 5vw;
             padding-bottom: 10vh;
         }
-    }
-}
-
-@media (min-width:1280px) {
-    .about-description {
-        padding: 4vw 0
     }
 }
 
@@ -197,6 +193,7 @@
 
 .info-column__title{
     color: var(--main-color);
+    min-width: 25vw;
 }
 
 @media (max-width:575px) {

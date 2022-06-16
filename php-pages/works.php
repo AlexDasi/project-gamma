@@ -121,8 +121,8 @@
 
             <div class="swiper-slide works works-8">
                 <!-- thumbnail -->
-                <img class="hiddenMobile" src="content/pictures/RoS enviromentale.jpg"/>
-                <img class="hiddenDesktop" src="content/pictures/tinified/RoS enviromentale.jpg"/>
+                <img class="hiddenMobile" src="content/pictures/RoS enviromental.jpg"/>
+                <img class="hiddenDesktop" src="content/pictures/tinified/RoS enviromental.jpg"/>
                 <!-- info -->
                 <div class="works--info">
                     <h2 >office design</h2>

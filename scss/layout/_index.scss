@@ -180,5 +180,17 @@
     }
 }
 
+@media (max-width:768px) {
+    .categories > ul > li > h2 {
+        font-size: 16vw;
+    }
+    .message-description {
+        width: 90vw;
+        padding-top: 4vh;
+        text-align: left;
+        font-size: 4vw;
+    }
+}
+
 
 

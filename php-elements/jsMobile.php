@@ -12,8 +12,7 @@
 <!--swiper-->
 
 <script src="../js/swiper/swiper-bundle.min.js"></script>
-<script class="hiddenMobile" src="../js/swiper/swiper.js"></script>
-<script class="hiddenDesktop" src="../js/swiper/swiperMobile.js"></script>
+<script src="../js/swiper/swiperMobile.js"></script>
 
 
 

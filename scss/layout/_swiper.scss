@@ -13,6 +13,7 @@ body {
   height: 100vh;
   display: flex;
   align-items: center;
+  overflow: hidden;
 
 }
 
@@ -326,11 +327,29 @@ body {
       width: 90vw;
       overflow: hidden;
       display: flex;
+      transform: scale(1);
       justify-content: center;
       padding: 10vh 0;
 
+      &:hover{
+        height: 100%;
+        width: 90vw;
+        overflow: hidden;
+        display: flex;
+        transform: scale(1);
+        justify-content: center;
+        padding: 10vh 0;
+
+        & img{
+          filter: contrast(130%);
+          filter: grayscale(0);
+          filter: brightness(0.5);
+        }
+      }
+
       & img{
         filter: grayscale(0);
+        filter: brightness(0.5);
         opacity: 1;
         transform: scale(1);
         width: auto;
@@ -349,12 +368,24 @@ body {
     font-family: var(--main-font);
     @include flexbox;
     flex-direction: column;
+    margin-left: 2vw;
 
+    &>h2{
+      text-align: left;
+      margin-bottom: 2vh;
+    }
 
     &>*{
       text-align: left;
     }
   }
+
+  .works:hover .works--info{
+
+    top: 300px;
+  }
 }
+
+
 
 

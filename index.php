@@ -63,6 +63,8 @@ include 'php-elements/header.php'
         
     <footer>
 
+    <p class="credits creditsMobile">Alex Dasi©2022</p>
+
     <?php
 
     include 'php-elements/footer.php'

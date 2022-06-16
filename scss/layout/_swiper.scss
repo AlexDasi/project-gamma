@@ -13,7 +13,7 @@ body {
   height: 100vh;
   display: flex;
   align-items: center;
-  overflow: hidden;
+  // overflow: hidden;
 
 }
 
@@ -54,6 +54,8 @@ body {
     background-size: cover;
     width: auto;
     transform: scale(0.9);
+
+
 
     transition: transform 0.3s;
 
@@ -326,16 +328,17 @@ body {
       height: 100%;
       width: 90vw;
       overflow: hidden;
-      display: flex;
+      display: block;
       transform: scale(1);
       justify-content: center;
       padding: 10vh 0;
+
 
       &:hover{
         height: 100%;
         width: 90vw;
         overflow: hidden;
-        display: flex;
+        display: block;
         transform: scale(1);
         justify-content: center;
         padding: 10vh 0;
@@ -383,6 +386,14 @@ body {
   .works:hover .works--info{
 
     top: 300px;
+  }
+
+  .swiper-slide{
+    margin: 10vh 5vw;
+  }
+
+  .slide-works{
+    margin: 0;
   }
 }
 

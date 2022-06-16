@@ -3,9 +3,9 @@
     @include flexbox;
     flex-direction: column;
 
-    position: absolute;
+    position: relative;
+    margin: 5vw;
     width: 90vw;
-    margin: 10vh 5vw;
     z-index: $z-null;
 
 .categories-items{
@@ -140,6 +140,8 @@
             }
         }
     }
+
+
 }
 
 @media (max-width:1280px){
@@ -178,6 +180,10 @@
     p{
         font-size: 3vw;
     }
+
+    .categories{
+        position:relative;
+    }
 }
 
 @media (max-width:768px) {
@@ -188,7 +194,7 @@
         width: 90vw;
         padding-top: 4vh;
         text-align: left;
-        font-size: 4vw;
+        font-size: 6vw;
     }
 }
 

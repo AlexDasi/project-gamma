@@ -283,6 +283,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   position: initial;
+  overflow-x: hidden;
 }
 
 p {
@@ -305,7 +306,7 @@ ul {
           margin-block-end: 0;
   -webkit-margin-before: 0;
           margin-block-start: 0;
-  list-style-type: none;
+  list-style-type: none !important;
   /* Remove bullets */
   padding: 0;
   /* Remove padding */
@@ -323,7 +324,6 @@ ul {
   }
 
   .hiddenDesktop {
-    overflow-x: hidden;
     width: 100vw;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -337,13 +337,7 @@ ul {
     display: block;
   }
   .hiddenDesktop > .swiper-wrapper > .swiper-slide {
-    min-height: 100vh;
     height: auto;
-  }
-
-  .creditsMobile {
-    position: absolute !important;
-    right: 2vw;
   }
 }
 @media (min-width: 1280px) {
@@ -356,8 +350,6 @@ header {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  min-width: 100vw;
-  max-width: 100vw;
   -ms-flex-preferred-size: auto;
       flex-basis: auto;
   -ms-flex-wrap: wrap;
@@ -373,9 +365,9 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: absolute;
+  position: relative;
+  margin: 5vw;
   width: 90vw;
-  margin: 10vh 5vw;
   z-index: 0;
 }
 .categories .categories-items {
@@ -524,6 +516,10 @@ header {
   p {
     font-size: 3vw;
   }
+
+  .categories {
+    position: relative;
+  }
 }
 @media (max-width: 768px) {
   .categories > ul > li > h2 {
@@ -534,7 +530,7 @@ header {
     width: 90vw;
     padding-top: 4vh;
     text-align: left;
-    font-size: 4vw;
+    font-size: 6vw;
   }
 }
 .nav {
@@ -598,7 +594,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  overflow: hidden;
 }
 
 .swiper {
@@ -905,9 +900,7 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
     height: 100%;
     width: 90vw;
     overflow: hidden;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
     -webkit-transform: scale(1);
             transform: scale(1);
     -webkit-box-pack: center;
@@ -919,9 +912,7 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
     height: 100%;
     width: 90vw;
     overflow: hidden;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
     -webkit-transform: scale(1);
             transform: scale(1);
     -webkit-box-pack: center;
@@ -975,6 +966,14 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
 
   .works:hover .works--info {
     top: 300px;
+  }
+
+  .swiper-slide {
+    margin: 10vh 5vw;
+  }
+
+  .slide-works {
+    margin: 0;
   }
 }
 .project-header {
@@ -1210,6 +1209,14 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
   margin-top: 4vw;
 }
 
+@media (max-width: 1280px) {
+  .works--info > p {
+    color: var(--main-color);
+    font-size: 2.5vw;
+    text-align: left;
+    width: 50vw;
+  }
+}
 @media (min-width: 768px) {
   .project-description__main .slice-infos__columns {
     -webkit-box-orient: horizontal;
@@ -1221,6 +1228,11 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
 @media (max-width: 768px) {
   .padding3 {
     padding: 3vw;
+  }
+
+  .works--info > p {
+    font-size: 5vw;
+    width: 80vw;
   }
 }
 .about-header {
@@ -1301,7 +1313,6 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
   .about-description__main {
     height: 100%;
     width: 90vw;
-    margin: 5vw;
     padding-bottom: 10vh;
   }
 }
@@ -1516,12 +1527,33 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
 .credits {
   font-size: 14px;
   position: fixed;
-  right: 2vw;
-  bottom: 2vh;
+  right: 10px;
+  bottom: 10px;
+  z-index: 200;
   text-transform: uppercase;
   color: var(--main-color);
 }
 
+@media (max-width: 1280px) {
+  .contact--message__main {
+    font-size: 20vw;
+    max-width: 85vw;
+  }
+  .contact--message__text {
+    display: block;
+    left: 1vw;
+    width: 60vw;
+    margin-top: 3vh;
+  }
+  .contact--message__text > p {
+    font-size: 4vw;
+  }
+}
+@media (max-width: 768px) {
+  .contact--social {
+    width: auto;
+  }
+}
 .follow {
   position: absolute;
   left: 0;

@@ -2,14 +2,17 @@
 
 var menu = ['HOME', 'WORKS', 'ABOUT', 'CONTACT'];
 var swiper = new Swiper(".MainSwiper", {
-  direction: "vertical",
+
   speed: 1000,
   // loop: true,
   allowTouchMove: true,
   spaceBetween: 0,
-  slidesPerView: 1,
+  slidesPerView: "auto",
   centeredSlides: true,
-  mousewheel: false,
+  direction: "vertical",
+  mousewheel: {
+    forceToAxis: true,
+  },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -27,7 +30,6 @@ var swiper = new Swiper(".MainSwiper", {
 
 var swiper = new Swiper(".WorksSwiper", {
   allowTouchMove: true,
-  direction: "horizontal",
   loop: true,
   initialSlide : 3,
   grabCursor: true,

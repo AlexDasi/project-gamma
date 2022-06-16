@@ -322,6 +322,14 @@
     }
 
 }
+@media (max-width:1280px) {
+    .works--info > p {
+        color: var(--main-color);
+        font-size: 2.5vw;
+        text-align: left;
+        width: 50vw;
+    }
+}
 
 @media (min-width:768px) {
     .project-description__main .slice-infos__columns {
@@ -332,6 +340,11 @@
 @media (max-width:768px) {
     .padding3{
         padding: 3vw;
+    }
+
+    .works--info > p {
+        font-size: 5vw;
+        width: 80vw;
     }
 }
 

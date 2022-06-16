@@ -21,6 +21,7 @@ body{
   @include flexbox;
   flex-direction: column;
   position: initial;    
+  overflow-x: hidden;
 }
 
 p {
@@ -38,7 +39,7 @@ ul{
   padding-inline-start: 0;
   margin-block-end: 0;
   margin-block-start: 0;
-  list-style-type: none; /* Remove bullets */
+  list-style-type: none !important; /* Remove bullets */
   padding: 0; /* Remove padding */
   margin: 0; /* Remove margins */
 }
@@ -55,7 +56,7 @@ ul{
       display: none!important;
     }
     .hiddenDesktop{
-      overflow-x: hidden;
+      // overflow-x: hidden;
       width: 100vw;
       display: flex;
       flex-direction: column;
@@ -64,17 +65,13 @@ ul{
         display: block;
 
         &>.swiper-slide{
-          min-height: 100vh;
+          // min-height: 100vh;
           height: auto;
         }
       }
     }
-
-    .creditsMobile{
-      position: absolute !important;
-      right: 2vw;
-    }
   }
+
 
   @media (min-width:1280px) {
     .hiddenDesktop{

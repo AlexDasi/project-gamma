@@ -7,7 +7,7 @@
         </div>
     </div>     
     
-    <p class="credits creditsMobile">Alex Dasi©2022</p>
+
 
     <div class="contact--social">
         <a href="" class="contact--social__element">

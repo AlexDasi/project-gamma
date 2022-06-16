@@ -24,65 +24,71 @@ SOFTWARE.
 
 'use strict';
 
-// Mobile promo section
 
-const promoPopup = document.getElementsByClassName('promo')[0];
-const promoPopupClose = document.getElementsByClassName('promo-close')[0];
-
-if (isMobile()) {
-    setTimeout(() => {
-        promoPopup.style.display = 'table';
-    }, 20000);
-}
-
-promoPopupClose.addEventListener('click', e => {
-    promoPopup.style.display = 'none';
-});
-
-const appleLink = document.getElementById('apple_link');
-appleLink.addEventListener('click', e => {
-    ga('send', 'event', 'link promo', 'app');
-    window.open('https://apps.apple.com/us/app/fluid-simulation/id1443124993');
-});
-
-const googleLink = document.getElementById('google_link');
-googleLink.addEventListener('click', e => {
-    ga('send', 'event', 'link promo', 'app');
-    window.open('https://play.google.com/store/apps/details?id=games.paveldogreat.fluidsimfree');
-});
 
 // Simulation section
 
+// const canvas = document.getElementById("c--fluid");
 const canvas = document.getElementsByTagName('canvas')[0];
 resizeCanvas();
+
+//CLEAN CONFIG
 
 let config = {
     SIM_RESOLUTION: 128,
     DYE_RESOLUTION: 1024,
-    CAPTURE_RESOLUTION: 512,
-    DENSITY_DISSIPATION: 1,
-    VELOCITY_DISSIPATION: 0.2,
-    PRESSURE: 0.8,
-    PRESSURE_ITERATIONS: 20,
-    CURL: 30,
+    CAPTURE_RESOLUTION: 128,
+    DENSITY_DISSIPATION: 1.5,
+    VELOCITY_DISSIPATION: 0.9,
+    PRESSURE: 0,
+    PRESSURE_ITERATIONS: 30,
+    CURL: 3,
     SPLAT_RADIUS: 0.25,
     SPLAT_FORCE: 6000,
     SHADING: true,
-    COLORFUL: true,
+    COLORFUL: false,
     COLOR_UPDATE_SPEED: 10,
     PAUSED: false,
-    BACK_COLOR: { r: 0, g: 0, b: 0 },
+    BACK_COLOR: { r:20, g: 20, b: 21 },
     TRANSPARENT: false,
-    BLOOM: true,
+    BLOOM: false,
     BLOOM_ITERATIONS: 8,
     BLOOM_RESOLUTION: 256,
-    BLOOM_INTENSITY: 0.8,
+    BLOOM_INTENSITY: 0.5,
     BLOOM_THRESHOLD: 0.6,
     BLOOM_SOFT_KNEE: 0.7,
-    SUNRAYS: true,
+    SUNRAYS: false,
     SUNRAYS_RESOLUTION: 196,
     SUNRAYS_WEIGHT: 1.0,
 }
+
+// let config = {
+//     SIM_RESOLUTION: 128,
+//     DYE_RESOLUTION: 1024,
+//     CAPTURE_RESOLUTION: 512,
+//     DENSITY_DISSIPATION: 3,
+//     VELOCITY_DISSIPATION: 1.5,
+//     PRESSURE: 0,
+//     PRESSURE_ITERATIONS: 20,
+//     CURL: 3,
+//     SPLAT_RADIUS: 0.7,
+//     SPLAT_FORCE: 2000,
+//     SHADING: false,
+//     COLORFUL: false,
+//     COLOR_UPDATE_SPEED: 0,
+//     PAUSED: false,
+//     BACK_COLOR: { r:199, g: 199, b: 197 },
+//     TRANSPARENT: false,
+//     BLOOM: false,
+//     BLOOM_ITERATIONS: 0,
+//     BLOOM_RESOLUTION: 256,
+//     BLOOM_INTENSITY: 0.8,
+//     BLOOM_THRESHOLD: 0.6,
+//     BLOOM_SOFT_KNEE: 0.7,
+//     SUNRAYS: false,
+//     SUNRAYS_RESOLUTION: 196,
+//     SUNRAYS_WEIGHT: 1.0,
+// }
 
 function pointerPrototype () {
     this.id = -1;
@@ -113,7 +119,7 @@ if (!ext.supportLinearFiltering) {
     config.SUNRAYS = false;
 }
 
-startGUI();
+// startGUI();
 
 function getWebGLContext (canvas) {
     const params = { alpha: true, depth: false, stencil: false, antialias: false, preserveDrawingBuffer: false };
@@ -133,7 +139,7 @@ function getWebGLContext (canvas) {
         supportLinearFiltering = gl.getExtension('OES_texture_half_float_linear');
     }
 
-    gl.clearColor(0.0, 0.0, 0.0, 1.0);
+    gl.clearColor(0.0, 0.0, 0.0, 0.0);
 
     const halfFloatTexType = isWebGL2 ? gl.HALF_FLOAT : halfFloat.HALF_FLOAT_OES;
     let formatRGBA;
@@ -328,6 +334,7 @@ function clamp01 (input) {
 
 function textureToCanvas (texture, width, height) {
     let captureCanvas = document.createElement('canvas');
+    g.id = 'c--fluid';
     let ctx = captureCanvas.getContext('2d');
     captureCanvas.width = width;
     captureCanvas.height = height;
@@ -1167,7 +1174,7 @@ function updateKeywords () {
 
 updateKeywords();
 initFramebuffers();
-multipleSplats(parseInt(Math.random() * 20) + 5);
+// multipleSplats(parseInt(Math.random() * 20) + 5);
 
 let lastUpdateTime = Date.now();
 let colorUpdateTimer = 0.0;
@@ -1203,7 +1210,7 @@ function resizeCanvas () {
     }
     return false;
 }
-
+//HERE?
 function updateColors (dt) {
     if (!config.COLORFUL) return;
 
@@ -1460,6 +1467,22 @@ function correctRadius (radius) {
         radius *= aspectRatio;
     return radius;
 }
+
+// canvas.addEventListener('mousedown', e => {
+//     let posX = scaleByPixelRatio(e.offsetX);
+//     let posY = scaleByPixelRatio(e.offsetY);
+//     let pointer = pointers.find(p => p.id == -1);
+//     if (pointer == null)
+//         pointer = new pointerPrototype();
+//     updatePointerDownData(pointer, -1, posX, posY);
+// });
+
+let posX = scaleByPixelRatio(0);
+let posY = scaleByPixelRatio(0);
+let pointer = pointers.find(p => p.id == -1);
+if (pointer == null)
+    pointer = new pointerPrototype();
+updatePointerDownData(pointer, -1, posX, posY);
 
 canvas.addEventListener('mousedown', e => {
     let posX = scaleByPixelRatio(e.offsetX);

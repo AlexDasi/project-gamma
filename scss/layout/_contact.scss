@@ -69,12 +69,40 @@
 .credits{
     font-size: $psmallDesktop;
     position: fixed;
-    right: 2vw;
-    bottom: 2vh;
+    right: 10px;
+    bottom: 10px;
+    z-index: $z-top;
 
     text-transform: uppercase;
     // color: var(--bkg-color);
     color: var(--main-color);
     // background-color: var(--accent-color);
+}
+
+@media (max-width:1280px) {
+
+    .contact--message{
+        &__main{
+            font-size: 20vw;
+            max-width: 85vw;
+        }
+        &__text{
+            display: block;
+            left: 1vw;
+            width: 60vw;
+            margin-top: 3vh;
+
+            &>p{
+                font-size: 4vw;
+            }
+        }
+    }
+}
+
+
+@media (max-width:768px) {
+    .contact--social{
+        width: auto;
+    }
 }
 

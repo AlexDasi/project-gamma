@@ -16,7 +16,7 @@
             <li id="web" class="categories--items categories--items-web"><h2 class="main-text web">WEB</h2></li>
         </ul>
         <p class="main-text categories--designer">designer</p>
-        <li id="" class="secondary-text message message-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit repellendus eveniet sequi culpa pariatur, corrupti iure vero impedit temporibus perspiciatis deserunt, placeat voluptate voluptates qui exercitationem, incidunt aliquam totam voluptas.</li>
+        <p id="" class="secondary-text message message-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit repellendus eveniet sequi culpa pariatur, corrupti iure vero impedit temporibus perspiciatis deserunt, placeat voluptate voluptates qui exercitationem, incidunt aliquam totam voluptas.</p>
 
     </section>
 

@@ -4,5 +4,11 @@
     </a>
 </div>
 
+<div class="hiddenDesktop arrow-container slide-arrow slide-arrow__next slideNext-btn">
+    <a class="circle effect">
+        <div class="arrow down"></div>
+    </a>
+</div>
+
 
 

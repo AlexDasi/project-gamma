@@ -41,7 +41,7 @@ var swiper = new Swiper(".MainSwiper", {
 
 var swiper = new Swiper(".WorksSwiper", {
   allowTouchMove: true,
-  // loop: true,
+  loop: true,
   initialSlide : 3,
   grabCursor: true,
   preventClicks: false,

@@ -193,3 +193,22 @@
 .magnet {
     transition: transform .3s ease;
 }
+
+
+//MQUERY
+
+@media (max-width: 1280px){
+    .arrow {
+        &::before{
+            border-color: var(--bkg-color);
+        }
+
+        &::after {
+            border-color: var(--bkg-color);
+        }
+    }
+
+    .circle{
+        background-color: var(--accent-color);
+    }
+}

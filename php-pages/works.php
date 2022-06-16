@@ -6,7 +6,8 @@
             <a href="php-pages/projects/camisola.php">
                 <div class="swiper-slide works works-1">
                 <!-- thumbnail -->
-                    <img src="content/pictures/camisola.jpg"/>
+                    <img class="hiddenMobile" src="content/pictures/camisola.jpg"/>
+                    <img class="hiddenDesktop" src="content/pictures/tinified/camisola.jpg"/>
                 <!-- info -->
                     <div class="works--info">
                         <h2 >CAMISOLA</h2>
@@ -22,7 +23,9 @@
 
             <div class="swiper-slide works works-2">
                 <!-- thumbnail -->
-                <img src="content/pictures/Terralava.jpg"/>
+
+                <img class="hiddenMobile" src="content/pictures/Terralava.jpg"/>
+                <img class="hiddenDesktop" src="content/pictures/tinified/Terralava.jpg"/>
                 <!-- info -->
                 <div class="works--info">
                     <h2 >TERRALAVA</h2>
@@ -37,7 +40,8 @@
 
             <div class="swiper-slide works works-3">
                 <!-- thumbnail -->
-                <img src="content/pictures/ROTCPop-up.jpg"/>
+                <img class="hiddenMobile" src="content/pictures/ROTCPop-up.jpg"/>
+                <img class="hiddenDesktop" src="content/pictures/tinified/ROTCPop-up.jpg"/>
                 <!-- info -->
                 <div class="works--info">
                     <h2>ROTC</h2>
@@ -52,7 +56,8 @@
 
             <div class="swiper-slide works works-4">
                 <!-- thumbnail -->
-                <img src="content/pictures/SE.jpg"/>
+                <img class="hiddenMobile" src="content/pictures/SE.jpg"/>
+                <img class="hiddenDesktop" src="content/pictures/tinified/SE.jpg"/>
                 <!-- info -->
                 <div class="works--info">
                     <h2 >Scotland Is Now</h2>
@@ -67,7 +72,8 @@
 
             <div class="swiper-slide works works-5">
                 <!-- thumbnail -->
-                <img src="content/pictures/SKULL-2.jpg"/>
+                <img class="hiddenMobile" src="content/pictures/SKULL-2.jpg"/>
+                <img class="hiddenDesktop" src="content/pictures/tinified/SKULL-2.jpg"/>
                 <!-- info -->
                 <div class="works--info">
                     <h2 >Old Skull</h2>
@@ -82,7 +88,8 @@
 
             <div class="swiper-slide works works-6">
                 <!-- thumbnail -->
-                <img src="content/pictures/poster conciertos.jpg"/>
+                <img class="hiddenMobile" src="content/pictures/poster conciertos.jpg"/>
+                <img class="hiddenDesktop" src="content/pictures/tinified/poster conciertos.jpg"/>
                 <!-- info -->
                 <div class="works--info">
                     <h2 >MEF2C Concerts</h2>
@@ -97,7 +104,9 @@
 
             <div class="swiper-slide works works-7">
                 <!-- thumbnail -->
-                <img src="content/pictures/RoS styleguide.jpg"/>
+
+                <img class="hiddenMobile" src="content/pictures/RoS styleguide.jpg"/>
+                <img class="hiddenDesktop" src="content/pictures/tinified/RoS styleguide.jpg"/>
                 <!-- info -->
                 <div class="works--info">
                     <h2 >RoS stylguide</h2>
@@ -112,7 +121,8 @@
 
             <div class="swiper-slide works works-8">
                 <!-- thumbnail -->
-                <img src="content/pictures/RoS enviromental.jpg"/>
+                <img class="hiddenMobile" src="content/pictures/RoS enviromentale.jpg"/>
+                <img class="hiddenDesktop" src="content/pictures/tinified/RoS enviromentale.jpg"/>
                 <!-- info -->
                 <div class="works--info">
                     <h2 >office design</h2>
@@ -127,7 +137,8 @@
 
             <div class="swiper-slide works works-9">
                 <!-- thumbnail -->
-                <img src="content/pictures/Pinstripe.jpg"/>
+                <img class="hiddenMobile" src="content/pictures/Pinstripe.jpg"/>
+                <img class="hiddenDesktop" src="content/pictures/tinified/Pinstripe.jpg"/>
                 <!-- info -->
                 <div class="works--info">
                     <h2 >Pinstripe</h2>
@@ -142,13 +153,14 @@
 
             <div class="swiper-slide works works-10">
                 <!-- thumbnail -->
-                <img src="content/pictures/burbuja-wood-banner.jpg"/>
+                <img class="hiddenMobile" src="content/pictures/burbuja-wood-banner.jpg"/>
+                <img class="hiddenDesktop" src="content/pictures/tinified/burbuja-wood-banner.jpg"/>
                 <!-- info -->
                 <div class="works--info">
                     <h2 >Burbuja</h2>
                     <p class="yellow-600">Branding design for an industrial laundry based in Valencia. The idea was to create a fresh and and sytlish branding that could stand out against their competitors in an old fashioned sector</p>
                 </div>
-                <div class="works--details">
+                <div class="hiddenMobile works--details">
                     <p>Branding</p>
                     <p class="yellow-600">2016</p>
                 </div>

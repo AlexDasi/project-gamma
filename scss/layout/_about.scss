@@ -180,9 +180,13 @@
     margin-top: 4rem
 }
 
-@media (min-width:768px) {
+@media (max-width:1280px) {
     .info-column {
-        flex-direction: column
+        flex-direction: column;
+
+        &__title{
+            min-width: 25vw;
+        }
     }
 
     .info-column:not(:first-child) {
@@ -193,7 +197,7 @@
 
 .info-column__title{
     color: var(--main-color);
-    min-width: 25vw;
+
 }
 
 @media (max-width:575px) {

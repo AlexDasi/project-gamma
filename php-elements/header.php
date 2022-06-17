@@ -29,7 +29,7 @@
 
     <link rel="stylesheet" href="scss/js-style/swiper-bundle.min.css"/>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
 
 
 

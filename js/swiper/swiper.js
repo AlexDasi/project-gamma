@@ -5,7 +5,7 @@ var swiper = new Swiper(".MainSwiper", {
   direction: "vertical",
   speed: 1000,
   // loop: true,
-  allowTouchMove: false,
+  allowTouchMove: true,
   spaceBetween: 0,
   slidesPerView: "auto",
   centeredSlides: true,

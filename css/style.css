@@ -1380,15 +1380,12 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
   margin-top: 4rem;
 }
 
-@media (max-width: 1280px) {
+@media (min-width: 768px) {
   .info-column {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-  .info-column__title {
-    min-width: 25vw;
   }
 
   .info-column:not(:first-child) {
@@ -1398,6 +1395,7 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
 }
 .info-column__title {
   color: var(--main-color);
+  min-width: 25vw;
 }
 
 @media (max-width: 575px) {

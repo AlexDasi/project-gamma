@@ -63,14 +63,12 @@ include 'phpelements/nav.php'
         <div id="js-tray-slide" class="tray__slide"></div>
     </div>
     
-    <!-- The main three.js file -->
-    <script src='https://unpkg.com/three@0.127.0/build/three.js'></script>
+  <!-- Cargar Three.js y sus extensiones desde CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/examples/js/controls/OrbitControls.js"></script>
 
-    <!-- This brings in the ability to load custom 3D objects in the .gltf file format. Blender allows the ability to export to this format out the box -->
-    <script src='https://cdn.jsdelivr.net/gh/mrdoob/three.js@r92/examples/js/loaders/GLTFLoader.js'></script>
-
-    <!-- This is a simple to use extension for three.js that activates all the rotating, dragging and zooming controls we need for both mouse and touch, there isn't a clear CDN for this that I can find -->
-    <script src='https://threejs.org/examples/js/controls/OrbitControls.js'></script>
+  <!-- Cargar tu script personalizado -->
     <script src="js/editor.js"></script>
 </body>
 </html>

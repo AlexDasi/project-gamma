@@ -1,1 +1,22 @@
-node_modules
+node_modules/
+package-lock.json
+
+# Compiled files
+/css/
+*.css
+*.css.map
+
+# Build files
+/dist/
+/build/
+
+# IDE and System files
+.DS_Store
+.idea/
+.vscode/
+*.log
+
+# Cache files
+.sass-cache/
+.cache/
+prepros.config

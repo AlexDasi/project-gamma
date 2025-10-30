@@ -1,0 +1,18 @@
+.circle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow.down {
+    transition: transform 0.3s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    &.up {
+        transform: translate(-50%, -50%) rotate(-180deg);
+    }
+}

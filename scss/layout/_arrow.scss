@@ -1,0 +1,53 @@
+.circle {.circle {.circle {
+
+    position: relative;
+
+    display: flex;    position: relative;    position: relative;
+
+    align-items: center;
+
+    justify-content: center;    display: flex;    display: flex;
+
+}
+
+    align-items: center;    align-items: center;
+
+.arrow {
+
+    transition: transform 0.3s ease;    justify-content: center;    justify-content: center;
+
+    position: absolute;
+
+    top: 50%;}}
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    
+
+    &.up {.arrow.down {.arrow.down {
+
+        transform: translate(-50%, -50%) rotate(-180deg);
+
+    }    transition: transform 0.3s ease;    transition: transform 0.3s ease;
+
+}
+
+    position: absolute;    position: absolute;
+
+    top: 50%;    top: 50%;
+
+    left: 50%;    left: 50%;
+
+    transform: translate(-50%, -50%);    transform: translate(-50%, -50%);
+
+        
+
+    &.up {    &.up {
+
+        transform: translate(-50%, -50%) rotate(-180deg);        transform: translate(-50%, -50%) rotate(-180deg);
+
+    }    }
+
+}}

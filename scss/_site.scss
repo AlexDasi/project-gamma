@@ -1,7 +1,10 @@
 * {
   box-sizing: border-box;
-  // cursor: none;
-  
+}
+
+/* Hide native cursor globally; custom ".follow" dot will be shown instead */
+html, body, * {
+  cursor: none !important;
 }
 
 html {
@@ -9,7 +12,6 @@ html {
     overflow-x: hidden;
     scroll-behavior: smooth;
     font-size: 12px;
-    // cursor: none;
   }
 
 body{
@@ -32,7 +34,7 @@ p {
 
 a{
   text-decoration: none;
-  cursor: pointer !important;
+  cursor: none !important;
 }
 
 ul{

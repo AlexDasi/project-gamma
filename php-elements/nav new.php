@@ -1,4 +1,4 @@
-<!-- <div class="follow"></div> -->
+<div class="follow hiddenMobile"></div>
 <nav class="nav nav--top">
     <ul>
         <li class="nav--items single"> <a href="../../index.php">alex dasi</a>

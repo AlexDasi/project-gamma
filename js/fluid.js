@@ -37,11 +37,11 @@ resizeCanvas();
 let config = {
     SIM_RESOLUTION: 128,
     DYE_RESOLUTION: 1024,
-    CAPTURE_RESOLUTION: 512,
-    DENSITY_DISSIPATION: 3,
-    VELOCITY_DISSIPATION: 1.5,
-    PRESSURE: 0.8,
-    PRESSURE_ITERATIONS: 20,
+    CAPTURE_RESOLUTION: 128,
+    DENSITY_DISSIPATION: 1.5,
+    VELOCITY_DISSIPATION: 0.9,
+    PRESSURE: 0,
+    PRESSURE_ITERATIONS: 30,
     CURL: 3,
     SPLAT_RADIUS: 0.25,
     SPLAT_FORCE: 6000,
@@ -49,7 +49,7 @@ let config = {
     COLORFUL: false,
     COLOR_UPDATE_SPEED: 10,
     PAUSED: false,
-    BACK_COLOR: { r:199, g: 199, b: 197 },
+    BACK_COLOR: { r:20, g: 20, b: 21 },
     TRANSPARENT: false,
     BLOOM: false,
     BLOOM_ITERATIONS: 8,
@@ -1184,7 +1184,7 @@ function update () {
     const dt = calcDeltaTime();
     if (resizeCanvas())
         initFramebuffers();
-    // updateColors(dt);
+    updateColors(dt);
     applyInputs();
     if (!config.PAUSED)
         step(dt);
@@ -1210,7 +1210,7 @@ function resizeCanvas () {
     }
     return false;
 }
-//CAMBIAR COLOR AQUI?
+//HERE?
 function updateColors (dt) {
     if (!config.COLORFUL) return;
 
@@ -1431,13 +1431,12 @@ function splatPointer (pointer) {
     splat(pointer.texcoordX, pointer.texcoordY, dx, dy, pointer.color);
 }
 
-//CAMBIAR COLOR AQUI?
 function multipleSplats (amount) {
     for (let i = 0; i < amount; i++) {
         const color = generateColor();
-        // color.r *= 10.0;
-        // color.g *= 10.0;
-        // color.b *= 10.0;
+        color.r *= 10.0;
+        color.g *= 10.0;
+        color.b *= 10.0;
         const x = Math.random();
         const y = Math.random();
         const dx = 1000 * (Math.random() - 0.5);

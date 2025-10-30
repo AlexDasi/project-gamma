@@ -1,7 +1,7 @@
 .nav{
     padding: 20px;
     width: 100vw;
-    z-index: $z-top+100;
+    z-index: $z-top;
 
     //FLEX
     @include flexbox;
@@ -19,7 +19,7 @@
         &>ul{
             @include flexbox;
             width: 100%;
-            justify-content: space-between;
+            justify-content: center;
         }
         
     }
@@ -33,9 +33,11 @@
     }
 }
 
-ul, ol, dl {
-    list-style-position: outside;
-    margin-bottom: 0;
+.single{
+    background-color: var(--accent-color);
+    &>a{
+        color: var(--bkg-color);
+    }
 }
 
 

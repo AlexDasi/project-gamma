@@ -1,7 +1,8 @@
 <canvas id="c--fluid"></canvas>
 <canvas id="c1"></canvas>
 
-<script src="js/fluid.js"></script>
+<script class="hiddenMobile"  src="js/fluid.js"></script>
+<script class="hiddenDesktop"  src="js/fluidMobile.js"></script>
 <script src="js/hidden.js"></script>
 
 <script src="node_modules/magnet-mouse/lib/magnet-mouse.min.js"></script>
@@ -12,5 +13,9 @@
 <!--swiper-->
 
 <script src="js/swiper/swiper-bundle.min.js"></script>
-<script src="js/swiper/swiper.js"></script>
-<script src="php-pages/works-new/works-new.js"></script>
+<script class="hiddenMobile" src="js/swiper/swiper.js"></script>
+<script class="hiddenDesktop" src="js/swiper/swiperMobile.js"></script>
+
+
+
+

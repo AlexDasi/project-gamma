@@ -11,7 +11,6 @@
         
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">    
-    <link rel="stylesheet" href="css/style.css">
 
     <script type="text/javascript" src="dat.gui.min.js"></script>
     <script>
@@ -20,6 +19,13 @@
         ga('send', 'pageview');
     </script>
     <script async src="https://www.google-analytics.com/analytics.js"></script>
+
+    <!-- cursor -->
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="../js/cursor.js"></script> -->
+
+
 
     <link rel="stylesheet" href="scss/js-style/swiper-bundle.min.css"/>
 

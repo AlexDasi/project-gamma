@@ -22,13 +22,14 @@
 }
 
 .swiper {
+    display: contents;
     margin-left: auto;
     margin-right: auto;
     position: relative;
     overflow: hidden;
     list-style: none;
     padding: 0;
-    z-index: 1
+    z-index: 1;
 }
 
 .swiper-vertical>.swiper-wrapper {
@@ -60,7 +61,7 @@
 
 .swiper-slide {
     flex-shrink: 0;
-    width: 100%;
+    /* width: 100%; */
     height: 100%;
     position: relative;
     transition-property: transform
@@ -189,6 +190,7 @@
 }
 
 .swiper-virtual .swiper-slide {
+    backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     transform: translateZ(0)
 }
@@ -470,6 +472,7 @@ button.swiper-pagination-bullet {
 .swiper-scrollbar {
     border-radius: 10px;
     position: relative;
+    touch-action: none;
     -ms-touch-action: none;
     background: rgba(0, 0, 0, .1)
 }
@@ -727,4 +730,10 @@ button.swiper-pagination-bullet {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     overflow: hidden
+}
+
+/* OVERWRITE CODE */
+
+.WorksSwiper .swiper-slide:hover {
+    z-index: 1;
 }

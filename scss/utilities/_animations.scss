@@ -53,16 +53,65 @@
 
 //ARROW 
 
+.circle{
+    width: 100px;
+    height: 100px;
+    padding: 2px;
+
+    z-index: $z-back;
+
+    position: fixed;
+
+}
+
 .arrow {
-    font-size: 45px;
-    line-height: 90px;
-    cursor: none;
-    margin: 20px;
-    width: 90px;
-    height: 90px;
-    text-align: center;
-    position: relative;
-    text-decoration: none;
+
+    &::before{
+        content: '';
+        display: block;
+        width: 30px;
+        height: 30px;
+        top: 50%;
+        left: 50%;
+        border-style: solid;
+        border-color: var(--main-color);
+        border-width: 2px 2px 0 0;
+        position: absolute;
+        transform-origin: 50% 50%;
+        &:hover{
+            border-color: var(--bkg-color);
+        }
+    
+    }
+
+    &.down::before { 
+        transform: rotate(135deg); 
+        margin: -20px 0 0 -15px;
+
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        top: 50%;
+        left: 50%;
+        border-style: solid;
+        border-color: var(--main-color);
+        position: absolute;
+        transform-origin: 50% 50%;
+
+        &:hover{
+            border-color: var(--bkg-color);
+        }
+
+    }
+
+    &.down::after { 
+        width: 0;
+        height: 40px;
+        border-width: 0 2px 0 0;
+        transform: translate(0px, -24px);
+    }
 
     &-container{
         z-index: $z-top+100;
@@ -71,8 +120,25 @@
         justify-content: center;
         position: fixed;
         bottom: 40px;
+        height: 100px;
         
     }
+}
+
+    //color change class
+
+.active::before, .active::after{
+        border-color: var(--bkg-color);
+        @include transitions;
+    }
+
+
+
+
+
+//CIRCLE//
+
+.circle{
 
     &:after {
         pointer-events: none;
@@ -81,47 +147,46 @@
         height: 100%;
         border-radius: 50%;
         content:'';
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
         box-sizing: content-box;
+    }
+    &:before {
+        speak: none;
+        line-height: 90px;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        display: block;
+        -webkit-font-smoothing: antialiased;
+    }
+
+
+    /* Effect 2 */
+
+    &.effect:after {
         top: -2px;
         left: -2px;
         padding: 2px;
-        z-index: $z-back;
+        z-index: -1;
         background: var(--accent-color);
         transform: scale(0);
         transition: transform 0.2s;
     }
 
-    &:before {
-        display: block;
-        -webkit-font-smoothing: antialiased;
-    }
-
-    &:hover:after {
+    /* Effect 2b */
+    &.effect:hover:after {
         transform: scale(1);
         transition: transform 0.4s;
     }
 }
 
-//LINK HOVER ANIMATION
 
-a{
-    box-shadow: inset 0 0 0 0 var(--accent-color);
-    transition: box-shadow .5s ease-in-out;
-
-    &.graphic:hover {
-        box-shadow: inset 320px 0 0 0 var(--accent-color);
-    }
-
-    &.ui:hover {
-        box-shadow: inset 600px 0 0 0 var(--accent-color);
-    }
-
-    &.web:hover {
-        box-shadow: inset 200px 0 0 0 var(--accent-color);
-    }
-
+//PAGINATION-PROJECTS
+.swiper-button-next{
+    transform: rotate(90);
 }
-
 
 //MAGNET
 
@@ -129,59 +194,21 @@ a{
     transition: transform .3s ease;
 }
 
-//////////ARROW SVG//////////
 
-    // &::before {
-    //     content: '';
-    //     display: block;
-    //     width: 30px;
-    //     height: 30px;
-    //     top: 50%;
-    //     left: 50%;
-    //     border-style: solid;
-    //     border-color: #000;
-    //     border-width: 2px 2px 0 0;
-    //     position: absolute;
-    //     transform-origin: 50% 50%;
-    // }
+//MQUERY
 
-    // &::after {
-    //     content: '';
-    //     display: block;
-    //     top: 50%;
-    //     left: 50%;
-    //     border-style: solid;
-    //     border-color: var(--main-color);
-    //     position: absolute;
-    //     transform-origin: 50% 50%;
-    // }
-        
-    // &::after {
-    //     content: '';
-    //     display: block;
-    //     top: 50%;
-    //     left: 50%;
-    //     border-style: solid;
-    //     border-color: var(--main-color);
-    //     position: absolute;
-    //     transform-origin: 50% 50%;
-    // }
-    
-    // &.down::before { 
-    //     transform: rotate(135deg); 
-    //     margin: -20px 0 0 -15px;
-    // }
+@media (max-width: 1280px){
+    .arrow {
+        &::before{
+            border-color: var(--bkg-color);
+        }
 
-    // &.down::after { 
-    //     transform: rotate(135deg); 
-    //     width: 0;
-    //     height: 40px;
-    //     border-width: 0 2px 0 0;
-    //     transform: translate(0px, -23px);
-    // }
+        &::after {
+            border-color: var(--bkg-color);
+        }
+    }
 
-
-
-    
-    
-
+    .circle{
+        background-color: var(--accent-color);
+    }
+}

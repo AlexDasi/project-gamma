@@ -1,32 +1,14 @@
-var swiper = new Swiper(".WorksSwiper", {
-  grabCursor: false,
-  // effect: "coverflow",
-  mousewheel: true,
-  centeredSlides: true,
-  slidesPerView: "auto",
-  spaceBetween: -50,
-  coverflowEffect: {
-    rotate: 0,
-    stretch: 0,
-    depth: 100,
-    modifier: 2,
-    slideShadows: false,
-  },
+//MAIN SWIPER
 
-  // navigation: {
-  //   nextEl: '.swiper-button-next',
-  //   prevEl: '.swiper-button-prev',
-  // },
-});
-
-var menu = ['HOME', 'WORKS', 'WORKS-NEW', 'ABOUT', 'CONTACT'];
+var menu = ['HOME', 'WORKS', 'ABOUT', 'CONTACT'];
 var swiper = new Swiper(".MainSwiper", {
-  allowTouchMove: false,
   direction: "vertical",
+  speed: 1000,
+  // loop: true,
+  allowTouchMove: false,
   spaceBetween: 0,
   slidesPerView: "auto",
   centeredSlides: true,
-  grabCursor: false,
   mousewheel: false,
   pagination: {
     el: ".swiper-pagination",
@@ -35,8 +17,60 @@ var swiper = new Swiper(".MainSwiper", {
       return '<span class="' + className + '">' + (menu[index]) + "</span>";
     },
   },
+  navigation: {
+    nextEl: '.slideNext-btn',
+    prevEl: '.slidePrev-btn',
+  },
+
+
+  
+
+  //TO ADD FLOORS//
+
+  // pagination: {
+  //   el: ".swiper-pagination",
+  //   clickable: true,
+  // },
+
+  // navigation: {
+  //   nextEl: '.swiper-button-next',
+  // },
 });
 
-swiper.on('slideChange', function(sld) {
-	document.body.setAttribute('data-sld', sld.realIndex);
-})
+//WORK SWIPER
+
+var swiper = new Swiper(".WorksSwiper", {
+  allowTouchMove: true,
+  direction: "horizontal",
+  mousewheel: {
+    forceToAxis: true,
+  },
+  loop: true,
+  initialSlide : 3,
+  grabCursor: true,
+  preventClicks: false,
+  mousewheel: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  spaceBetween: 0,
+  speed: 100,
+  freeMode: {
+    enabled: true,
+  },
+
+  on: {
+    resize: function () {
+        var windowWidth = $(window).width();
+        if(windowWidth <= 767){
+                swiperBottomScrollbarFull.direction('vertical');
+                swiperBottomScrollbarFull.detachEvents();
+        }else{
+                swiperBottomScrollbarFull.direction('horizontal');
+                swiperBottomScrollbarFull.attachEvents();
+        }
+        swiperBottomScrollbarFull.update();
+    }
+  }
+});
+
+

@@ -1,26 +1,27 @@
 * {
   box-sizing: border-box;
+  // cursor: none;
   
 }
-
 
 html {
     box-sizing: border-box;
     overflow-x: hidden;
     scroll-behavior: smooth;
     font-size: 12px;
+    // cursor: none;
   }
 
 body{
-    background-color: var(--bkg-color);
-    min-height: 100vh;
-    width: 100%;
-    max-width: 100%;
-    margin: 0px;
-    @include flexbox;
-    flex-direction: column;
-    position: initial;
-    
+  background-color: var(--main-color);
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  margin: 0px;
+  @include flexbox;
+  flex-direction: column;
+  position: initial;    
+  overflow-x: hidden;
 }
 
 p {
@@ -31,13 +32,14 @@ p {
 
 a{
   text-decoration: none;
+  cursor: pointer !important;
 }
 
 ul{
   padding-inline-start: 0;
   margin-block-end: 0;
   margin-block-start: 0;
-  list-style-type: none; /* Remove bullets */
+  list-style-type: none !important; /* Remove bullets */
   padding: 0; /* Remove padding */
   margin: 0; /* Remove margins */
 }
@@ -47,8 +49,41 @@ ul{
 }
 
 
+//GENERAL MQUERY 
+
+@media (max-width:1280px) {
+    .hiddenMobile{
+      display: none!important;
+    }
+    .hiddenDesktop{
+      // overflow-x: hidden;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+
+      &>.swiper-wrapper{
+        display: block;
+
+        &>.swiper-slide{
+          // min-height: 100vh;
+          height: auto;
+        }
+      }
+    }
+  }
 
 
+  @media (min-width:1280px) {
+    .hiddenDesktop{
+      display: none!important;
+    }
+  }
+
+
+
+
+  
+  
 
 
 

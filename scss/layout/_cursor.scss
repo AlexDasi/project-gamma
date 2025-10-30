@@ -1,0 +1,15 @@
+.follow {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background-color: var(--accent-color);  
+    border-radius: 100%;
+    // transition: transform .1s ease;
+    z-index: $z-top+1000;
+
+    &-mouse-active{
+      display: none;
+    }
+  }

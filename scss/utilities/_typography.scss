@@ -2,17 +2,30 @@
 
 .main-text,h1,h2{
     @include main-text;
-    font-size: 6rem;
+    font-size: 4.5rem;
     text-transform: uppercase;
     font-weight: 600;
+    margin: 0;
 }
 
 .secondary-text,p,a,h3,h4,h5{
     @include secondary-text;
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 200;
+    margin: 0;
 } 
 
+h1{
+    color: var(--accent-color);
+    font-size: 8rem;
+}
+
+h3{
+    color: var(--accent-color);
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
 
 
 

@@ -92,14 +92,43 @@ function updatePagination() {
 
 //WORK SWIPER
 
+// Duplicate slides for pseudo-infinite scrolling
+const worksWrapper = document.querySelector('.WorksSwiper .swiper-wrapper');
+let originalSlides;
+if (worksWrapper) {
+  originalSlides = Array.from(worksWrapper.querySelectorAll('.swiper-slide'));
+  const duplicateTimes = 3; // Create 3 copies on each side
+  
+  // Clone and append to end (right side)
+  for (let i = 0; i < duplicateTimes; i++) {
+    originalSlides.forEach(slide => {
+      const clone = slide.cloneNode(true);
+      worksWrapper.appendChild(clone);
+    });
+  }
+  
+  // Clone and prepend to beginning (left side) - in correct order
+  for (let i = 0; i < duplicateTimes; i++) {
+    // Insert in reverse to maintain correct order when prepending
+    for (let j = originalSlides.length - 1; j >= 0; j--) {
+      const clone = originalSlides[j].cloneNode(true);
+      worksWrapper.insertBefore(clone, worksWrapper.firstChild);
+    }
+  }
+}
+
+// Calculate initial slide to start in the middle section
+const totalOriginalSlides = originalSlides ? originalSlides.length : 0;
+const calculatedInitialSlide = totalOriginalSlides * duplicateTimes + 3; // Start at middle section, slide 3
+
 var swiper = new Swiper(".WorksSwiper", {
   allowTouchMove: true,
   direction: "horizontal",
   mousewheel: {
     forceToAxis: true,
   },
-  loop: true,
-  initialSlide : 3,
+  loop: false,
+  initialSlide : calculatedInitialSlide,
   grabCursor: true,
   preventClicks: false,
   mousewheel: true,
@@ -109,6 +138,7 @@ var swiper = new Swiper(".WorksSwiper", {
   speed: 100,
   freeMode: {
     enabled: true,
+    momentum: true,
   },
 
   on: {

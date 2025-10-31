@@ -10,9 +10,9 @@
 
 <div id="footer-menu">
 
-    <a href="<?php bloginfo ('url'); ?>" id="copyright"><?php bloginfo ('name'); ?></a>
+    <!-- <a href="<?php bloginfo ('url'); ?>" id="copyright"><?php bloginfo ('name'); ?></a> -->
 
-    <?php wp_nav_menu ( array ( 'theme_location' => 'footer' ) ); ?>
+    <!-- <?php wp_nav_menu ( array ( 'theme_location' => 'footer' ) ); ?> -->
 
 </div>
 

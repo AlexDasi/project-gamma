@@ -9,7 +9,7 @@
                 <div class="slice-infos__text"><p>Working as a graphic designer for the past 10 years, first as a freelance and for different companies I understood the importance of visual communication. Right now I've incorporated new tools to achieve the same goal. Recently finished a postgrad in Web Development, UX/UI and marketing. The spectrum in which communications take place grows and morphs everyday and we need to adapt to the environment in order to master it.</p></div>
             
                 <ul class="slice-infos__columns">
-                    <li class="info-column">
+                    <li class="info-column info-column--experience">
                         <h3 class="info-column__title title title--2">experience</h3>
                         <div class="info-column__text">
                             <ul>
@@ -19,7 +19,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="info-column">
+                    <li class="info-column info-column--skills">
                         <h3 class="info-column__title title title--2">skills</h3>
                         <div class="info-column__text">
                             <ul>
@@ -31,7 +31,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="info-column">
+                    <li class="info-column info-column--tools">
                         <h3 class="info-column__title title title--2">tools</h3>
                         <div class="info-column__text">
                             <ul>

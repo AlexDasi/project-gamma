@@ -1386,6 +1386,11 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
   margin-top: 4rem;
 }
 
+@media (min-width: 768px) {
+  .info-column:not(:first-child) {
+    margin-top: 0;
+  }
+}
 @media (max-width: 1280px) {
   .info-column {
     -webkit-box-orient: vertical;

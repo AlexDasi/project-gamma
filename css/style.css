@@ -880,7 +880,7 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
 .project-header {
   position: relative;
   padding-bottom: 10rem;
-  background-color: var(--main-color);
+  background-color: var(--bkg-color);
   perspective: 1000px;
   z-index: 100;
 }
@@ -902,7 +902,7 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
   line-height: 1.25;
   word-break: break-all;
   color: var(--bkg-color);
-  background-color: var(--accent-color);
+  background-color: var(--main-color);
 }
 @media (max-width: 768px) {
   .project-header__title {
@@ -974,7 +974,7 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
   position: relative;
   display: block;
   overflow: hidden;
-  background-color: var(--main-color);
+  background-color: var(--bkg-color);
 }
 
 @media (min-width: 768px) {
@@ -996,7 +996,7 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
   position: relative;
   padding: 4vw 0;
   display: block;
-  background-color: var(--main-color);
+  background-color: var(--bkg-color);
 }
 .project-content > * {
   display: block;
@@ -1007,14 +1007,14 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
 }
 .project-content__quote {
   font-size: 4.5rem;
-  color: var(--bkg-color);
+  color: var(--main-color);
   padding: 4vw 0;
 }
 .project-content__quote > a {
   position: relative;
   font-size: 4.5rem;
   color: var(--bkg-color);
-  background: var(--accent-color);
+  background: var(--main-color);
   z-index: 0;
 }
 
@@ -1057,7 +1057,7 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
   }
 }
 .project-description__main .slice-infos__columns .info-column__title {
-  color: var(--bkg-color);
+  color: var(--main-color);
 }
 @media (max-width: 575px) {
   .project-description__main .slice-infos__columns .info-column__title {
@@ -1069,7 +1069,7 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
   margin-left: 4rem;
 }
 .project-description__main .slice-infos__columns .info-column__text > p {
-  color: var(--bkg-color);
+  color: var(--main-color);
 }
 @media (min-width: 768px) {
   .project-description__main .slice-infos__columns .info-column__text {

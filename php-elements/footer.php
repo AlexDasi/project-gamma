@@ -18,7 +18,7 @@
 
 <div id="footer-social">
 
-    <?php wp_nav_menu ( array ( 'theme_location' => 'social' ) ); ?>
+    <?php if (function_exists('wp_nav_menu')) wp_nav_menu ( array ( 'theme_location' => 'social' ) ); ?>
 
 </div>
 
@@ -26,7 +26,7 @@
 
 </footer>
 
-<?php wp_footer(); ?>
+<?php if (function_exists('wp_footer')) wp_footer(); ?>
 </body>
 
 </html>

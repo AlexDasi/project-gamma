@@ -3,7 +3,7 @@
 .project-header {
     position: relative;
     padding-bottom: 10rem;
-    background-color: var(--bkg-color);
+    background-color: var(--main-color);
     perspective: 1000px;
     z-index: $z-medium;
 
@@ -28,7 +28,7 @@
         line-height: 1.25;
         word-break: break-all;
         color: var(--bkg-color);
-        background-color: var(--main-color);
+        background-color: var(--accent-color);
 
         @media (max-width:768px) {
             &{
@@ -135,7 +135,7 @@
     display: block;
     // padding: 6rem 0;
     overflow: hidden;
-    background-color: var(--bkg-color);
+    background-color: var(--main-color);
 }
 
 @media (min-width:768px) {
@@ -168,7 +168,7 @@
     position: relative;
     padding: 4vw 0;
     display: block;
-    background-color: var(--bkg-color);
+    background-color: var(--main-color);
         &>*{
             display: block;
             max-width: 100vw;
@@ -183,7 +183,7 @@
 
     &__quote{
         font-size: 4.5rem;
-        color: var(--main-color);
+        color: var(--bkg-color);
         padding: 4vw 0;
 
 
@@ -193,7 +193,7 @@
             position: relative;
             font-size: 4.5rem;
             color: var(--bkg-color);
-            background: var(--main-color);
+            background: var(--accent-color);
             z-index: $z-null;
 
             // background-color: var(--accent-color);
@@ -274,7 +274,7 @@
     }
 
     &__title{
-        color: var(--main-color);
+        color: var(--bkg-color);
     }
 
     @media (max-width:575px) {
@@ -287,7 +287,7 @@
     &__text {
         margin-left: 4rem;
         &>p{
-            color: var(--main-color)
+            color: var(--bkg-color)
         }
 
     }

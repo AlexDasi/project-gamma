@@ -11,6 +11,13 @@
     pointer-events: none; // do not block interactions
 }
 
+/* Change cursor color in project pages */
+.project-header .follow,
+.project-description .follow,
+.project-content .follow {
+    background-color: $bkg-color;
+}
+
 /* When magnet is active (inside arrow), hide the dot entirely */
 .follow-mouse-active {
   display: none !important;

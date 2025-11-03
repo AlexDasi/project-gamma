@@ -880,7 +880,7 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
 .project-header {
   position: relative;
   padding-bottom: 10rem;
-  background-color: var(--bkg-color);
+  background-color: var(--main-color);
   perspective: 1000px;
   z-index: 100;
 }
@@ -902,7 +902,7 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
   line-height: 1.25;
   word-break: break-all;
   color: var(--bkg-color);
-  background-color: var(--main-color);
+  background-color: var(--accent-color);
 }
 @media (max-width: 768px) {
   .project-header__title {
@@ -974,7 +974,7 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
   position: relative;
   display: block;
   overflow: hidden;
-  background-color: var(--bkg-color);
+  background-color: var(--main-color);
 }
 
 @media (min-width: 768px) {
@@ -996,7 +996,7 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
   position: relative;
   padding: 4vw 0;
   display: block;
-  background-color: var(--bkg-color);
+  background-color: var(--main-color);
 }
 .project-content > * {
   display: block;
@@ -1007,14 +1007,14 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
 }
 .project-content__quote {
   font-size: 4.5rem;
-  color: var(--main-color);
+  color: var(--bkg-color);
   padding: 4vw 0;
 }
 .project-content__quote > a {
   position: relative;
   font-size: 4.5rem;
   color: var(--bkg-color);
-  background: var(--main-color);
+  background: var(--accent-color);
   z-index: 0;
 }
 
@@ -1057,7 +1057,7 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
   }
 }
 .project-description__main .slice-infos__columns .info-column__title {
-  color: var(--main-color);
+  color: var(--bkg-color);
 }
 @media (max-width: 575px) {
   .project-description__main .slice-infos__columns .info-column__title {
@@ -1069,7 +1069,7 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
   margin-left: 4rem;
 }
 .project-description__main .slice-infos__columns .info-column__text > p {
-  color: var(--main-color);
+  color: var(--bkg-color);
 }
 @media (min-width: 768px) {
   .project-description__main .slice-infos__columns .info-column__text {
@@ -1478,6 +1478,13 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
   border-radius: 100%;
   z-index: 1200;
   pointer-events: none;
+}
+
+/* Change cursor color in project pages */
+.project-header .follow,
+.project-description .follow,
+.project-content .follow {
+  background-color: hsl(227, 3%, 8%);
 }
 
 /* When magnet is active (inside arrow), hide the dot entirely */

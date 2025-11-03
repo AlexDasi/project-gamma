@@ -1469,7 +1469,8 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
   }
 }
 .follow {
-  position: absolute;
+  /* Use fixed so the dot stays relative to the viewport during scroll */
+  position: fixed;
   left: 0;
   top: 0;
   width: 10px;

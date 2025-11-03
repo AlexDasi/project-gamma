@@ -96,7 +96,8 @@ function updatePagination() {
 const worksWrapper = document.querySelector('.WorksSwiper .swiper-wrapper');
 let originalSlides;
 if (worksWrapper) {
-  originalSlides = Array.from(worksWrapper.querySelectorAll('.swiper-slide'));
+  // Select direct children (anchor tags) instead of .swiper-slide divs
+  originalSlides = Array.from(worksWrapper.children);
   const duplicateTimes = 3; // Create 3 copies on each side
   
   // Clone and append to end (right side)

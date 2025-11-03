@@ -63,7 +63,9 @@ include 'php-elements/header.php'
         
     <footer>
 
-    <p class="credits creditsMobile">Alex Dasi©2022</p>
+    <p class="credits credits-left creditsDesktop">[PRESS SPACE :]</p>
+
+    <p class="credits creditsMobile">Alex Dasi©2025</p>
 
     <?php
 

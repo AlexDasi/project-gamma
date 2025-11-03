@@ -14,10 +14,10 @@
             <h2>Behance</h2>
         </a>
         <a href="" class="contact--social__element">
-            <h2>Github</h2>
-        </a>
-        <a href="" class="contact--social__element">
             <h2>Linkedin</h2>
+        </a>
+        <a href="mailto:alejandrodasi@me.com" class="contact--social__element">
+            <h2>Email</h2>
         </a>
     </div>
 

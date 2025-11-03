@@ -602,6 +602,12 @@ body {
   transition: opacity 0.3s;
 }
 
+.works {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+}
 .works--details {
   position: relative;
   top: -250px;

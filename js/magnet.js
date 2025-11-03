@@ -13,3 +13,10 @@ let magnetfunction = new MagnetMouse({
     });
     
     magnetfunction.init();
+
+// Reinitialize magnet for dynamically loaded elements
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(() => {
+        magnetfunction.init();
+    }, 100);
+});

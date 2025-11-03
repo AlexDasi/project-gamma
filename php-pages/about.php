@@ -4,45 +4,13 @@
         <section class="about-description">
             <div class="about-description__main">
             
-                <h2 class="slice-infos__title">I'm focused on learning new ways of user experience and express creativity through interaction</h2>
+                <h2 class="slice-infos__title">I'M FOCUSED ON LEARNING NEW WAYS OF USER EXPERIENCE AND EXPRESS CREATIVITY THROUGH USER INTERACTION</h2>
             
-                <div class="slice-infos__text"><p>Working as a graphic designer for the past 10 years, first as a freelance and for different companies I understood the importance of visual communication. Right now I've incorporated new tools to achieve the same goal. Recently finished a postgrad in Web Development, UX/UI and marketing. The spectrum in which communications take place grows and morphs everyday and we need to adapt to the environment in order to master it.</p></div>
+                <div class="slice-infos__text"><p>For over a decade, I've been shaping ideas through design — first as a freelancer, then collaborating with different companies. Over time, I've learned that great visual communication isn't just about aesthetics, but about creating meaning and connection. Recently, I expanded my toolkit with a postgraduate degree in Web Development, UX/UI, and Marketing, blending artistry with strategy. As the ways we communicate evolve every day, I believe the key is to stay curious, adapt fast, and never stop learning.</p></div>
             
-                <ul class="slice-infos__columns">
-                    <li class="info-column info-column--experience">
-                        <h3 class="info-column__title title title--2">experience</h3>
-                        <div class="info-column__text">
-                            <ul>
-                                <li><p>Knowadays. <strong>London</strong></p></li>
-                                <li><p>Scottish Enterprise. <strong>Edinburgh</strong></p></li>
-                                <li><p>Registers of Scotland. <strong>Edinburgh</strong></p></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="info-column info-column--skills">
-                        <h3 class="info-column__title title title--2">skills</h3>
-                        <div class="info-column__text">
-                            <ul>
-                                <li><p>Web Design</p></li>
-                                <li><p>UX/UI</p></li>
-                                <li><p>Branding</p></li>
-                                <li><p>Wireframing</p></li>
-                                <li><p>Design System</p></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="info-column info-column--tools">
-                        <h3 class="info-column__title title title--2">tools</h3>
-                        <div class="info-column__text">
-                            <ul>
-                                <li><p>Figma</p></li>
-                                <li><p>Vs Code</p></li>
-                                <li><p>Github</p></li>
-                                <li><p>Adobe CS</p></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
+                <div class="cv-download-container">
+                    <a href="/content/downloadables/Resume Alex Dasi 2025.pdf" class="cv-download-btn effect magnet" download>DOWNLOAD CV</a>
+                </div>
             </div>
         </section>
     </header>

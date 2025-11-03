@@ -1463,6 +1463,71 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
             flex-direction: row;
   }
 }
+.cv-download-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 6rem;
+}
+
+.cv-download-btn {
+  display: inline-block;
+  position: relative;
+  padding: 10px 20px;
+  border: 1px solid hsl(60, 2%, 78%);
+  border-radius: 50px;
+  color: var(--main-color);
+  font-family: "Inter", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background: transparent;
+  cursor: pointer;
+  z-index: 1;
+  overflow: hidden;
+}
+.cv-download-btn.effect:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: var(--accent-color);
+  border-radius: 50px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 0.15s ease-out;
+  transition: -webkit-transform 0.15s ease-out;
+  transition: transform 0.15s ease-out;
+  transition: transform 0.15s ease-out, -webkit-transform 0.15s ease-out;
+}
+.cv-download-btn.effect:hover:after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+  transition: -webkit-transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
+}
+.cv-download-btn:hover {
+  border-color: transparent;
+  color: var(--bkg-color);
+}
+
+@media (max-width: 768px) {
+  .cv-download-btn {
+    font-size: 2rem;
+  }
+}
 .contact--message {
   position: absolute;
   left: 5vw;

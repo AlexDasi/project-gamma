@@ -259,4 +259,62 @@
     }
 }
 
+// CV Download Button
+.cv-download-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+}
+
+.cv-download-btn {
+    display: inline-block;
+    position: relative;
+    padding: $padding $space;
+    border: 1px solid $grey-bkg-color;
+    border-radius: 50px;
+    color: var(--main-color);
+    font-family: $main-font;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    background: transparent;
+    cursor: pointer;
+    z-index: 1;
+    overflow: hidden;
+
+    // Grow from center effect (matching arrow)
+    &.effect:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        background: var(--accent-color);
+        border-radius: 50px;
+        transform: scale(0);
+        transition: transform 0.15s ease-out;
+    }
+
+    &.effect:hover:after {
+        transform: scale(1);
+        transition: transform 0.2s ease-out;
+    }
+
+    &:hover {
+        border-color: transparent;
+        color: var(--bkg-color);
+    }
+}
+
+@media (max-width: 768px) {
+    .cv-download-btn {
+        font-size: 2rem;
+    }
+}
+
 

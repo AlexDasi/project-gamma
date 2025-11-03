@@ -1447,6 +1447,10 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
   text-transform: uppercase;
   color: var(--main-color);
 }
+.credits-left {
+  left: 10px;
+  right: auto;
+}
 
 @media (max-width: 1280px) {
   .contact--message__main {

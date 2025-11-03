@@ -3,8 +3,8 @@
     <!-- Swiper -->
     <div class="swiper WorksSwiper">
         <div class="swiper-wrapper">
-            <a href="php-pages/projects/camisola.php">
-                <div class="swiper-slide works works-1">
+            <a href="php-pages/projects/camisola.php" class="swiper-slide">
+                <div class="works works-1">
                 <!-- thumbnail -->
                     <img class="hiddenMobile" src="content/pictures/camisola.jpg"/>
                     <img class="hiddenDesktop" src="content/pictures/tinified/camisola.jpg"/>
@@ -21,8 +21,8 @@
             </a>
 
 
-            <a href="php-pages/projects/terralava.php">
-                <div class="swiper-slide works works-2">
+            <a href="php-pages/projects/terralava.php" class="swiper-slide">
+                <div class="works works-2">
                     <!-- thumbnail -->
 
                     <img class="hiddenMobile" src="content/pictures/Terralava.jpg"/>
@@ -40,8 +40,8 @@
             </a>
 
 
-            <a href="php-pages/projects/rotc.php">
-                <div class="swiper-slide works works-3">
+            <a href="php-pages/projects/rotc.php" class="swiper-slide">
+                <div class="works works-3">
                     <!-- thumbnail -->
                     <img class="hiddenMobile" src="content/pictures/ROTCPop-up.jpg"/>
                     <img class="hiddenDesktop" src="content/pictures/tinified/ROTCPop-up.jpg"/>
@@ -58,8 +58,8 @@
             </a>
 
 
-            <a href="php-pages/projects/scotland-is-now.php">
-                <div class="swiper-slide works works-4">
+            <a href="php-pages/projects/scotland-is-now.php" class="swiper-slide">
+                <div class="works works-4">
                     <!-- thumbnail -->
                     <img class="hiddenMobile" src="content/pictures/SE.jpg"/>
                     <img class="hiddenDesktop" src="content/pictures/tinified/SE.jpg"/>
@@ -76,8 +76,8 @@
             </a>
 
 
-            <a href="php-pages/projects/old-skull.php">
-                <div class="swiper-slide works works-5">
+            <a href="php-pages/projects/old-skull.php" class="swiper-slide">
+                <div class="works works-5">
                     <!-- thumbnail -->
                     <img class="hiddenMobile" src="content/pictures/SKULL-2.jpg"/>
                     <img class="hiddenDesktop" src="content/pictures/tinified/SKULL-2.jpg"/>
@@ -94,8 +94,8 @@
             </a>
 
 
-            <a href="php-pages/projects/mef2c-concerts.php">
-                <div class="swiper-slide works works-6">
+            <a href="php-pages/projects/mef2c-concerts.php" class="swiper-slide">
+                <div class="works works-6">
                     <!-- thumbnail -->
                     <img class="hiddenMobile" src="content/pictures/poster conciertos.jpg"/>
                     <img class="hiddenDesktop" src="content/pictures/tinified/poster conciertos.jpg"/>
@@ -112,8 +112,8 @@
             </a>
 
 
-            <a href="php-pages/projects/ros-styleguide.php">
-                <div class="swiper-slide works works-7">
+            <a href="php-pages/projects/ros-styleguide.php" class="swiper-slide">
+                <div class="works works-7">
                     <!-- thumbnail -->
 
                     <img class="hiddenMobile" src="content/pictures/RoS styleguide.jpg"/>
@@ -131,8 +131,8 @@
             </a>
 
 
-            <a href="php-pages/projects/office-design.php">
-                <div class="swiper-slide works works-8">
+            <a href="php-pages/projects/office-design.php" class="swiper-slide">
+                <div class="works works-8">
                     <!-- thumbnail -->
                     <img class="hiddenMobile" src="content/pictures/RoS enviromental.jpg"/>
                     <img class="hiddenDesktop" src="content/pictures/tinified/RoS enviromental.jpg"/>
@@ -149,8 +149,8 @@
             </a>
 
 
-            <a href="php-pages/projects/pinstripe.php">
-                <div class="swiper-slide works works-9">
+            <a href="php-pages/projects/pinstripe.php" class="swiper-slide">
+                <div class="works works-9">
                     <!-- thumbnail -->
                     <img class="hiddenMobile" src="content/pictures/Pinstripe.jpg"/>
                     <img class="hiddenDesktop" src="content/pictures/tinified/Pinstripe.jpg"/>
@@ -167,8 +167,8 @@
             </a>
 
 
-            <a href="php-pages/projects/burbuja.php">
-                <div class="swiper-slide works works-10">
+            <a href="php-pages/projects/burbuja.php" class="swiper-slide">
+                <div class="works works-10">
                     <!-- thumbnail -->
                     <img class="hiddenMobile" src="content/pictures/burbuja-wood-banner.jpg"/>
                     <img class="hiddenDesktop" src="content/pictures/tinified/burbuja-wood-banner.jpg"/>

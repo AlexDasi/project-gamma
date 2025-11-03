@@ -47,6 +47,12 @@ body {
   &-wrapper{
     height: 40vh;
     display: flex;
+
+    a {
+      display: block;
+      text-decoration: none;
+      cursor: pointer;
+    }
   }
 
   &-slide{

@@ -1481,9 +1481,7 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
 }
 
 /* Change cursor color in project pages */
-.project-header .follow,
-.project-description .follow,
-.project-content .follow {
+body.project-page .follow {
   background-color: hsl(227, 3%, 8%);
 }
 

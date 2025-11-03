@@ -4,7 +4,7 @@ include '../../php-elements/header-works.php'
 
 ?>
 
-<body>
+<body class="project-page">
 
     <?php include '../../php-elements/nav new.php'?>
 

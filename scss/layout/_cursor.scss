@@ -1,5 +1,6 @@
 .follow {
-    position: absolute;
+  /* Use fixed so the dot stays relative to the viewport during scroll */
+  position: fixed;
     left: 0;
     top: 0;
     width: 10px;
@@ -9,6 +10,11 @@
     // transition: transform .1s ease;
     z-index: $z-top+1000;
     pointer-events: none; // do not block interactions
+}
+
+/* Change cursor color in project pages */
+body.project-page .follow {
+    background-color: $bkg-color;
 }
 
 /* When magnet is active (inside arrow), hide the dot entirely */

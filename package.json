@@ -10,7 +10,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "php -S localhost:8000",
+    "build:css": "sass scss/style.scss css/style.css",
+    "watch:css": "sass --watch scss/style.scss css/style.css",
+    "dev": "concurrently -n server,scss -c \"blue.bold,magenta.bold\" \"php -S localhost:8000\" \"sass --watch scss/style.scss css/style.css\""
   },
   "repository": {
     "type": "git",
@@ -22,5 +26,9 @@
     "url": "https://github.com/AlexDasi/project-gamma/issues"
   },
   "homepage": "https://github.com/AlexDasi/project-gamma#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "sass": "^1.77.0"
+  }
 }

@@ -77,6 +77,11 @@
     // color: var(--bkg-color);
     color: var(--main-color);
     // background-color: var(--accent-color);
+
+    &-left{
+        left: 10px;
+        right: auto; // prevent stretching when using left placement
+    }
 }
 
 @media (max-width:1280px) {

@@ -169,7 +169,7 @@ camera.position.x = 0;
 const INITIAL_MTL = new THREE.MeshPhongMaterial( { color: 0xf1f1f1, shininess: 10 } );
 
 const INITIAL_MAP = [
-  {childID: "button", mtl: INITIAL_MTL},
+  {childID: "buttons", mtl: INITIAL_MTL},
   {childID: "shirt", mtl: INITIAL_MTL},
 ];
 

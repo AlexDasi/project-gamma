@@ -52,6 +52,9 @@ include 'phpelements/nav.php'
         </div>
     </div>
 
+    <!-- Loading indicator -->
+    <div id="js-loader" class="loader">Loading...</div>
+
     <!-- Just a quick notice to the user that it can be interacted with -->
     <span class="drag-notice" id="js-drag-notice">Drag to rotate 360&#176;</span>
 
@@ -67,10 +70,10 @@ include 'phpelements/nav.php'
     <script src='https://unpkg.com/three@0.127.0/build/three.js'></script>
 
     <!-- This brings in the ability to load custom 3D objects in the .gltf file format. Blender allows the ability to export to this format out the box -->
-    <script src='https://cdn.jsdelivr.net/gh/mrdoob/three.js@r92/examples/js/loaders/GLTFLoader.js'></script>
+    <script src='https://cdn.jsdelivr.net/gh/mrdoob/three.js@r127/examples/js/loaders/GLTFLoader.js'></script>
 
     <!-- This is a simple to use extension for three.js that activates all the rotating, dragging and zooming controls we need for both mouse and touch, there isn't a clear CDN for this that I can find -->
-    <script src='https://threejs.org/examples/js/controls/OrbitControls.js'></script>
+    <script src='https://cdn.jsdelivr.net/gh/mrdoob/three.js@r127/examples/js/controls/OrbitControls.js'></script>
     <script src="js/editor.js"></script>
 </body>
 </html>

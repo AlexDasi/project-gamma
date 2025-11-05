@@ -89,7 +89,7 @@ body {
     }
 
     &:hover{
-      transform: scale(1);
+      transform: scale(1.05); // Increased from 1 to 1.05 for more prominent hover
 
       // transition: transform 0.3s;
       // transition: opacity 0.3s;
@@ -151,8 +151,8 @@ body {
   &:hover &--details{
 
     opacity: 1;
-    left: 520px;
-    padding-left: 10px;
+    left: 540px; // Increased from 520px for more separation
+    padding-left: 20px; // Increased from 10px for more margin
     width: 100px;
     text-transform: uppercase;
     font-family: var(--main-font);
@@ -189,15 +189,16 @@ body {
       color: var(--main-color);
       font-size: $psmall;
       text-align: left;
-      width: 35vw;
+      width: 25vw; // Reduced from 35vw to make more compact
+      line-height: 1.3; // Added tighter line height
     }
   }
 
   &:hover &--info{
 
     opacity: 1;
-    top: 380px;
-    padding-top: 20px;
+    top: 410px; // Moved down more to align with bottom of image
+    padding-top: 30px; // Increased padding for more separation
     font-family: var(--main-font);
     @include transitions;
   }

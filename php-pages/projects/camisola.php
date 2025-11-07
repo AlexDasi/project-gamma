@@ -46,7 +46,7 @@ include '../../php-elements/header-works.php'
                 <img class="element project-content__image" src="../../content/pictures/projects/camisola/Camisola2.jpg" alt=""> 
 
                 <video class="element project-content__video" autoplay loop muted> 
-                    <source src="../../content/videos/camisola/dsk/1.mp4" type="video/mp4"></source>
+                    <source src="../../content/videos-gifs/camisola/dsk/1.mp4" type="video/mp4"></source>
                 </video>
 
                 <img class="element project-content__image" src="../../content/pictures/projects/camisola/Camisola1.jpg" alt=""> 
@@ -54,11 +54,11 @@ include '../../php-elements/header-works.php'
                 <p class="padding3 project-content__quote">The site <a href="https://camisola.alexdasi.com/">is live</a>  if you fancy explore and play with the editor.</p>
 
                 <video class="element project-content__video" autoplay loop muted> 
-                    <source src="../../content/videos/camisola/dsk/2.mp4" type="video/mp4"></source>
+                    <source src="../../content/videos-gifs/camisola/dsk/2.mp4" type="video/mp4"></source>
                 </video> 
 
                 <video class="element project-content__video" autoplay loop muted> 
-                    <source src="../../content/videos/camisola/dsk/3.mp4" type="video/mp4"></source>
+                    <source src="../../content/videos-gifs/camisola/dsk/3.mp4" type="video/mp4"></source>
                 </video>
                 
                 <img class="element project-content__image" src="../../content/pictures/projects/camisola/Camisola4.jpg" alt=""> 

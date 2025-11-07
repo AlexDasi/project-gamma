@@ -149,12 +149,12 @@
             </a>
 
 
+            <!-- OFFICE DESIGN PROJECT TEMPORARILY HIDDEN - MISSING THUMBNAIL -->
+            <!-- 
             <a href="php-pages/projects/office-design.php" class="swiper-slide">
                 <div class="works works-8">
-                    <!-- thumbnail -->
                     <img class="hiddenMobile" src="content/pictures/thumbnails/RoS enviromental.jpg"/>
                     <img class="hiddenDesktop" src="content/pictures/thumbnails/RoS enviromental-mobile.jpg"/>
-                    <!-- info -->
                     <div class="works--info">
                         <h2 >office design</h2>
                         <p class="yellow-600">Illustration for a bike clothing brand based in Glasgow. The concept consists on a chain-made brain coming up from a beaten-up skull in a tatoo drawing style.</p>
@@ -165,6 +165,7 @@
                     </div>
                 </div>
             </a>
+            -->
 
 
             <a href="php-pages/projects/pinstripe.php" class="swiper-slide">

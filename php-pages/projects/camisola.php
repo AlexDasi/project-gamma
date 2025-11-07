@@ -51,7 +51,7 @@ include '../../php-elements/header-works.php'
 
                 <img class="element project-content__image" src="../../content/pictures/projects/camisola/Camisola1.jpg" alt=""> 
 
-                <p class="padding3 project-content__quote">The site <a href="https://frontend.esatid3-2021.com/alex-beta/index.php">is live</a>  if you fancy explore and play with the editor.</p>
+                <p class="padding3 project-content__quote">The site <a href="https://camisola.alexdasi.com/">is live</a>  if you fancy explore and play with the editor.</p>
 
                 <video class="element project-content__video" autoplay loop muted> 
                     <source src="../../content/videos/camisola/dsk/2.mp4" type="video/mp4"></source>

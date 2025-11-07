@@ -12,7 +12,7 @@ include '../../php-elements/header-works.php'
 
     
     <header class="project-header">
-        <div class="project-header__image"><img class="center" src="../../content/pictures/SE.jpg" alt=""></div>
+        <div class="project-header__image"><img class="center" src="../../content/pictures/projects/scotland-is-now/SE.jpg" alt=""></div>
         <h1 class="padding3 project-header__title title title--project title--black">Scotland Is Now</h1>
         <section class="project-description">
             <div class="project-description__main">
@@ -40,13 +40,13 @@ include '../../php-elements/header-works.php'
         <section class="project-content">
             <div class="project-content__wrapper">
                 
-                <img class="element project-content__image" src="../../content/pictures/SE.jpg" alt=""> 
+                <img class="element project-content__image" src="../../content/pictures/projects/scotland-is-now/SE.jpg" alt=""> 
 
-                <img class="element project-content__image" src="../../content/pictures/SE.jpg" alt=""> 
+                <img class="element project-content__image" src="../../content/pictures/projects/scotland-is-now/SE.jpg" alt=""> 
 
                 <p class="padding3 project-content__quote">Showcasing Scotland's innovation and creativity.</p>
 
-                <img class="element project-content__image" src="../../content/pictures/SE.jpg" alt=""> 
+                <img class="element project-content__image" src="../../content/pictures/projects/scotland-is-now/SE.jpg" alt=""> 
             
             </div>
         </section> 

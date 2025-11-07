@@ -12,7 +12,7 @@ include '../../php-elements/header-works.php'
 
     
     <header class="project-header">
-        <div class="project-header__image"><img class="center" src="../../content/pictures/poster conciertos.jpg" alt=""></div>
+        <div class="project-header__image"><img class="center" src="../../content/pictures/projects/mef2c-concerts/poster conciertos.jpg" alt=""></div>
         <h1 class="padding3 project-header__title title title--project title--black">MEF2C Concerts</h1>
         <section class="project-description">
             <div class="project-description__main">
@@ -40,13 +40,13 @@ include '../../php-elements/header-works.php'
         <section class="project-content">
             <div class="project-content__wrapper">
                 
-                <img class="element project-content__image" src="../../content/pictures/poster conciertos.jpg" alt=""> 
+                <img class="element project-content__image" src="../../content/pictures/projects/mef2c-concerts/poster conciertos.jpg" alt=""> 
 
-                <img class="element project-content__image" src="../../content/pictures/poster conciertos.jpg" alt=""> 
+                <img class="element project-content__image" src="../../content/pictures/projects/mef2c-concerts/poster conciertos.jpg" alt=""> 
 
                 <p class="padding3 project-content__quote">Bold typography meets live music energy.</p>
 
-                <img class="element project-content__image" src="../../content/pictures/poster conciertos.jpg" alt=""> 
+                <img class="element project-content__image" src="../../content/pictures/projects/mef2c-concerts/poster conciertos.jpg" alt=""> 
             
             </div>
         </section> 

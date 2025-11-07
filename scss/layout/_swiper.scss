@@ -202,6 +202,31 @@ body {
     font-family: var(--main-font);
     @include transitions;
   }
+
+  // CLUSTAG SPECIFIC STYLING FOR HORIZONTAL THUMBNAIL
+  &.works-clustag {
+    .works--details {
+      left: 450px; // Adjusted for wider horizontal thumbnail
+      
+      &:hover,
+      .swiper-slide:hover & {
+        left: 620px; // Moved further right to account for wider image
+      }
+    }
+
+    .works--info {
+      left: -100px; // Adjusted starting position for horizontal format
+      
+      &>p {
+        width: 20vw; // Adjusted text width for horizontal format
+      }
+    }
+
+    &:hover .works--info {
+      top: 410px; // Same vertical position but confirm for horizontal format
+      left: -80px; // Adjusted hover position for horizontal thumbnail
+    }
+  }
 }
 
 

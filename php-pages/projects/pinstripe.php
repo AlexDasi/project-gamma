@@ -12,7 +12,7 @@ include '../../php-elements/header-works.php'
 
     
     <header class="project-header">
-        <div class="project-header__image"><img class="center" src="../../content/pictures/Pinstripe.jpg" alt=""></div>
+        <div class="project-header__image"><img class="center" src="../../content/pictures/projects/pinstripe/Pinstripe.jpg" alt=""></div>
         <h1 class="padding3 project-header__title title title--project title--black">Pinstripe</h1>
         <section class="project-description">
             <div class="project-description__main">
@@ -40,13 +40,13 @@ include '../../php-elements/header-works.php'
         <section class="project-content">
             <div class="project-content__wrapper">
                 
-                <img class="element project-content__image" src="../../content/pictures/Pinstripe.jpg" alt=""> 
+                <img class="element project-content__image" src="../../content/pictures/projects/pinstripe/Pinstripe.jpg" alt=""> 
 
-                <img class="element project-content__image" src="../../content/pictures/Pinstripe.jpg" alt=""> 
+                <img class="element project-content__image" src="../../content/pictures/projects/pinstripe/Pinstripe.jpg" alt=""> 
 
                 <p class="padding3 project-content__quote">Intuitive interfaces with visual refinement.</p>
 
-                <img class="element project-content__image" src="../../content/pictures/Pinstripe.jpg" alt=""> 
+                <img class="element project-content__image" src="../../content/pictures/projects/pinstripe/Pinstripe.jpg" alt=""> 
             
             </div>
         </section> 

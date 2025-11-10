@@ -22,7 +22,7 @@ include '../../php-elements/header-works.php'
             
                 <h2 class="padding3 slice-infos__title">Poetic Digital Spaces & Artistic Sensibility</h2>
             
-                <div class="padding3 slice-infos__text"><p>Web design and development for Elsa Moreno, a poet and multidisciplinary artist whose work blends performance, literature, and ecology. The site reflects her artistic sensibility through a minimalist layout, soft color palette, and rhythmic visual flow—creating a serene digital space that mirrors her poetic and performative universe.</p></div>
+                <div class="padding3 slice-infos__text"><p>Web design and development for <a href="https://www.elsa-moreno.com" target="_blank">Elsa Moreno</a>, a poet and multidisciplinary artist whose work blends performance, literature, and ecology. The site reflects her artistic sensibility through a minimalist layout, soft color palette, and rhythmic visual flow—creating a serene digital space that mirrors her poetic and performative universe.</p></div>
             
                 <ul class="padding3 slice-infos__columns">
                     <li class="info-column">
@@ -35,7 +35,7 @@ include '../../php-elements/header-works.php'
                     </li>
                     <li class="info-column">
                         <h3 class="info-column__title title title--2">credits</h3>
-                        <div class="info-column__text"><p>Creative Direction: <a href="#">Elsa Moreno</a><br>Design & Development: Alex Dasi</p></div>
+                        <div class="info-column__text"><p>Alex Dasi & <a href="https://www.elsa-moreno.com" target="_blank">Elsa Moreno</a></p></div>
                     </li>
                 </ul>
             </div>
@@ -49,7 +49,7 @@ include '../../php-elements/header-works.php'
 
                 <img class="element project-content__image" src="../../content/pictures/projects/elsa/Macbook-elsa.jpg" alt="Elsa Moreno desktop website">
 
-                <p class="padding3 project-content__quote">The minimalist layout and soft color palette create a serene digital space that mirrors her poetic and performative universe, allowing the content to breathe and flow naturally.</p>
+                <p class="padding3 project-content__quote">The minimalist layout and soft color palette create a serene digital space that mirrors her poetic and performative universe, allowing the content to breathe and flow naturally. <a href="https://www.elsa-moreno.com" target="_blank">Visit the website</a> to experience the full artistic journey.</p>
 
                 <img class="element project-content__image" src="../../content/pictures/projects/elsa/Macbook-elsa 2.jpg" alt="Elsa Moreno additional view">
 

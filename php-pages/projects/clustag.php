@@ -49,6 +49,8 @@ include '../../php-elements/header-works.php'
 
                 <img class="element project-content__image" src="../../content/pictures/projects/clustag/clustag-iphone.jpg" alt="Clustag Mobile Interface">
 
+                <img class="element project-content__image" src="../../content/pictures/projects/clustag/clustag-warehouse.jpg" alt="Clustag Environmental Context">
+
                 <!-- Additional project content would go here -->
                 <div class="element project-content__text">
                     <p>The platform features a sophisticated dark interface with interactive elements that guide users through complex environmental data. Key features include real-time data visualization, interactive timelines, and comprehensive educational resources about environmental challenges and solutions.</p>

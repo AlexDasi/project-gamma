@@ -289,6 +289,15 @@
         &>p{
             color: var(--bkg-color)
         }
+        
+        a{
+            color: var(--bkg-color);
+            text-decoration: underline;
+            
+            &:hover{
+                color: var(--accent-color);
+            }
+        }
 
     }
 

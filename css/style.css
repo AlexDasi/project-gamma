@@ -1218,6 +1218,13 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
 .project-description__main .slice-infos__columns .info-column__text > p {
   color: var(--bkg-color);
 }
+.project-description__main .slice-infos__columns .info-column__text a {
+  color: var(--bkg-color);
+  text-decoration: underline;
+}
+.project-description__main .slice-infos__columns .info-column__text a:hover {
+  color: var(--accent-color);
+}
 @media (min-width: 768px) {
   .project-description__main .slice-infos__columns .info-column__text {
     margin-top: 3.6rem;

@@ -45,7 +45,7 @@ include '../../php-elements/header-works.php'
 
                 <img class="element project-content__image" src="../../content/pictures/projects/elsa/iphone-elsa 1.jpg" alt="Elsa Moreno mobile website">
 
-                <img class="element project-content__image" src="../../content/pictures/projects/elsa/ScreenRecording2025-11-10at19.18.53-ezgif.com-video-to-gif-converter.gif" alt="Elsa Moreno website animation">
+                <img class="element project-content__image" src="../../content/pictures/projects/elsa/elsa-animation.gif" alt="Elsa Moreno website animation">
 
                 <img class="element project-content__image" src="../../content/pictures/projects/elsa/Macbook-elsa.jpg" alt="Elsa Moreno desktop website">
 

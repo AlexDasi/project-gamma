@@ -20,22 +20,22 @@ include '../../php-elements/header-works.php'
         <section class="project-description">
             <div class="project-description__main">
             
-                <h2 class="padding3 slice-infos__title">INNOVATIVE WEB PLATFORM FOR ENVIRONMENTAL CHALLENGES</h2>
+                <h2 class="padding3 slice-infos__title">Smart RFID Solutions with Industrial Elegance</h2>
             
-                <div class="padding3 slice-infos__text"><p>Clustag is a comprehensive web platform designed to address environmental challenges through innovative data visualization and user engagement. The project features an interactive timeline, data collection interfaces, and educational content about sustainability. With sections like "The Challenge" highlighting environmental issues, the platform combines clean design with meaningful functionality to drive environmental awareness and action.</p></div>
+                <div class="padding3 slice-infos__text"><p>Clustag is a global technology company specializing in RFID-based intralogistics solutions that optimize traceability and efficiency within warehouses and supply chains. Their systems—ranging from RFID tunnels and pallet validation to garment tracking—automate the identification and movement of goods, helping brands achieve smarter, faster, and more accurate operations.</p></div>
             
                 <ul class="padding3 slice-infos__columns">
                     <li class="info-column">
                         <h3 class="info-column__title title title--2">client</h3>
-                        <div class="info-column__text"><p>Clustag<br>2024</p></div>
+                        <div class="info-column__text"><p>Clustag<br>2025</p></div>
                     </li>
                     <li class="info-column">
                         <h3 class="info-column__title title title--2">services</h3>
-                        <div class="info-column__text"><p>Web Development & UX/UI Design<br></p></div>
+                        <div class="info-column__text"><p>UX/UI Design<br></p></div>
                     </li>
                     <li class="info-column">
                         <h3 class="info-column__title title title--2">credits</h3>
-                        <div class="info-column__text"><p>Alex Dasi</p></div>
+                        <div class="info-column__text"><p>Alex Dasi & <a href="https://freshup.es">FreshUp</a></p></div>
                     </li>
                 </ul>
             </div>
@@ -47,14 +47,14 @@ include '../../php-elements/header-works.php'
 
                 <img class="element project-content__image" src="../../content/videos-gifs/clustag/clustag video 1.gif" alt="Clustag Platform Animation">
 
-                <p class="padding3 project-content__quote"><a href="https://camisola.alexdasi.com/">Clustag</a>  if you fancy explore and play with the editor.</p>
+                <p class="padding3 project-content__quote"><a href="https://camisola.alexdasi.com/">The website</a> reflects this technological precision through a clean, modular layout and an industrial yet elegant visual identity.</p>
 
                 <img class="element project-content__image" src="../../content/pictures/projects/clustag/clustag-iphone.jpg" alt="Clustag Mobile Interface">
 
                 <img class="element project-content__image" src="../../content/pictures/projects/clustag/clustag-warehouse.jpg" alt="Clustag Environmental Context">
 
                 <!-- Additional project content would go here -->
-                <p class="padding3 project-content__quote">The platform features a sophisticated dark interface with interactive elements that guide users through complex environmental data. Key features include real-time data visualization, interactive timelines, and comprehensive educational resources about environmental challenges and solutions.</p>
+                <p class="padding3 project-content__quote">Its design emphasizes clarity, data visualization, and intuitive navigation—mirroring the brand’s focus on efficiency and innovation. The visual language combines neutral tones, geometric structure, and dynamic motion elements to communicate reliability and forward-thinking engineering.</p>
 
             </div>
         </section>

@@ -29,11 +29,29 @@
                 <!-- info -->
                     <div class="works--info">
                         <h2>CLUSTAG</h2>
-                        <p class="yellow-600">Innovative web platform designed to address environmental challenges through data visualization and user engagement. Features interactive timelines and educational content about sustainability.</p>
+                        <p class="yellow-600">Web design for Clustag, a company specializing in RFID technology for logistics and retail optimization. The visual direction draws from industrial aesthetics—neutral tones, geometric layouts, and precise motion—to reflect the brand’s focus on innovation, efficiency, and technological sophistication.</p>
                     </div>
                     <div class="hiddenMobile works--details">
                         <p>Web Development & UX/UI Design</p>
-                        <p class="yellow-600">2024</p>
+                        <p class="yellow-600">2025</p>
+                    </div>
+                </div>
+            </a>
+
+
+            <a href="php-pages/projects/elsa.php" class="swiper-slide">
+                <div class="works works-elsa">
+                <!-- thumbnail -->
+                    <img class="hiddenMobile" src="content/pictures/thumbnails/elsa.jpg"/>
+                    <img class="hiddenDesktop" src="content/pictures/thumbnails/elsa-mobile.jpg"/>
+                <!-- info -->
+                    <div class="works--info">
+                        <h2>ELSA</h2>
+                        <p class="yellow-600">Web design and development for Elsa Moreno, a poet and multidisciplinary artist whose work blends performance, literature, and ecology. The site reflects her artistic sensibility through a minimalist layout, soft color palette, and rhythmic visual flow—creating a serene digital space that mirrors her poetic and performative universe.</p>
+                    </div>
+                    <div class="hiddenMobile works--details">
+                        <p>Web Design, Development, Visual Language</p>
+                        <p class="yellow-600">2025</p>
                     </div>
                 </div>
             </a>

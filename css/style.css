@@ -1105,11 +1105,11 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
   color: var(--bkg-color);
 }
 .project-description__main .slice-infos__columns .info-column__text a {
+  position: relative;
   color: var(--bkg-color);
-  text-decoration: underline;
-}
-.project-description__main .slice-infos__columns .info-column__text a:hover {
-  color: var(--accent-color);
+  background: var(--accent-color);
+  text-decoration: none;
+  z-index: 0;
 }
 @media (min-width: 768px) {
   .project-description__main .slice-infos__columns .info-column__text {
@@ -1127,6 +1127,13 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
 .project-description__main .slice-infos__text > p {
   text-align: justify;
   color: var(--bkg-color);
+}
+.project-description__main .slice-infos__text a {
+  position: relative;
+  color: var(--bkg-color);
+  background: var(--accent-color);
+  text-decoration: none;
+  z-index: 0;
 }
 .project-description__main .slice-infos__columns {
   display: flex;

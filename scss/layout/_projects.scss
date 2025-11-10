@@ -291,12 +291,11 @@
         }
         
         a{
+            position: relative;
             color: var(--bkg-color);
-            text-decoration: underline;
-            
-            &:hover{
-                color: var(--accent-color);
-            }
+            background: var(--accent-color);
+            text-decoration: none;
+            z-index: 0;
         }
 
     }
@@ -321,6 +320,15 @@
         &>p{
             text-align: justify;
             color: var(--bkg-color);
+        }
+
+        // Links in introductory text should match quote style
+        a {
+            position: relative;
+            color: var(--bkg-color);
+            background: var(--accent-color);
+            text-decoration: none;
+            z-index: 0;
         }
     }
 

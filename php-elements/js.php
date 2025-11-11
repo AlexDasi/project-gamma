@@ -3,7 +3,6 @@
 
 <script class="hiddenMobile"  src="js/fluid.js"></script>
 <parameter name="hiddenDesktop"  src="js/fluidMobile.js"></script>
-<script src="js/hidden.js"></script>
 
 <script src="js/vendor/magnet-mouse.min.js"></script>
 <script src="js/magnet.js"></script>

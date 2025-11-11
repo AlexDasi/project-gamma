@@ -437,12 +437,11 @@ body {
         filter: brightness(0.5) !important;
         opacity: 1 !important;
         transform: scale(1) !important; // Ensure image doesn't scale
-        width: auto;
+        width: 100%;
         height: 70vh;
         object-fit: cover;
-        object-position: center;
+        object-position: center center; // Explicitly center both axes
         display: block;
-        margin: 0 auto;
         
         // ANULAR HOVER EFFECTS EN IMAGENES MOBILE
         transition: none !important;

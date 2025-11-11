@@ -11,15 +11,15 @@
 
 // / MQUERY / //
 
-@media (min-width:768px) {
+@media (max-width:768px) {
     .about-header {
-        padding-bottom: 8rem;
+        padding-bottom: 0rem;
     }
 }
 
-@media (min-width:1280px) {
+@media (max-width:1280px) {
     .about-header {
-        padding-bottom: 7rem;
+        padding-bottom: 0rem;
     }
 }
 

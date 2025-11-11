@@ -1,67 +1,56 @@
-.contact--message{
-    position:absolute;
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    position: relative;
+}
+
+.contact--message {
+    position: absolute;
     left: 5vw;
     top: 15vh;
 
-    &__main{
+    &__main {
         font-size: 13vw;
         display: inline-block;
         max-width: 60vw;
 
-        &-link{
+        &-link {
             z-index: $z-top;
         }
     }
 
-    &__text{
+    &__text {
         width: 20vw;
         display: inline-block;
         position: relative;
         left: -3vw;
     }
-
-
-
-    @media (max-width:1280px) {
-        &{
-            &__text{
-                display: block;
-                left: 1vw;
-                width: 40vw;
-                margin-top: 3vh;
-            }
-        }
-    }
 }
 
-.contact--social{
-    bottom: 20vh;
-    height: auto;
-    flex-direction: column;
-    justify-content: left;
+.contact--social {
     position: absolute;
-    height: auto;
+    bottom: 15vh;
     width: 100%;
     @include flexbox;
+    flex-direction: column;
     align-items: center;
 
-
-    &__element{
+    &__element {
         width: 7vw;
         @include flexbox;
         justify-content: center;
-
         @include transitions;
         filter: grayscale(1);
 
-        &:hover{
+        &:hover {
             filter: grayscale(0);
         }
 
-        &>h2{
+        h2 {
             color: var(--accent-color);
             width: 40px;
-
         }
     }
 }
@@ -84,30 +73,37 @@
     }
 }
 
-@media (max-width:1280px) {
+@media (max-width: 1280px) {
+    #contact {
+        min-height: 80vh; // Keep standard height, flexbox handles spacing
+        padding-bottom: 10vh; // Add bottom padding for breathing room
+        margin-top: 0vh;
+    }
 
-    .contact--message{
-        &__main{
+    .contact--message {
+        top: 12vh;
+        position: static;
+
+        &__main {
             font-size: 20vw;
             max-width: 85vw;
         }
-        &__text{
+        
+        &__text {
             display: block;
             left: 1vw;
             width: 60vw;
             margin-top: 3vh;
 
-            &>p{
+            p {
                 font-size: 4vw;
             }
         }
     }
-}
 
-
-@media (max-width:768px) {
-    .contact--social{
-        width: auto;
+    .contact--social {
+        bottom: 8vh; // Adequate space without excessive padding
+        align-items: start;
     }
 }
 

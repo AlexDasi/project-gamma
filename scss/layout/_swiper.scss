@@ -420,57 +420,61 @@ body {
       width: 90vw;
       overflow: hidden;
       display: block;
-      transform: scale(1);
+      transform: scale(1) !important; // Force static scale for mobile
       justify-content: center;
       padding: 10vh 0;
 
-
-      &:hover{
-        height: 100%;
-        width: 90vw;
-        overflow: hidden;
-        display: block;
-        transform: scale(1);
-        justify-content: center;
-        padding: 10vh 0;
-
-        & img{
-          filter: contrast(130%);
-          filter: grayscale(0);
-          filter: brightness(0.5);
-          object-fit: cover;
-          object-position: center;
-          display: block;
-          margin: 0 auto;
-        }
+      // ANULAR COMPLETAMENTE LOS EFECTOS HOVER PARA MOBILE
+      &:hover,
+      &:active,
+      &:focus {
+        transform: scale(1) !important; // No scaling on touch
+        transition: none !important;    // No transitions on mobile
       }
 
       & img{
-        filter: grayscale(0);
-        filter: brightness(0.5);
-        opacity: 1;
-        transform: scale(1);
+        filter: grayscale(0) !important;
+        filter: brightness(0.5) !important;
+        opacity: 1 !important;
+        transform: scale(1) !important; // Ensure image doesn't scale
         width: auto;
         height: 70vh;
         object-fit: cover;
         object-position: center;
         display: block;
         margin: 0 auto;
+        
+        // ANULAR HOVER EFFECTS EN IMAGENES MOBILE
+        transition: none !important;
+      }
+
+      // HOVER STATES ANULADOS PARA MOBILE
+      &:hover img,
+      &:active img,
+      &:focus img {
+        filter: brightness(0.5) !important; // Keep same brightness
+        opacity: 1 !important;              // Keep same opacity
+        transform: scale(1) !important;     // No transform changes
+        transition: none !important;        // No transitions
       }
     }
   }
 
   .works--info{
     width: 75vw;
-    position: absolute;
+    position: absolute !important;
     // bottom: 5px;
-    opacity: 1;
-    top: 50px;
-    left: 10px;
+    opacity: 1 !important;
+    top: 50px !important;
+    left: 10px !important;
     font-family: var(--main-font);
     @include flexbox;
     flex-direction: column;
     margin-left: 2vw;
+    
+    // ANULAR HOVER STATES PARA MOBILE
+    transform: none !important;
+    transition: none !important;
 
     &>h2{
       text-align: left;
@@ -482,10 +486,35 @@ body {
     }
   }
 
-  .works:hover .works--info{
+  // ANULAR TODOS LOS HOVER EFFECTS DE WORKS EN MOBILE
+  .works {
+    &:hover .works--info,
+    &:active .works--info,
+    &:focus .works--info {
+      position: absolute !important;
+      opacity: 1 !important;
+      top: 50px !important;
+      left: 10px !important;
+      padding-top: 0 !important; // Remove desktop padding-top: 30px
+      transform: none !important;
+      transition: none !important;
+    }
 
-    top: 300px;
+    &--details {
+      opacity: 0 !important; // Hide details completely on mobile
+      pointer-events: none !important;
+    }
+
+    &:hover .works--details,
+    &:active .works--details,
+    &:focus .works--details {
+      opacity: 0 !important; // Keep hidden even on hover
+      transform: none !important;
+      transition: none !important;
+    }
   }
+
+
 
   .swiper-slide{
     margin: 10vh 5vw;

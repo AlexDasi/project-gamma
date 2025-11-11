@@ -182,7 +182,9 @@
     }
 
     .categories{
-        position:relative;
+        position: relative;
+        margin: 5vw 0; // Elimina margin lateral, mantiene vertical
+        width: 100vw; // Ocupa todo el ancho
     }
 }
 

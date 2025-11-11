@@ -4,7 +4,7 @@
     <div class="swiper WorksSwiper">
         <div class="swiper-wrapper">
             <a href="php-pages/projects/camisola.php" class="swiper-slide">
-                <div class="works works-1">
+                <div class="works works-camisola">
                 <!-- thumbnail -->
                     <img class="hiddenMobile" src="content/pictures/thumbnails/camisola.jpg"/>
                     <img class="hiddenDesktop" src="content/pictures/thumbnails/camisola-mobile.jpg"/>

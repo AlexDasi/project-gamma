@@ -32,12 +32,13 @@ $metaDescription = isset($metaDescription) && is_string($metaDescription) && tri
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">    
 
     <script type="text/javascript" src="/dat.gui.min.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSXNYNQRKG"></script>
     <script>
-        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-        ga('create', 'UA-105392568-1', 'auto');
-        ga('send', 'pageview');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HSXNYNQRKG');
     </script>
-    <script async src="https://www.google-analytics.com/analytics.js"></script>
 
     <!-- cursor -->
 

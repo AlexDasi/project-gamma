@@ -33,9 +33,39 @@
     &--designer{
         margin-top: 4rem;
         text-transform: lowercase;
-        background-color: var(--accent-colour);
+        display: inline-block;
+        align-self: flex-start;
+        width: fit-content;
+        position: relative;
+        overflow: visible;
+        isolation: isolate;
+        line-height: 0.95;
+        padding: 0.08em 0.18em 0.14em;
+        margin-left: -0.18em;
+        transition: color 0.28s ease;
+
+        &::before{
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: var(--accent-color);
+            transform: scaleX(0);
+            transform-origin: left center;
+            transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+            z-index: -1;
+        }
     }
 
+}
+
+@media (hover: hover){
+    .categories--designer:hover{
+        color: var(--bkg-color);
+
+        &::before{
+            transform: scaleX(1);
+        }
+    }
 }
 
 // .messages{

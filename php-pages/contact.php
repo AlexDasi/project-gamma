@@ -10,10 +10,10 @@
 
 
     <div class="contact--social">
-        <a href="" class="contact--social__element">
+        <a href="https://www.behance.net/alexdasi" class="contact--social__element" target="_blank" rel="noopener noreferrer">
             <h2>Behance</h2>
         </a>
-        <a href="" class="contact--social__element">
+        <a href="https://www.linkedin.com/in/alexdasi/" class="contact--social__element" target="_blank" rel="noopener noreferrer">
             <h2>Linkedin</h2>
         </a>
         <a href="mailto:alejandrodasi@me.com" class="contact--social__element">

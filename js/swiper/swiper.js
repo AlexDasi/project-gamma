@@ -95,9 +95,10 @@ function updatePagination() {
 // Duplicate slides for pseudo-infinite scrolling
 const worksWrapper = document.querySelector('.WorksSwiper .swiper-wrapper');
 let originalSlides;
+const duplicateTimes = 3;
 if (worksWrapper) {
   originalSlides = Array.from(worksWrapper.querySelectorAll('.swiper-slide'));
-  const duplicateTimes = 3; // Create 3 copies on each side
+  // Create 3 copies on each side for pseudo-infinite scrolling
   
   // Clone and append to end (right side)
   for (let i = 0; i < duplicateTimes; i++) {
@@ -139,20 +140,6 @@ var swiper = new Swiper(".WorksSwiper", {
   freeMode: {
     enabled: true,
     momentum: true,
-  },
-
-  on: {
-    resize: function () {
-        var windowWidth = $(window).width();
-        if(windowWidth <= 767){
-                swiperBottomScrollbarFull.direction('vertical');
-                swiperBottomScrollbarFull.detachEvents();
-        }else{
-                swiperBottomScrollbarFull.direction('horizontal');
-                swiperBottomScrollbarFull.attachEvents();
-        }
-        swiperBottomScrollbarFull.update();
-    }
   }
 });
 

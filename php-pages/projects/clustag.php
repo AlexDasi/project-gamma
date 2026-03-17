@@ -43,15 +43,15 @@ include '../../php-elements/header-works.php'
         <section class="project-content">
             <div class="project-content__wrapper">
 
-                <img class="element project-content__image" src="../../content/pictures/projects/clustag/clustag-iphones.jpg" alt="Clustag Platform Interface">
+                <img class="element project-content__image" src="../../content/pictures/projects/clustag/clustag-iphones.jpg" alt="Clustag Platform Interface" loading="lazy" decoding="async">
 
-                <img class="element project-content__image" src="../../content/videos-gifs/clustag/clustag video 1.gif" alt="Clustag Platform Animation">
+                <img class="element project-content__image" src="../../content/videos-gifs/clustag/clustag video 1.gif" alt="Clustag Platform Animation" loading="lazy" decoding="async">
 
                 <p class="padding3 project-content__quote"><a href="https://clustag.com/">The website</a> reflects this technological precision through a clean, modular layout and an industrial yet elegant visual identity.</p>
 
-                <img class="element project-content__image" src="../../content/pictures/projects/clustag/clustag-iphone.jpg" alt="Clustag Mobile Interface">
+                <img class="element project-content__image" src="../../content/pictures/projects/clustag/clustag-iphone.jpg" alt="Clustag Mobile Interface" loading="lazy" decoding="async">
 
-                <img class="element project-content__image" src="../../content/pictures/projects/clustag/clustag-warehouse.jpg" alt="Clustag Environmental Context">
+                <img class="element project-content__image" src="../../content/pictures/projects/clustag/clustag-warehouse.jpg" alt="Clustag Environmental Context" loading="lazy" decoding="async">
 
                 <!-- Additional project content would go here -->
                 <p class="padding3 project-content__quote">Its design emphasizes clarity, data visualization, and intuitive navigation—mirroring the brand’s focus on efficiency and innovation. The visual language combines neutral tones, geometric structure, and dynamic motion elements to communicate reliability and forward-thinking engineering.</p>

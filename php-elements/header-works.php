@@ -7,7 +7,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Alex Dasi, graphic designer and web designer creating brand identities, interfaces, and digital experiences.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#f7ff99">
+    <meta property="og:title" content="Alex Dasi Portfolio">
+    <meta property="og:description" content="Graphic design, web design, branding, and digital experiences by Alex Dasi.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Alex Dasi Portfolio">
+    <meta name="twitter:card" content="summary_large_image">
     <title>Alex Dasi Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="/images/vectors/arrow.svg">
         
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">    

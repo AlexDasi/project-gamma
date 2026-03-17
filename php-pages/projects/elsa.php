@@ -43,15 +43,15 @@ include '../../php-elements/header-works.php'
         <section class="project-content">
             <div class="project-content__wrapper">
 
-                <img class="element project-content__image" src="../../content/pictures/projects/elsa/iphone-elsa 1.jpg" alt="Elsa Moreno mobile website">
+                <img class="element project-content__image" src="../../content/pictures/projects/elsa/iphone-elsa 1.jpg" alt="Elsa Moreno mobile website" loading="lazy" decoding="async">
 
-                <img class="element project-content__image" src="../../content/pictures/projects/elsa/elsa-animation.gif" alt="Elsa Moreno website animation">
+                <img class="element project-content__image" src="../../content/pictures/projects/elsa/elsa-animation.gif" alt="Elsa Moreno website animation" loading="lazy" decoding="async">
 
-                <img class="element project-content__image" src="../../content/pictures/projects/elsa/Macbook-elsa.jpg" alt="Elsa Moreno desktop website">
+                <img class="element project-content__image" src="../../content/pictures/projects/elsa/Macbook-elsa.jpg" alt="Elsa Moreno desktop website" loading="lazy" decoding="async">
 
                 <p class="padding3 project-content__quote">The minimalist layout and soft color palette create a serene digital space that mirrors her poetic and performative universe, allowing the content to breathe and flow naturally. <a href="https://www.elsa-moreno.com" target="_blank">Visit the website</a> to experience the full artistic journey.</p>
 
-                <img class="element project-content__image" src="../../content/pictures/projects/elsa/Macbook-elsa 2.jpg" alt="Elsa Moreno additional view">
+                <img class="element project-content__image" src="../../content/pictures/projects/elsa/Macbook-elsa 2.jpg" alt="Elsa Moreno additional view" loading="lazy" decoding="async">
 
             </div>
         </section>

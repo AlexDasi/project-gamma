@@ -15,7 +15,7 @@ include '../../php-elements/header-works.php'
 
     
     <header class="project-header">
-        <div class="project-header__image"><img class="center" src="../../content/pictures/projects/camisola header.jpg" alt=""></div>
+        <div class="project-header__image"><img class="center" src="../../content/pictures/projects/camisola header.jpg" alt="Camisola project header"></div>
         <h1 class="padding3 project-header__title title title--project title--black">Camisola</h1>
         <section class="project-description">
             <div class="project-description__main">
@@ -43,25 +43,25 @@ include '../../php-elements/header-works.php'
         <section class="project-content">
             <div class="project-content__wrapper">
                 
-                <img class="element project-content__image" src="../../content/pictures/projects/camisola/Camisola2.jpg" alt=""> 
+                <img class="element project-content__image" src="../../content/pictures/projects/camisola/Camisola2.jpg" alt="Camisola website preview" loading="lazy" decoding="async"> 
 
-                <video class="element project-content__video" autoplay loop muted> 
+                <video class="element project-content__video" autoplay loop muted playsinline preload="metadata"> 
                     <source src="../../content/videos-gifs/camisola/dsk/1.mp4" type="video/mp4"></source>
                 </video>
 
-                <img class="element project-content__image" src="../../content/pictures/projects/camisola/Camisola1.jpg" alt=""> 
+                <img class="element project-content__image" src="../../content/pictures/projects/camisola/Camisola1.jpg" alt="Camisola branding layout" loading="lazy" decoding="async"> 
 
                 <p class="padding3 project-content__quote">The site <a href="https://camisola.alexdasi.com/">is live</a>  if you fancy explore and play with the editor.</p>
 
-                <video class="element project-content__video" autoplay loop muted> 
+                <video class="element project-content__video" autoplay loop muted playsinline preload="metadata"> 
                     <source src="../../content/videos-gifs/camisola/dsk/2.mp4" type="video/mp4"></source>
                 </video> 
 
-                <video class="element project-content__video" autoplay loop muted> 
+                <video class="element project-content__video" autoplay loop muted playsinline preload="metadata"> 
                     <source src="../../content/videos-gifs/camisola/dsk/3.mp4" type="video/mp4"></source>
                 </video>
                 
-                <img class="element project-content__image" src="../../content/pictures/projects/camisola/Camisola4.jpg" alt=""> 
+                <img class="element project-content__image" src="../../content/pictures/projects/camisola/Camisola4.jpg" alt="Camisola website detail" loading="lazy" decoding="async"> 
             
             </div>
         </section> 

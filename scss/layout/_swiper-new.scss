@@ -1,48 +1,45 @@
-// Swipe indicator for mobile - visual hint that user can swipe
-.swipe-hint {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  
-  color: var(--accent-color);
-  font-size: 0.85rem;
-  font-weight: 500;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  
-  opacity: 0.8;
-  animation: pulse-swipe 2s ease-in-out infinite;
-  pointer-events: none;
-  z-index: 10;
-  
-  @media (min-width: 1025px) {
-    display: none;
-  }
-
-  &--hidden {
-    animation: fade-out 0.4s ease-out forwards;
-  }
-}
-
-@keyframes pulse-swipe {
-  0%, 100% {
-    opacity: 0.6;
-    transform: translateX(-50%) scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: translateX(-50%) scale(1.05);
-  }
-}
-
-@keyframes fade-out {
-  0% {
-    opacity: 0.8;
-  }
-  100% {
+// Mobile swipe indicator using pagination dots (cursor-inspired style)
+.WorksSwiper {
+  .swiper-pagination {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    z-index: 20;
+    pointer-events: auto;
     opacity: 0;
-    visibility: hidden;
+    transition: opacity 0.25s ease;
+
+    @media (max-width: 1024px) {
+      opacity: 1;
+    }
+
+    @media (min-width: 1025px) {
+      display: none;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    margin: 0 !important;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    opacity: 0.35;
+    transform: scale(1);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    box-shadow: 0 0 0 0 rgba(236, 249, 142, 0);
+  }
+
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+    transform: scale(1.15);
+    box-shadow: 0 0 0 6px rgba(236, 249, 142, 0.14);
   }
 }
 

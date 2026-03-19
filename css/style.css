@@ -641,14 +641,15 @@ body {
   position: relative;
 }
 .works--details {
-  position: relative;
-  top: -250px;
+  position: absolute;
+  top: calc(100% - 140px);
   opacity: 0;
-  width: 100px;
+  width: 150px;
   text-transform: uppercase;
-  left: 400px;
+  left: calc(100% + 16px);
   font-family: var(--main-font);
   pointer-events: none;
+  transform: translateY(8px);
   transition: all 0.15s ease-in-out;
   -webkit-transition: all 0.15s ease-in-out;
   -moz-transition: all 0.15s ease-in-out;
@@ -670,10 +671,11 @@ body {
 }
 .works:hover .works--details {
   opacity: 1;
-  left: 540px;
-  padding-left: 20px;
-  width: 100px;
+  left: calc(100% + 16px);
+  padding-left: 0;
+  width: 150px;
   text-transform: uppercase;
+  transform: translateY(0);
   font-family: var(--main-font);
   transition: all 0.15s ease-in-out;
   -webkit-transition: all 0.15s ease-in-out;
@@ -684,8 +686,8 @@ body {
 .works--info {
   position: absolute;
   opacity: 0;
-  top: 300px;
-  left: -150px;
+  top: calc(100% + 12px);
+  left: 0;
   font-family: var(--main-font);
   pointer-events: none;
   display: -webkit-box;
@@ -694,6 +696,7 @@ body {
   display: -webkit-flex;
   display: flex;
   flex-direction: row;
+  transform: translateY(8px);
   transition: all 0.15s ease-in-out;
   -webkit-transition: all 0.15s ease-in-out;
   -moz-transition: all 0.15s ease-in-out;
@@ -722,8 +725,9 @@ body {
 }
 .works:hover .works--info {
   opacity: 1;
-  top: 410px;
-  padding-top: 30px;
+  top: calc(100% + 12px);
+  padding-top: 0;
+  transform: translateY(0);
   font-family: var(--main-font);
   transition: all 0.15s ease-in-out;
   -webkit-transition: all 0.15s ease-in-out;
@@ -733,52 +737,52 @@ body {
 }
 @media (min-width: 1281px) {
   .works.works-clustag .works--details {
-    left: 450px;
+    left: calc(100% + 16px);
   }
   .works.works-clustag .works--details:hover, .swiper-slide:hover .works.works-clustag .works--details {
-    left: 620px;
+    left: calc(100% + 16px);
   }
   .works.works-clustag .works--info {
-    left: -100px;
+    left: 0;
   }
   .works.works-clustag .works--info > p {
     width: 20vw;
   }
   .works.works-clustag:hover .works--info {
-    top: 410px;
-    left: -80px;
+    top: calc(100% + 12px);
+    left: 0;
   }
   .works.works-camisola .works--details {
-    left: 450px;
+    left: calc(100% + 16px);
   }
   .works.works-camisola .works--details:hover, .swiper-slide:hover .works.works-camisola .works--details {
-    left: 620px;
+    left: calc(100% + 16px);
   }
   .works.works-camisola .works--info {
-    left: -100px;
+    left: 0;
   }
   .works.works-camisola .works--info > p {
     width: 20vw;
   }
   .works.works-camisola:hover .works--info {
-    top: 410px;
-    left: -80px;
+    top: calc(100% + 12px);
+    left: 0;
   }
   .works.works-elsa .works--details {
-    left: 450px;
+    left: calc(100% + 16px);
   }
   .works.works-elsa .works--details:hover, .swiper-slide:hover .works.works-elsa .works--details {
-    left: 620px;
+    left: calc(100% + 16px);
   }
   .works.works-elsa .works--info {
-    left: -100px;
+    left: 0;
   }
   .works.works-elsa .works--info > p {
     width: 20vw;
   }
   .works.works-elsa:hover .works--info {
-    top: 410px;
-    left: -80px;
+    top: calc(100% + 12px);
+    left: 0;
   }
 }
 
@@ -1695,3 +1699,5 @@ canvas {
     display: none;
   }
 }
+
+/*# sourceMappingURL=style.css.map */

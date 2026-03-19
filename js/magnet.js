@@ -1,18 +1,22 @@
-let magnetfunction = new MagnetMouse({
-    magnet: {
-        element: '.magnet',
-        class: 'magnet-mouse-active',
-        enabled: true, /* Enables the magnet effect */
-        distance: 40, /* Distance (in px) when the magnet effect around element activates */
-        position: 'center' /* Position of mouse relative to the element when magnet effect is active */
-        },
-    follow: {
-        element: '.follow',
-        class: 'follow-mouse-active'
-        }
-    });
+if (!window.magnetMouseInstance) {
+    window.magnetMouseInstance = new MagnetMouse({
+        magnet: {
+            element: '.magnet',
+            class: 'magnet-mouse-active',
+            enabled: true, /* Enables the magnet effect */
+            distance: 40, /* Distance (in px) when the magnet effect around element activates */
+            position: 'center' /* Position of mouse relative to the element when magnet effect is active */
+            },
+        follow: {
+            element: '.follow',
+            class: 'follow-mouse-active'
+            }
+        });
     
-    magnetfunction.init();
+    window.magnetMouseInstance.init();
+}
+
+const magnetfunction = window.magnetMouseInstance;
 
 // Reinitialize magnet for dynamically loaded elements
 document.addEventListener('DOMContentLoaded', function() {

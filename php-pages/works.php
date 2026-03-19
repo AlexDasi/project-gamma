@@ -6,8 +6,8 @@
             <a href="php-pages/projects/camisola.php" class="swiper-slide">
                 <div class="works works-camisola">
                 <!-- thumbnail -->
-                    <img class="hiddenMobile" src="content/pictures/thumbnails/camisola.jpg"/>
-                    <img class="hiddenDesktop" src="content/pictures/thumbnails/camisola-mobile.jpg"/>
+                    <img class="hiddenMobile" src="content/pictures/thumbnails/lq/camisola.jpg"/>
+                    <img class="hiddenDesktop" src="content/pictures/thumbnails/lq/camisola-mobile.jpg"/>
                 <!-- info -->
                     <div class="works--info">
                         <h2 >CAMISOLA</h2>
@@ -24,8 +24,8 @@
             <a href="php-pages/projects/clustag.php" class="swiper-slide">
                 <div class="works works-clustag">
                 <!-- thumbnail -->
-                    <img class="hiddenMobile" src="content/pictures/thumbnails/clustag.jpg"/>
-                    <img class="hiddenDesktop" src="content/pictures/thumbnails/clustag-mobile.jpg"/>
+                    <img class="hiddenMobile" src="content/pictures/thumbnails/lq/clustag.jpg"/>
+                    <img class="hiddenDesktop" src="content/pictures/thumbnails/lq/clustag-mobile.jpg"/>
                 <!-- info -->
                     <div class="works--info">
                         <h2>CLUSTAG</h2>
@@ -42,8 +42,8 @@
             <a href="php-pages/projects/elsa.php" class="swiper-slide">
                 <div class="works works-elsa">
                 <!-- thumbnail -->
-                    <img class="hiddenMobile" src="content/pictures/thumbnails/elsa.jpg"/>
-                    <img class="hiddenDesktop" src="content/pictures/thumbnails/elsa-mobile.jpg"/>
+                    <img class="hiddenMobile" src="content/pictures/thumbnails/lq/elsa.jpg"/>
+                    <img class="hiddenDesktop" src="content/pictures/thumbnails/lq/elsa-mobile.jpg"/>
                 <!-- info -->
                     <div class="works--info">
                         <h2>ELSA</h2>
@@ -61,8 +61,8 @@
                 <div class="works works-2">
                     <!-- thumbnail -->
 
-                    <img class="hiddenMobile" src="content/pictures/thumbnails/Terralava.jpg"/>
-                    <img class="hiddenDesktop" src="content/pictures/thumbnails/Terralava-mobile.jpg"/>
+                    <img class="hiddenMobile" src="content/pictures/thumbnails/lq/Terralava.jpg"/>
+                    <img class="hiddenDesktop" src="content/pictures/thumbnails/lq/Terralava-mobile.jpg"/>
                     <!-- info -->
                     <div class="works--info">
                         <h2 >TERRALAVA</h2>
@@ -79,8 +79,8 @@
             <a href="php-pages/projects/rotc.php" class="swiper-slide">
                 <div class="works works-3">
                     <!-- thumbnail -->
-                    <img class="hiddenMobile" src="content/pictures/thumbnails/ROTCPop-up.jpg"/>
-                    <img class="hiddenDesktop" src="content/pictures/thumbnails/ROTCPop-up-mobile.jpg"/>
+                    <img class="hiddenMobile" src="content/pictures/thumbnails/lq/ROTCPop-up.jpg"/>
+                    <img class="hiddenDesktop" src="content/pictures/thumbnails/lq/ROTCPop-up-mobile.jpg"/>
                     <!-- info -->
                     <div class="works--info">
                         <h2>ROTC</h2>
@@ -97,8 +97,8 @@
             <a href="php-pages/projects/scotland-is-now.php" class="swiper-slide">
                 <div class="works works-4">
                     <!-- thumbnail -->
-                    <img class="hiddenMobile" src="content/pictures/thumbnails/SE.jpg"/>
-                    <img class="hiddenDesktop" src="content/pictures/thumbnails/SE-mobile.jpg"/>
+                    <img class="hiddenMobile" src="content/pictures/thumbnails/lq/SE.jpg"/>
+                    <img class="hiddenDesktop" src="content/pictures/thumbnails/lq/SE-mobile.jpg"/>
                     <!-- info -->
                     <div class="works--info">
                         <h2 >Scotland Is Now</h2>
@@ -115,8 +115,8 @@
             <a href="php-pages/projects/old-skull.php" class="swiper-slide">
                 <div class="works works-5">
                     <!-- thumbnail -->
-                    <img class="hiddenMobile" src="content/pictures/thumbnails/SKULL-2.jpg"/>
-                    <img class="hiddenDesktop" src="content/pictures/thumbnails/SKULL-2-mobile.jpg"/>
+                    <img class="hiddenMobile" src="content/pictures/thumbnails/lq/SKULL-2.jpg"/>
+                    <img class="hiddenDesktop" src="content/pictures/thumbnails/lq/SKULL-2-mobile.jpg"/>
                     <!-- info -->
                     <div class="works--info">
                         <h2 >Old Skull</h2>
@@ -133,8 +133,8 @@
             <a href="php-pages/projects/mef2c-concerts.php" class="swiper-slide">
                 <div class="works works-6">
                     <!-- thumbnail -->
-                    <img class="hiddenMobile" src="content/pictures/thumbnails/poster conciertos.jpg"/>
-                    <img class="hiddenDesktop" src="content/pictures/thumbnails/poster conciertos-mobile.jpg"/>
+                    <img class="hiddenMobile" src="content/pictures/thumbnails/lq/poster conciertos.jpg"/>
+                    <img class="hiddenDesktop" src="content/pictures/thumbnails/lq/poster conciertos-mobile.jpg"/>
                     <!-- info -->
                     <div class="works--info">
                         <h2 >MEF2C Concerts</h2>
@@ -152,8 +152,8 @@
                 <div class="works works-7">
                     <!-- thumbnail -->
 
-                    <img class="hiddenMobile" src="content/pictures/thumbnails/RoS styleguide.jpg"/>
-                    <img class="hiddenDesktop" src="content/pictures/thumbnails/RoS styleguide-mobile.jpg"/>
+                    <img class="hiddenMobile" src="content/pictures/thumbnails/lq/RoS styleguide.jpg"/>
+                    <img class="hiddenDesktop" src="content/pictures/thumbnails/lq/RoS styleguide-mobile.jpg"/>
                     <!-- info -->
                     <div class="works--info">
                         <h2 >RoS stylguide</h2>
@@ -189,8 +189,8 @@
             <a href="php-pages/projects/pinstripe.php" class="swiper-slide">
                 <div class="works works-9">
                     <!-- thumbnail -->
-                    <img class="hiddenMobile" src="content/pictures/thumbnails/Pinstripe.jpg"/>
-                    <img class="hiddenDesktop" src="content/pictures/thumbnails/Pinstripe-mobile.jpg"/>
+                    <img class="hiddenMobile" src="content/pictures/thumbnails/lq/Pinstripe.jpg"/>
+                    <img class="hiddenDesktop" src="content/pictures/thumbnails/lq/Pinstripe-mobile.jpg"/>
                     <!-- info -->
                     <div class="works--info">
                         <h2 >Pinstripe</h2>
@@ -207,8 +207,8 @@
             <a href="php-pages/projects/burbuja.php" class="swiper-slide">
                 <div class="works works-10">
                     <!-- thumbnail -->
-                    <img class="hiddenMobile" src="content/pictures/thumbnails/burbuja-wood-banner.jpg"/>
-                    <img class="hiddenDesktop" src="content/pictures/thumbnails/burbuja-wood-banner-mobile.jpg"/>
+                    <img class="hiddenMobile" src="content/pictures/thumbnails/lq/burbuja-wood-banner.jpg"/>
+                    <img class="hiddenDesktop" src="content/pictures/thumbnails/lq/burbuja-wood-banner-mobile.jpg"/>
                     <!-- info -->
                     <div class="works--info">
                         <h2 >Burbuja</h2>

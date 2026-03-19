@@ -1626,6 +1626,9 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
 }
 
 @media (max-width: 1280px) {
+  .creditsDesktop {
+    display: none !important;
+  }
   #contact {
     min-height: 80vh;
     padding-bottom: 10vh;

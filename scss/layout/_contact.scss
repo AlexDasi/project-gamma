@@ -74,6 +74,10 @@
 }
 
 @media (max-width: 1280px) {
+    .creditsDesktop {
+        display: none !important;
+    }
+
     #contact {
         min-height: 80vh; // Keep standard height, flexbox handles spacing
         padding-bottom: 10vh; // Add bottom padding for breathing room

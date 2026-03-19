@@ -50,6 +50,7 @@ let config = {
     COLOR_UPDATE_SPEED: 10,
     PAUSED: false,
     BACK_COLOR: { r:20, g: 20, b: 21 },
+    EFFECT_COLOR: { r: 236, g: 249, b: 142 },
     TRANSPARENT: false,
     BLOOM: false,
     BLOOM_ITERATIONS: 8,
@@ -1186,6 +1187,62 @@ function updateKeywords () {
     displayMaterial.setKeywords(displayKeywords);
 }
 
+function registerFluidRuntimeAPI () {
+    const framebufferKeys = [
+        'SIM_RESOLUTION',
+        'DYE_RESOLUTION',
+        'BLOOM_RESOLUTION',
+        'SUNRAYS_RESOLUTION'
+    ];
+
+    const keywordKeys = ['SHADING', 'BLOOM', 'SUNRAYS'];
+
+    function applySettings (partialConfig) {
+        if (!partialConfig || typeof partialConfig !== 'object') return;
+
+        let needsFramebuffers = false;
+        let needsKeywords = false;
+        let needsEffectColorRefresh = false;
+
+        Object.keys(partialConfig).forEach((key) => {
+            if (!(key in config)) return;
+            config[key] = partialConfig[key];
+
+            if (framebufferKeys.includes(key)) needsFramebuffers = true;
+            if (keywordKeys.includes(key)) needsKeywords = true;
+            if (key === 'EFFECT_COLOR') needsEffectColorRefresh = true;
+        });
+
+        if (needsKeywords) updateKeywords();
+        if (needsFramebuffers) initFramebuffers();
+
+        if (needsEffectColorRefresh) {
+            pointers.forEach((pointer) => {
+                pointer.color = generateColor();
+            });
+            multipleSplats(2);
+        }
+    }
+
+    const desktopAPI = {
+        mode: 'desktop',
+        getConfig: () => ({ ...config }),
+        applySettings,
+        randomSplats: (count = 6) => multipleSplats(count),
+        refreshFramebuffers: () => initFramebuffers(),
+        refreshKeywords: () => updateKeywords()
+    };
+
+    window.__fluidBackgroundAPIDesktop = desktopAPI;
+
+    // Keep a single active API pointer used by controls.
+    if (window.innerWidth > 1024 || !window.__fluidBackgroundAPI) {
+        window.__fluidBackgroundAPI = desktopAPI;
+    }
+}
+
+registerFluidRuntimeAPI();
+
 updateKeywords();
 initFramebuffers();
 // multipleSplats(parseInt(Math.random() * 20) + 5);
@@ -1591,11 +1648,20 @@ function correctDeltaY (delta) {
 }
 
 function generateColor () {
-    let c = HSVtoRGB(Math.random(), 1.0, 1.0);
-    c.r *= 0.15;
-    c.g *= 0.15;
-    c.b *= 0.15;
-    return c;
+    if (config.COLORFUL) {
+        let randomColor = HSVtoRGB(Math.random(), 1.0, 1.0);
+        randomColor.r *= 0.15;
+        randomColor.g *= 0.15;
+        randomColor.b *= 0.15;
+        return randomColor;
+    }
+
+    const base = normalizeColor(config.EFFECT_COLOR || { r: 236, g: 249, b: 142 });
+    return {
+        r: base.r * 0.2,
+        g: base.g * 0.2,
+        b: base.b * 0.2
+    };
 }
 
 function HSVtoRGB (h, s, v) {

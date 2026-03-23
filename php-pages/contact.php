@@ -3,7 +3,7 @@
     <div class="contact--message">
         <a class="contact--message__main-link" href="mailto:alejandrodasi@me.com"><h1 class="contact--message__main">REACH<br>ME OUT</h1></a>
         <div class="contact--message__text">
-            <p>Don't be shy! If you liked what you saw, drop me a message or reach me trough my social. Don't be a stranger :)</p>
+            <p>If you liked what you saw, drop me a message or reach me trough my social. Don't be a stranger :)</p>
         </div>
     </div>     
     

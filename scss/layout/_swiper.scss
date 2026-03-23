@@ -258,6 +258,30 @@ body {
       }
     }
 
+    &.works-idrica-wastewater {
+      .works--details {
+        left: calc(100% + 16px);
+
+        &:hover,
+        .swiper-slide:hover & {
+          left: calc(100% + 16px);
+        }
+      }
+
+      .works--info {
+        left: 0;
+
+        &>p {
+          width: 20vw;
+        }
+      }
+
+      &:hover .works--info {
+        top: calc(100% + 12px);
+        left: 0;
+      }
+    }
+
     // ELSA SPECIFIC STYLING FOR HORIZONTAL THUMBNAIL
     &.works-elsa {
       .works--details {

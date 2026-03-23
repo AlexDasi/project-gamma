@@ -51,6 +51,7 @@ let config = {
     PAUSED: false,
     BACK_COLOR: { r:20, g: 20, b: 21 },
     EFFECT_COLOR: { r: 236, g: 249, b: 142 },
+    EFFECT_OPACITY: 1,
     TRANSPARENT: false,
     BLOOM: false,
     BLOOM_ITERATIONS: 8,
@@ -583,6 +584,7 @@ const displayShaderSource = `
     uniform sampler2D uDithering;
     uniform vec2 ditherScale;
     uniform vec2 texelSize;
+    uniform float effectOpacity;
 
     vec3 linearToGamma (vec3 color) {
         color = max(color, vec3(0));
@@ -628,6 +630,7 @@ const displayShaderSource = `
         c += bloom;
     #endif
 
+        c *= effectOpacity;
         float a = max(c.r, max(c.g, c.b));
         gl_FragColor = vec4(c, a);
     }
@@ -1413,6 +1416,7 @@ function drawDisplay (target) {
     displayMaterial.bind();
     if (config.SHADING)
         gl.uniform2f(displayMaterial.uniforms.texelSize, 1.0 / width, 1.0 / height);
+    gl.uniform1f(displayMaterial.uniforms.effectOpacity, config.EFFECT_OPACITY);
     gl.uniform1i(displayMaterial.uniforms.uTexture, dye.read.attach(0));
     if (config.BLOOM) {
         gl.uniform1i(displayMaterial.uniforms.uBloom, bloom.attach(1));

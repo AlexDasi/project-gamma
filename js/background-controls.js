@@ -11,6 +11,7 @@
     CURL: 3,
     SPLAT_RADIUS: 0.25,
     SPLAT_FORCE: 6000,
+    EFFECT_OPACITY: 1,
     SHADING: true,
     BLOOM: false,
     EFFECT_COLOR: { r: 236, g: 249, b: 142 }
@@ -24,6 +25,7 @@
       CURL: 2,
       SPLAT_RADIUS: 0.22,
       SPLAT_FORCE: 4200,
+      EFFECT_OPACITY: 0.85,
       SHADING: true,
       BLOOM: false,
       EFFECT_COLOR: { r: 176, g: 214, b: 148 }
@@ -35,6 +37,7 @@
       CURL: 3,
       SPLAT_RADIUS: 0.25,
       SPLAT_FORCE: 6000,
+      EFFECT_OPACITY: 1,
       SHADING: true,
       BLOOM: false,
       EFFECT_COLOR: { r: 236, g: 249, b: 142 }
@@ -46,6 +49,7 @@
       CURL: 6,
       SPLAT_RADIUS: 0.32,
       SPLAT_FORCE: 9000,
+      EFFECT_OPACITY: 1,
       SHADING: true,
       BLOOM: true,
       EFFECT_COLOR: { r: 255, g: 140, b: 110 }
@@ -135,6 +139,7 @@
       '  <label><span>Pressure Iter</span><input data-key="PRESSURE_ITERATIONS" type="range" min="8" max="50" step="1"></label>',
       '  <label><span>Splat Radius</span><input data-key="SPLAT_RADIUS" type="range" min="0.05" max="0.45" step="0.01"></label>',
       '  <label><span>Splat Force</span><input data-key="SPLAT_FORCE" type="range" min="1000" max="12000" step="100"></label>',
+      '  <label><span>Opacity</span><input data-key="EFFECT_OPACITY" type="range" min="0" max="1" step="0.01"></label>',
       '  <label class="bg-controls__switch"><input data-key="SHADING" type="checkbox"><span>Shading</span></label>',
       '  <label class="bg-controls__switch"><input data-key="BLOOM" type="checkbox"><span>Bloom</span></label>',
       '  <label><span>Effect Color</span><input data-key="EFFECT_COLOR" type="color"></label>',

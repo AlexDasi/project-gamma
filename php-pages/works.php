@@ -57,6 +57,24 @@
             </a>
 
 
+            <a href="php-pages/projects/idrica-wastewater.php" class="swiper-slide">
+                <div class="works works-idrica-wastewater">
+                <!-- thumbnail -->
+                    <img class="hiddenMobile" src="content/pictures/thumbnails/lq/idrica-wastewater.jpg"/>
+                    <img class="hiddenDesktop" src="content/pictures/thumbnails/lq/idrica-wastewater-mobile.jpg"/>
+                <!-- info -->
+                    <div class="works--info">
+                        <h2>IDRICA</h2>
+                        <p class="yellow-600">UX/UI design for a desktop platform focused on wastewater treatment plant operations, bringing together monitoring, alarms, maps, and dense technical data into a clearer and more dependable interface system.</p>
+                    </div>
+                    <div class="hiddenMobile works--details">
+                        <p>UX/UI Design</p>
+                        <p class="yellow-600">2023</p>
+                    </div>
+                </div>
+            </a>
+
+
             <a href="php-pages/projects/terralava.php" class="swiper-slide">
                 <div class="works works-2">
                     <!-- thumbnail -->

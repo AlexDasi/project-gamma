@@ -132,8 +132,13 @@
         position: fixed;
         bottom: 40px;
         height: 100px;
+        pointer-events: none;
         
     }
+}
+
+.arrow-container .circle {
+    pointer-events: auto;
 }
 
     //color change class

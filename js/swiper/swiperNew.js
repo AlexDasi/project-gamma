@@ -26,7 +26,13 @@
       spaceBetween: 0,
       slidesPerView: 'auto',
       centeredSlides: true,
-      mousewheel: false,
+      mousewheel: {
+        enabled: true,
+        forceToAxis: true,
+        releaseOnEdges: false,
+        thresholdDelta: 5,
+        thresholdTime: 300
+      },
       pagination: {
         el: '.swiper-pagination',
         clickable: true,

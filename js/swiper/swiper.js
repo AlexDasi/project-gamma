@@ -9,7 +9,13 @@ var MainSwiper = new Swiper(".MainSwiper", {
   spaceBetween: 0,
   slidesPerView: "auto",
   centeredSlides: true,
-  mousewheel: false,
+  mousewheel: {
+    enabled: true,
+    forceToAxis: true,
+    releaseOnEdges: false,
+    thresholdDelta: 40,
+    thresholdTime: 500,
+  },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,

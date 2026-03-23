@@ -153,6 +153,11 @@ h3 {
   position: fixed;
   bottom: 40px;
   height: 100px;
+  pointer-events: none;
+}
+
+.arrow-container .circle {
+  pointer-events: auto;
 }
 
 .active::before, .active::after {
@@ -768,6 +773,22 @@ body {
     top: calc(100% + 12px);
     left: 0;
   }
+  .works.works-idrica-wastewater .works--details {
+    left: calc(100% + 16px);
+  }
+  .works.works-idrica-wastewater .works--details:hover, .swiper-slide:hover .works.works-idrica-wastewater .works--details {
+    left: calc(100% + 16px);
+  }
+  .works.works-idrica-wastewater .works--info {
+    left: 0;
+  }
+  .works.works-idrica-wastewater .works--info > p {
+    width: 20vw;
+  }
+  .works.works-idrica-wastewater:hover .works--info {
+    top: calc(100% + 12px);
+    left: 0;
+  }
   .works.works-elsa .works--details {
     left: calc(100% + 16px);
   }
@@ -1256,6 +1277,9 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
 .project-description__main .slice-infos__text > p {
   text-align: justify;
   color: var(--bkg-color);
+}
+.project-description__main .slice-infos__text > p + p {
+  margin-top: 2rem;
 }
 .project-description__main .slice-infos__text a {
   position: relative;

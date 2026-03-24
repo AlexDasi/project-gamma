@@ -681,7 +681,7 @@ body {
 
 .WorksSwiper .swiper-pagination {
   position: absolute;
-  bottom: 24px;
+  top: -24px;
   left: 50%;
   transform: translateX(-50%);
   width: auto;

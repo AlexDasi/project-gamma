@@ -140,10 +140,7 @@
       pagination: {
         el: worksRoot.querySelector('.swiper-pagination'),
         clickable: true,
-        renderBullet(index, className) {
-          const num = String(index + 1).padStart(2, '0');
-          return `<span class="${className} works-page-number" data-index="${index}" aria-label="Project ${num}">${num}</span>`;
-        }
+        type: 'bullets'
       },
       breakpoints: {
         0: {

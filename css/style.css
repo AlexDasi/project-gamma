@@ -664,13 +664,13 @@ body {
   width: auto;
   height: auto;
   background: transparent;
-  opacity: 0.4;
+  opacity: 0.7;
   margin: 0;
   padding: 0;
   font-size: 16px;
   font-weight: 500;
   font-family: "Inter", sans-serif;
-  color: var(--main-color);
+  color: var(--accent-color);
   letter-spacing: 1px;
   position: relative;
   cursor: pointer;

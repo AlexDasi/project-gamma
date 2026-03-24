@@ -644,7 +644,8 @@ body {
 
 .WorksSwiper .swiper-button-prev,
 .WorksSwiper .swiper-button-next {
-  top: calc(50% - 20vh - 72px);
+  top: 50%;
+  transform: translateY(-50%);
   color: var(--accent-color);
   z-index: 500;
   width: auto;
@@ -655,7 +656,7 @@ body {
 }
 .WorksSwiper .swiper-button-prev::after,
 .WorksSwiper .swiper-button-next::after {
-  font-size: 4.2rem;
+  font-size: 1.8rem;
   line-height: 1;
   font-weight: 200;
   font-family: "Inter", sans-serif;
@@ -671,11 +672,38 @@ body {
 }
 
 .WorksSwiper .swiper-button-prev {
-  left: 24px;
+  left: 16px;
 }
 
 .WorksSwiper .swiper-button-next {
-  right: 24px;
+  right: 16px;
+}
+
+.WorksSwiper .swiper-pagination {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  z-index: 500;
+}
+.WorksSwiper .swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: var(--accent-color);
+  opacity: 0.4;
+  margin: 0;
+  transition: opacity 0.3s, transform 0.3s;
+}
+.WorksSwiper .swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  opacity: 1;
+  transform: scale(1.3);
+}
+.WorksSwiper .swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet:hover {
+  opacity: 0.8;
 }
 
 .WorksSwiper {

@@ -2,6 +2,8 @@
 
     <!-- Swiper -->
     <div class="swiper WorksSwiper">
+        <div class="swiper-button-prev hiddenMobile" aria-label="Previous project"></div>
+        <div class="swiper-button-next hiddenMobile" aria-label="Next project"></div>
         <div class="swiper-wrapper">
             <a href="php-pages/projects/camisola.php" class="swiper-slide">
                 <div class="works works-camisola">
@@ -52,6 +54,24 @@
                     <div class="hiddenMobile works--details">
                         <p>Web Design, Development, Visual Language</p>
                         <p class="yellow-600">2025</p>
+                    </div>
+                </div>
+            </a>
+
+
+            <a href="php-pages/projects/knowadays.php" class="swiper-slide">
+                <div class="works works-knowadays">
+                <!-- thumbnail -->
+                    <img class="hiddenMobile" src="content/pictures/thumbnails/lq/knowadays.jpg"/>
+                    <img class="hiddenDesktop" src="content/pictures/thumbnails/lq/knowadays-mobile.jpg"/>
+                <!-- info -->
+                    <div class="works--info">
+                        <h2>KNOWADAYS</h2>
+                        <p class="yellow-600">Design applications and digital redesign work for Knowadays, a global online learning platform focused on proofreading, editing, and writing education. Multi-format delivery across web, email, social, and editorial assets.</p>
+                    </div>
+                    <div class="hiddenMobile works--details">
+                        <p>UX/UI, SM, Editorial & Graphic Design</p>
+                        <p class="yellow-600">2024</p>
                     </div>
                 </div>
             </a>

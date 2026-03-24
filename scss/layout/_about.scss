@@ -270,9 +270,9 @@
     display: inline-block;
     position: relative;
     padding: $padding $space;
-    border: 1px solid $grey-bkg-color;
+    border: 1px solid var(--accent-color);
     border-radius: 50px;
-    color: var(--main-color);
+    color: var(--bkg-color);
     font-family: $main-font;
     font-size: 2rem;
     font-weight: 300;
@@ -280,7 +280,7 @@
     text-decoration: none;
     text-transform: uppercase;
     transition: all 0.3s ease;
-    background: transparent;
+    background: var(--accent-color);
     cursor: pointer;
     z-index: 1;
     overflow: hidden;
@@ -294,20 +294,21 @@
         right: 0;
         bottom: 0;
         z-index: -1;
-        background: var(--accent-color);
+        background: transparent;
         border-radius: 50px;
-        transform: scale(0);
-        transition: transform 0.15s ease-out;
+        transform: none;
+        transition: none;
     }
 
     &.effect:hover:after {
-        transform: scale(1);
-        transition: transform 0.2s ease-out;
+        transform: none;
+        transition: none;
     }
 
     &:hover {
-        border-color: transparent;
+        border-color: var(--accent-color);
         color: var(--bkg-color);
+        background: var(--accent-color);
     }
 }
 
@@ -317,4 +318,19 @@
     }
 }
 
+@media (max-width: 1280px) {
+    .cv-download-btn {
+        background: var(--accent-color) !important;
+        color: var(--bkg-color) !important;
+        border-color: var(--accent-color) !important;
+        transition: none;
+
+        &:hover,
+        &:active,
+        &:focus {
+            background: var(--accent-color) !important;
+            color: var(--bkg-color) !important;
+        }
+    }
+}
 

@@ -9,6 +9,12 @@ var MainSwiper = new Swiper(".MainSwiper", {
   spaceBetween: 0,
   slidesPerView: "auto",
   centeredSlides: true,
+  longSwipes: true,
+  longSwipesRatio: 0.15,
+  longSwipesMs: 120,
+  shortSwipes: true,
+  touchReleaseOnEdges: false,
+  resistanceRatio: 0.4,
   mousewheel: {
     enabled: true,
     forceToAxis: true,
@@ -128,26 +134,53 @@ if (worksWrapper) {
 const totalOriginalSlides = originalSlides ? originalSlides.length : 0;
 const calculatedInitialSlide = totalOriginalSlides * duplicateTimes + 3; // Start at middle section, slide 3
 
-var swiper = new Swiper(".WorksSwiper", {
-  allowTouchMove: true,
+var worksSwiper = new Swiper(".WorksSwiper", {
+  allowTouchMove: false,
   direction: "horizontal",
-  mousewheel: {
-    forceToAxis: true,
-  },
   loop: false,
-  initialSlide : calculatedInitialSlide,
-  grabCursor: true,
+  initialSlide: calculatedInitialSlide,
+  grabCursor: false,
+  simulateTouch: false,
   preventClicks: false,
-  mousewheel: true,
   centeredSlides: true,
   slidesPerView: "auto",
   spaceBetween: 0,
-  speed: 100,
-  freeMode: {
-    enabled: true,
-    momentum: true,
-  }
+  speed: 300,
+  navigation: {
+    nextEl: '.works-nav__next',
+    prevEl: '.works-nav__prev',
+  },
 });
+
+// Block horizontal trackpad/wheel gesture on desktop Works section
+const worksContainer = document.querySelector('.WorksSwiper');
+if (worksContainer) {
+  worksContainer.addEventListener('wheel', function (event) {
+    if (Math.abs(event.deltaX) > Math.abs(event.deltaY)) {
+      event.preventDefault();
+    }
+  }, { passive: false });
+}
+
+// Ensure desktop works arrows always trigger slide navigation
+const worksPrevBtn = document.querySelector('.works-nav__prev');
+const worksNextBtn = document.querySelector('.works-nav__next');
+
+if (worksPrevBtn && worksSwiper) {
+  worksPrevBtn.addEventListener('click', function (event) {
+    event.preventDefault();
+    event.stopPropagation();
+    worksSwiper.slidePrev();
+  });
+}
+
+if (worksNextBtn && worksSwiper) {
+  worksNextBtn.addEventListener('click', function (event) {
+    event.preventDefault();
+    event.stopPropagation();
+    worksSwiper.slideNext();
+  });
+}
 
 
 // Cache bust: Wed Nov  5 10:37:14 CET 2025

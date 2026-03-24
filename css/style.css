@@ -644,7 +644,8 @@ body {
 
 .WorksSwiper .swiper-button-prev,
 .WorksSwiper .swiper-button-next {
-  top: 24px;
+  top: 50%;
+  transform: translateY(-50%);
   color: var(--accent-color);
   z-index: 500;
   width: auto;
@@ -680,7 +681,7 @@ body {
 
 .WorksSwiper .swiper-pagination {
   position: absolute;
-  top: 28px;
+  bottom: 24px;
   left: 50%;
   transform: translateX(-50%);
   width: auto;

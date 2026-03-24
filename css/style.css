@@ -1225,18 +1225,20 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
 @media (min-width: 768px) {
   .project-header__title {
     position: absolute;
-    top: 20vh;
+    top: calc(58vh - 1.35em);
     left: 0;
     z-index: 2;
     margin-top: 0;
     margin-left: 20vw;
+    line-height: 1.05;
     word-break: normal;
   }
 }
 @media (min-width: 1280px) {
   .project-header__title {
-    top: 30vh;
+    top: calc(58vh - 1.2em);
     margin-top: 0;
+    line-height: 1.05;
   }
 }
 .project-description {

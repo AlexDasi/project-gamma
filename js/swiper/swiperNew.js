@@ -141,7 +141,7 @@
         el: worksRoot.querySelector('.swiper-pagination'),
         clickable: true,
         renderBullet(index, className) {
-          return `<span class="${className} works-swipe-dot" aria-label="Project ${index + 1}"></span>`;
+          return `<span class="${className} works-page-number" data-index="${index}" aria-label="Project ${String(index + 1).padStart(2, '0')}">0${index + 1}</span>`;
         }
       },
       breakpoints: {

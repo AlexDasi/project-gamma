@@ -151,33 +151,61 @@ body {
   right: 16px;
 }
 
-// WorksSwiper Pagination (bullet list at bottom)
+// WorksSwiper Pagination (numbered with animated underline)
 .WorksSwiper .swiper-pagination {
   position: absolute;
-  bottom: 20px;
+  bottom: 24px;
   left: 50%;
   transform: translateX(-50%);
   width: auto;
   display: flex;
-  gap: 12px;
+  gap: 28px;
   justify-content: center;
   z-index: 500;
+  align-items: flex-end;
 
   &.swiper-pagination-bullets .swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
-    background: var(--accent-color);
+    width: auto;
+    height: auto;
+    background: transparent;
     opacity: 0.4;
     margin: 0;
-    transition: opacity 0.3s, transform 0.3s;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: $main-font;
+    color: var(--main-color);
+    letter-spacing: 1px;
+    position: relative;
+    cursor: pointer;
+    transition: opacity 0.3s, color 0.3s;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--accent-color);
+      opacity: 0;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+    }
 
     &.swiper-pagination-bullet-active {
       opacity: 1;
-      transform: scale(1.3);
+      color: var(--accent-color);
+
+      &::after {
+        opacity: 1;
+        transform: scaleX(1);
+      }
     }
 
-    &:hover {
-      opacity: 0.8;
+    &:hover:not(.swiper-pagination-bullet-active) {
+      opacity: 0.6;
     }
   }
 }

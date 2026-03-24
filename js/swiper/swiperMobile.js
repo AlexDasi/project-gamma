@@ -11,6 +11,14 @@ var swiper = new Swiper(".MainSwiper", {
   centeredSlides: true,
   grabCursor: true,
   direction: "vertical",
+  threshold: 10,
+  followFinger: true,
+  resistanceRatio: 0.85,
+  longSwipes: true,
+  longSwipesRatio: 0.15,
+  longSwipesMs: 120,
+  shortSwipes: true,
+  touchReleaseOnEdges: false,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -29,31 +37,19 @@ var swiper = new Swiper(".MainSwiper", {
 var swiper = new Swiper(".WorksSwiper", {
   allowTouchMove: true,
   loop: true,
-  initialSlide : 3,
+  initialSlide: 3,
   grabCursor: true,
   direction: "horizontal",
   preventClicks: false,
-  // mousewheel: false,
   centeredSlides: true,
   slidesPerView: "auto",
   spaceBetween: 0,
-  speed: 100,
-  freeMode: {
-    enabled: true,
+  speed: 400,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
   },
-
-  // on: {
-  //   resize: function () {
-  //       var windowWidth = $(window).width();
-  //       if(windowWidth <= 767){
-  //               swiperBottomScrollbarFull.direction('vertical');
-  //               swiperBottomScrollbarFull.detachEvents();
-  //       }else{
-  //               swiperBottomScrollbarFull.direction('horizontal');
-  //               swiperBottomScrollbarFull.attachEvents();
-  //       }
-  //       swiperBottomScrollbarFull.update();
-  //   }
 });
 
 

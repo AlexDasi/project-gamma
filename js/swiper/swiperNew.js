@@ -103,7 +103,9 @@
   }
 
   function initWorksSwiper() {
-    const worksRoot = document.querySelector('.WorksSwiper');
+    const worksRoots = Array.from(document.querySelectorAll('.WorksSwiper'));
+    const worksRoot =
+      worksRoots.find((root) => root.offsetParent !== null) || worksRoots[0] || null;
     if (!worksRoot || typeof Swiper === 'undefined') return null;
 
     const wrapper = worksRoot.querySelector('.swiper-wrapper');
@@ -111,11 +113,13 @@
 
     sortWorksSlidesByNewestFirst(wrapper);
 
-    const worksSwiper = new Swiper('.WorksSwiper', {
+    const worksSwiper = new Swiper(worksRoot, {
       direction: 'horizontal',
       loop: false,
       rewind: false,
-      grabCursor: true,
+      grabCursor: false,
+      allowTouchMove: isMobile(),
+      simulateTouch: isMobile(),
       centeredSlides: false,
       slidesPerView: 'auto',
       spaceBetween: 0,
@@ -123,26 +127,18 @@
       watchOverflow: true,
       watchSlidesProgress: true,
       roundLengths: true,
-      resistanceRatio: 0.85,
+      resistanceRatio: 0.25,
       slideToClickedSlide: true,
       observer: true,
       observeParents: true,
-      freeMode: {
-        enabled: true,
-        momentum: true,
-        momentumRatio: 0.55,
-        momentumVelocityRatio: 0.55,
-        sticky: false,
-        minimumVelocity: 0.08
-      },
-      mousewheel: {
-        enabled: true,
-        forceToAxis: true,
-        releaseOnEdges: true,
-        sensitivity: 0.85
+      freeMode: false,
+      mousewheel: false,
+      navigation: {
+        nextEl: worksRoot.querySelector('.swiper-button-next'),
+        prevEl: worksRoot.querySelector('.swiper-button-prev')
       },
       pagination: {
-        el: '.WorksSwiper .swiper-pagination',
+        el: worksRoot.querySelector('.swiper-pagination'),
         clickable: true,
         renderBullet(index, className) {
           return `<span class="${className} works-swipe-dot" aria-label="Project ${index + 1}"></span>`;
@@ -151,28 +147,19 @@
       breakpoints: {
         0: {
           speed: 360,
-          freeMode: {
-            enabled: true,
-            momentum: true,
-            momentumRatio: 0.5,
-            momentumVelocityRatio: 0.5,
-            sticky: true,
-            minimumVelocity: 0.08
-          }
+          allowTouchMove: true,
+          simulateTouch: true
         },
         1025: {
           speed: 420,
-          freeMode: {
-            enabled: true,
-            momentum: true,
-            momentumRatio: 0.55,
-            momentumVelocityRatio: 0.55,
-            sticky: false,
-            minimumVelocity: 0.08
-          }
+          allowTouchMove: false,
+          simulateTouch: false
         }
       },
       on: {
+        init(swiper) {
+          swiper.slideToClosest(0);
+        },
         touchEnd(swiper) {
           if (!isMobile()) return;
           // Force nearest-slide snap after finger release on mobile.
@@ -180,12 +167,37 @@
         }
       }
     });
+
+    // Hard-block horizontal wheel gestures over Works to avoid browser back/forward swipe.
+    worksRoot.addEventListener(
+      'wheel',
+      (event) => {
+        if (!isMobile() && Math.abs(event.deltaX) > 0) {
+          event.preventDefault();
+        }
+      },
+      { passive: false }
+    );
+
     return worksSwiper;
   }
 
   function boot() {
     window.mainSwiper = initMainSwiper();
     window.worksSwiper = initWorksSwiper();
+
+    // Also block horizontal wheel gestures globally while WORKS section is active.
+    window.addEventListener(
+      'wheel',
+      (event) => {
+        if (!window.mainSwiper) return;
+        if (window.mainSwiper.activeIndex !== 1) return;
+        if (Math.abs(event.deltaX) > 0) {
+          event.preventDefault();
+        }
+      },
+      { passive: false }
+    );
   }
 
   if (document.readyState === 'loading') {

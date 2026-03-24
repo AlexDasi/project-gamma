@@ -13,6 +13,7 @@ body {
   height: 100vh;
   display: flex;
   align-items: center;
+  position: relative;
   // overflow: hidden;
 
 }
@@ -109,6 +110,55 @@ body {
         transition: opacity 0.3s;
       }
     }
+  }
+}
+
+// Desktop WorksSwiper native navigation arrows
+.WorksSwiper .swiper-button-prev,
+.WorksSwiper .swiper-button-next {
+  top: calc(50% - 20vh - 72px);
+  color: var(--accent-color);
+  z-index: 500;
+  width: auto;
+  height: auto;
+  margin-top: 0;
+  opacity: 0.62;
+  transition: opacity 0.2s;
+
+  &::after {
+    font-size: 4.2rem;
+    line-height: 1;
+    font-weight: 200;
+    font-family: $main-font;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &.swiper-button-disabled {
+    opacity: 0.2;
+    pointer-events: none;
+  }
+}
+
+.WorksSwiper .swiper-button-prev {
+  left: 24px;
+}
+
+.WorksSwiper .swiper-button-next {
+  right: 24px;
+}
+
+.WorksSwiper {
+  overscroll-behavior-x: none;
+  touch-action: pan-y;
+}
+
+@media (max-width: 1280px) {
+  .WorksSwiper .swiper-button-prev,
+  .WorksSwiper .swiper-button-next {
+    display: none;
   }
 }
 
@@ -298,6 +348,31 @@ body {
         
         &>p {
           width: 20vw; // Adjusted text width for horizontal format
+        }
+      }
+
+      &:hover .works--info {
+        top: calc(100% + 12px);
+        left: 0;
+      }
+    }
+
+    // KNOWADAYS SPECIFIC STYLING FOR HORIZONTAL THUMBNAIL
+    &.works-knowadays {
+      .works--details {
+        left: calc(100% + 16px);
+
+        &:hover,
+        .swiper-slide:hover & {
+          left: calc(100% + 16px);
+        }
+      }
+
+      .works--info {
+        left: 0;
+
+        &>p {
+          width: 20vw;
         }
       }
 
@@ -548,6 +623,30 @@ body {
 
   .slide-works{
     margin: 0;
+  }
+
+  // WorksSwiper pagination bullets for mobile (simple dots)
+  .WorksSwiper .swiper-pagination {
+    bottom: 16px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+
+    .swiper-pagination-bullet {
+      width: 8px;
+      height: 8px;
+      background: var(--accent-color);
+      opacity: 0.35;
+      border-radius: 50%;
+      transform: none;
+      border: none;
+      margin: 0 4px;
+      transition: opacity 0.2s;
+    }
+
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+    }
   }
 }
 

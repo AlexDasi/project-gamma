@@ -113,56 +113,25 @@ body {
   }
 }
 
-// Desktop WorksSwiper native navigation arrows (small)
+// Desktop WorksSwiper native navigation arrows (hidden - using pagination instead)
 .WorksSwiper .swiper-button-prev,
 .WorksSwiper .swiper-button-next {
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--accent-color);
-  z-index: 500;
-  width: auto;
-  height: auto;
-  margin-top: 0;
-  opacity: 0.62;
-  transition: opacity 0.2s;
-
-  &::after {
-    font-size: 1.8rem;
-    line-height: 1;
-    font-weight: 200;
-    font-family: $main-font;
-  }
-
-  &:hover {
-    opacity: 1;
-  }
-
-  &.swiper-button-disabled {
-    opacity: 0.2;
-    pointer-events: none;
-  }
+  display: none;
 }
 
-.WorksSwiper .swiper-button-prev {
-  left: 16px;
-}
-
-.WorksSwiper .swiper-button-next {
-  right: 16px;
-}
-
-// WorksSwiper Pagination (numbered with animated underline)
+// WorksSwiper Pagination (numbered with animated underline - centered overlay)
 .WorksSwiper .swiper-pagination {
   position: absolute;
-  bottom: 24px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   width: auto;
   display: flex;
   gap: 28px;
   justify-content: center;
-  z-index: 500;
-  align-items: flex-end;
+  z-index: 1000;
+  align-items: center;
+  pointer-events: auto;
 
   &.swiper-pagination-bullets .swiper-pagination-bullet {
     width: auto;

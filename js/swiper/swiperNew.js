@@ -7,26 +7,44 @@
 (function () {
   'use strict';
 
-  const MOBILE_BREAKPOINT = 1024;
+  // Must match the CSS breakpoint in _site.scss (@media max-width: 1280px)
+  const MOBILE_BREAKPOINT = 1280;
 
   function isMobile() {
     return window.innerWidth <= MOBILE_BREAKPOINT;
   }
 
   function initMainSwiper() {
-    const mainRoot = document.querySelector('.MainSwiper');
+    // Explicitly select the correct element based on viewport:
+    // On mobile (≤1280px) CSS shows .hiddenDesktop, on desktop it shows .hiddenMobile.
+    const allRoots = Array.from(document.querySelectorAll('.MainSwiper'));
+    const targetClass = isMobile() ? 'hiddenDesktop' : 'hiddenMobile';
+    const mainRoot =
+      allRoots.find((el) => el.classList.contains(targetClass)) ||
+      allRoots.find((el) => el.offsetParent !== null) ||
+      allRoots[0] ||
+      null;
     if (!mainRoot || typeof Swiper === 'undefined') return null;
 
     const mainMenu = ['HOME', 'WORKS', 'ABOUT', 'CONTACT'];
+    const mobile = isMobile();
 
-    const mainSwiper = new Swiper('.MainSwiper', {
+    const mainSwiper = new Swiper(mainRoot, {
       direction: 'vertical',
-      speed: 1000,
-      allowTouchMove: false,
+      speed: mobile ? 600 : 1000,
+      allowTouchMove: mobile,
+      touchReleaseOnEdges: mobile,
+      resistanceRatio: mobile ? 0.4 : 0,
+      threshold: mobile ? 10 : 0,
+      followFinger: mobile,
+      longSwipes: true,
+      longSwipesRatio: mobile ? 0.15 : 0.5,
+      longSwipesMs: mobile ? 120 : 300,
+      shortSwipes: true,
       spaceBetween: 0,
-      slidesPerView: 'auto',
-      centeredSlides: true,
-      mousewheel: {
+      slidesPerView: mobile ? 1 : 'auto',
+      centeredSlides: !mobile,
+      mousewheel: mobile ? false : {
         enabled: true,
         forceToAxis: true,
         releaseOnEdges: false,
@@ -34,15 +52,15 @@
         thresholdTime: 300
       },
       pagination: {
-        el: '.swiper-pagination',
+        el: mainRoot.querySelector('.swiper-pagination'),
         clickable: true,
         renderBullet(index, className) {
           return `<span class="${className}">${mainMenu[index]}</span>`;
         }
       },
       navigation: {
-        nextEl: '.slideNext-btn',
-        prevEl: '.slidePrev-btn'
+        nextEl: mainRoot.querySelector('.slideNext-btn'),
+        prevEl: mainRoot.querySelector('.slidePrev-btn')
       },
       on: {
         slideChange() {
@@ -120,7 +138,7 @@
       grabCursor: false,
       allowTouchMove: isMobile(),
       simulateTouch: isMobile(),
-      centeredSlides: false,
+      centeredSlides: isMobile(),
       slidesPerView: 'auto',
       spaceBetween: 0,
       speed: 420,
@@ -183,6 +201,19 @@
   function boot() {
     window.mainSwiper = initMainSwiper();
     window.worksSwiper = initWorksSwiper();
+
+    // Re-initialize swipers when the mobile/desktop breakpoint is crossed (e.g. DevTools resize).
+    const _mq = window.matchMedia('(max-width: ' + MOBILE_BREAKPOINT + 'px)');
+    _mq.addEventListener('change', function () {
+      if (window.mainSwiper && typeof window.mainSwiper.destroy === 'function') {
+        window.mainSwiper.destroy(true, true);
+      }
+      if (window.worksSwiper && typeof window.worksSwiper.destroy === 'function') {
+        window.worksSwiper.destroy(true, true);
+      }
+      window.mainSwiper = initMainSwiper();
+      window.worksSwiper = initWorksSwiper();
+    });
 
     // Also block horizontal wheel gestures globally while WORKS section is active.
     window.addEventListener(

@@ -291,16 +291,27 @@ ul {
   .hiddenMobile {
     display: none !important;
   }
-  .hiddenDesktop {
+  .hiddenDesktop.swiper {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .hiddenDesktop.swiper {
+    touch-action: pan-x;
+  }
+  .hiddenDesktop:not(.swiper) {
     width: 100vw;
     display: flex;
     flex-direction: column;
   }
-  .hiddenDesktop > .swiper-wrapper {
+  .hiddenDesktop:not(.swiper) > .swiper-wrapper {
     display: block;
   }
-  .hiddenDesktop > .swiper-wrapper > .swiper-slide {
+  .hiddenDesktop:not(.swiper) > .swiper-wrapper > .swiper-slide {
     height: auto;
+  }
+  .hiddenDesktop.swiper .swiper-pagination {
+    display: none;
   }
 }
 @media (min-width: 1280px) {
@@ -644,19 +655,18 @@ body {
 
 .WorksSwiper .swiper-button-prev,
 .WorksSwiper .swiper-button-next {
-  top: 50%;
-  transform: translateY(-50%);
+  top: calc(50% - 20vh - 72px);
   color: var(--accent-color);
   z-index: 500;
   width: auto;
   height: auto;
   margin-top: 0;
-  opacity: 0.8;
+  opacity: 0.62;
   transition: opacity 0.2s;
 }
 .WorksSwiper .swiper-button-prev::after,
 .WorksSwiper .swiper-button-next::after {
-  font-size: 2rem;
+  font-size: 4.2rem;
   line-height: 1;
   font-weight: 200;
   font-family: "Inter", sans-serif;
@@ -672,38 +682,11 @@ body {
 }
 
 .WorksSwiper .swiper-button-prev {
-  left: 32px;
+  left: 24px;
 }
 
 .WorksSwiper .swiper-button-next {
-  right: 32px;
-}
-
-.WorksSwiper .swiper-pagination {
-  position: absolute;
-  top: -24px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: auto;
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  z-index: 500;
-}
-.WorksSwiper .swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
-  background: var(--accent-color);
-  opacity: 0.5;
-  margin: 0;
-  transition: opacity 0.3s, transform 0.3s;
-}
-.WorksSwiper .swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  opacity: 1;
-  transform: scale(1.2);
-}
-.WorksSwiper .swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet:hover {
-  opacity: 0.8;
+  right: 24px;
 }
 
 .WorksSwiper {
@@ -1967,6 +1950,11 @@ canvas {
   position: fixed;
   top: 0;
   left: 0;
+}
+@media (max-width: 1280px) {
+  canvas {
+    pointer-events: none;
+  }
 }
 
 @media all and (max-width: 600px) {

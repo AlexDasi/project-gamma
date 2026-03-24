@@ -59,8 +59,22 @@ ul{
     .hiddenMobile{
       display: none!important;
     }
-    .hiddenDesktop{
-      // overflow-x: hidden;
+
+    // Mobile MainSwiper container — Swiper needs a bounded height to work
+    .hiddenDesktop.swiper {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+      // Ensure the browser passes vertical touch events to Swiper (not native scroll).
+      // pan-x = browser only handles horizontal panning; vertical goes to JS.
+      .hiddenDesktop.swiper {
+        touch-action: pan-x;
+      }
+
+    // Fallback if for any reason the element is NOT a Swiper
+    .hiddenDesktop:not(.swiper) {
       width: 100vw;
       display: flex;
       flex-direction: column;
@@ -69,10 +83,14 @@ ul{
         display: block;
 
         &>.swiper-slide{
-          // min-height: 100vh;
           height: auto;
         }
       }
+    }
+
+    // Hide the labeled pagination bullets on mobile (HOME/WORKS/ABOUT/CONTACT)
+    .hiddenDesktop.swiper .swiper-pagination {
+      display: none;
     }
   }
 

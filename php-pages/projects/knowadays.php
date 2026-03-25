@@ -44,7 +44,7 @@ include '../../php-elements/header-works.php'
 
                 <img class="element project-content__image" src="../../content/pictures/projects/knowadays/mobile/knowadays-mobile-01.jpg" alt="Knowadays mobile view" loading="lazy" decoding="async">
 
-                <p class="padding3 project-content__quote">The focus was to keep the interface clear, editorial, and conversion-oriented across multiple channels: from website updates and landing pages to mailing design and social media communication. <a href="https://knowadays.com/" target="_blank">Visit Knowadays</a> or explore their <a href="https://www.instagram.com/knowadayslearning/" target="_blank">Instagram</a>.</p>
+                <p class="padding3 project-content__quote">The focus was to keep the interface clear, editorial, and conversion-oriented across multiple channels: from website updates and landing pages to mailing design and social media communication. You can explore the project on the <a href="https://knowadays.com/" target="_blank">Knowadays website</a>, and follow their ongoing content on <a href="https://www.instagram.com/knowadayslearning/" target="_blank">Instagram</a>.</p>
 
                 <img class="element project-content__image" src="../../content/pictures/projects/knowadays/tablet/knowadays-tablet-01.jpg" alt="Knowadays tablet mockup" loading="lazy" decoding="async">
 

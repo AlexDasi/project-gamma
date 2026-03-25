@@ -26,7 +26,8 @@
         }
         &>h2{
             font-size: 8vw;
-            filter: blur(1px);
+            // Temporarily disabled so the desktop headings stay crisp.
+            filter: blur(0px);
             display: inline-block;
     
             &:hover{

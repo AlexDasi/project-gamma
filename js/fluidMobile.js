@@ -50,7 +50,7 @@ let config = {
     COLOR_UPDATE_SPEED: 10,
     PAUSED: false,
     BACK_COLOR: { r:20, g: 20, b: 21 },
-    EFFECT_COLOR: { r: 236, g: 249, b: 142 },
+    EFFECT_COLOR: randomEffectColor(),
     EFFECT_OPACITY: 1,
     TRANSPARENT: false,
     BLOOM: false,
@@ -1506,9 +1506,9 @@ function splatPointer (pointer) {
     splat(pointer.texcoordX, pointer.texcoordY, dx, dy, pointer.color);
 }
 
-function multipleSplats (amount) {
+function multipleSplats (amount, rainbowBurst = false) {
     for (let i = 0; i < amount; i++) {
-        const color = generateColor();
+        const color = generateColor(rainbowBurst);
         color.r *= 10.0;
         color.g *= 10.0;
         color.b *= 10.0;
@@ -1617,8 +1617,10 @@ window.addEventListener('touchend', e => {
 window.addEventListener('keydown', e => {
     if (e.code === 'KeyP')
         config.PAUSED = !config.PAUSED;
-    if (e.key === ' ')
-        splatStack.push(parseInt(Math.random() * 20) + 5);
+    if (e.key === ' ') {
+        e.preventDefault();
+        multipleSplats(parseInt(Math.random() * 20) + 16, true);
+    }
 });
 
 function updatePointerDownData (pointer, id, posX, posY) {
@@ -1660,8 +1662,8 @@ function correctDeltaY (delta) {
     return delta;
 }
 
-function generateColor () {
-    if (config.COLORFUL) {
+function generateColor (forceColorful = false) {
+    if (forceColorful || config.COLORFUL) {
         let randomColor = HSVtoRGB(Math.random(), 1.0, 1.0);
         randomColor.r *= 0.15;
         randomColor.g *= 0.15;
@@ -1708,6 +1710,15 @@ function normalizeColor (input) {
         b: input.b / 255
     };
     return output;
+}
+
+function randomEffectColor () {
+    const randomColor = HSVtoRGB(Math.random(), 0.8, 1.0);
+    return {
+        r: Math.round(randomColor.r * 255),
+        g: Math.round(randomColor.g * 255),
+        b: Math.round(randomColor.b * 255)
+    };
 }
 
 function wrap (value, min, max) {

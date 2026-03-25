@@ -716,8 +716,6 @@ body {
 .WorksSwiperMobile .swiper-pagination {
   display: flex !important;
   opacity: 1 !important;
-  z-index: 700 !important;
-  pointer-events: auto !important;
 }
 
 @media (max-width: 1280px) {
@@ -1683,21 +1681,32 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
   right: 0;
   bottom: 0;
   z-index: -1;
-  background: transparent;
   border-radius: 50px;
-  transform: none;
-  transition: none;
-}
-.cv-download-btn.effect:hover:after {
-  transform: none;
-  transition: none;
-}
-.cv-download-btn:hover {
-  border-color: var(--accent-color);
-  color: var(--bkg-color);
-  background: var(--accent-color);
 }
 
+@media (min-width: 1281px) {
+  .cv-download-btn {
+    background: transparent;
+    color: var(--main-color);
+    border-color: var(--main-color);
+    transition: color 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+  }
+  .cv-download-btn.effect:after {
+    background: var(--accent-color);
+    inset: 0;
+    border-radius: 50px;
+    clip-path: circle(0% at 50% 50%);
+    transition: clip-path 0.18s ease;
+  }
+  .cv-download-btn:hover {
+    color: var(--bkg-color);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 10px rgba(236, 249, 142, 0.4);
+  }
+  .cv-download-btn.effect:hover:after {
+    clip-path: circle(150% at 50% 50%);
+  }
+}
 @media (max-width: 768px) {
   .cv-download-btn {
     font-size: 2rem;

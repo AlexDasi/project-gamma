@@ -8,9 +8,18 @@
   'use strict';
 
   const MOBILE_BREAKPOINT = 1280;
+  const MIN_VISIBLE_PROJECT_YEAR = 2021;
+  const HIDDEN_PROJECTS = ['terralava'];
 
   function isMobile() {
     return window.innerWidth <= MOBILE_BREAKPOINT;
+  }
+
+  function isProjectHidden(slide) {
+    const worksDiv = slide.querySelector('.works');
+    if (!worksDiv) return false;
+    const classList = Array.from(worksDiv.classList);
+    return HIDDEN_PROJECTS.some((h) => classList.some((c) => c.includes(h)));
   }
 
   function initMainSwiper() {
@@ -91,18 +100,19 @@
     const slides = Array.from(wrapper.querySelectorAll(':scope > .swiper-slide'));
     if (!slides.length) return;
 
-    // Keep the intentionally empty spacer slide at the end.
-    const spacerSlides = slides.filter((slide) => !slide.querySelector('.works'));
     const contentSlides = slides.filter((slide) => slide.querySelector('.works'));
+    const visibleSlides = contentSlides.filter(
+      (slide) => parseSlideYear(slide) >= MIN_VISIBLE_PROJECT_YEAR && !isProjectHidden(slide)
+    );
 
-    contentSlides.sort((a, b) => {
+    visibleSlides.sort((a, b) => {
       const yearDiff = parseSlideYear(b) - parseSlideYear(a);
       if (yearDiff !== 0) return yearDiff;
       return 0;
     });
 
-    const orderedSlides = contentSlides.concat(spacerSlides);
-    orderedSlides.forEach((slide) => wrapper.appendChild(slide));
+    slides.forEach((slide) => slide.remove());
+    visibleSlides.forEach((slide) => wrapper.appendChild(slide));
   }
 
   function initWorksSwiperDesktop() {
@@ -117,7 +127,8 @@
 
     const worksSwiper = new Swiper(worksRoot, {
       direction: 'horizontal',
-      loop: false,
+      loop: true,
+      loopAdditionalSlides: 6,
       rewind: false,
       grabCursor: false,
       allowTouchMove: false,
@@ -166,7 +177,8 @@
 
     return new Swiper(worksRoot, {
       direction: 'horizontal',
-      loop: false,
+      loop: true,
+      loopAdditionalSlides: 6,
       rewind: false,
       grabCursor: false,
       allowTouchMove: true,

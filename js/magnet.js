@@ -4,7 +4,7 @@ if (!window.magnetMouseInstance) {
             element: '.magnet',
             class: 'magnet-mouse-active',
             enabled: true, /* Enables the magnet effect */
-            distance: 14, /* Keep activation tight so it only triggers near the element */
+            distance: 28, /* Stronger magnet range so desktop CTA and arrow visibly follow cursor */
             position: 'center' /* Position of mouse relative to the element when magnet effect is active */
             },
         follow: {

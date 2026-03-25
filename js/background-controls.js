@@ -81,7 +81,12 @@
   function loadSavedSettings() {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
-      return raw ? JSON.parse(raw) : null;
+      if (!raw) return null;
+      const parsed = JSON.parse(raw);
+      if (parsed && parsed.EFFECT_COLOR) {
+        delete parsed.EFFECT_COLOR;
+      }
+      return parsed;
     } catch (error) {
       return null;
     }

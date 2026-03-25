@@ -88,7 +88,9 @@
   }
 
   function sortWorksSlidesByNewestFirst(wrapper) {
-    const slides = Array.from(wrapper.querySelectorAll(':scope > .swiper-slide'));
+    const slides = Array.from(wrapper.children).filter(
+      (child) => child.classList && child.classList.contains('swiper-slide')
+    );
     if (!slides.length) return;
 
     // Keep the intentionally empty spacer slide at the end.
@@ -162,6 +164,9 @@
     const wrapper = worksRoot.querySelector('.swiper-wrapper');
     if (!wrapper) return null;
 
+    const paginationEl = worksRoot.querySelector('.swiper-pagination');
+    if (!paginationEl) return null;
+
     sortWorksSlidesByNewestFirst(wrapper);
 
     return new Swiper(worksRoot, {
@@ -171,6 +176,9 @@
       grabCursor: false,
       allowTouchMove: true,
       simulateTouch: true,
+      touchStartPreventDefault: false,
+      touchReleaseOnEdges: true,
+      threshold: 8,
       centeredSlides: true,
       slidesPerView: 'auto',
       spaceBetween: 0,
@@ -184,8 +192,11 @@
       observeParents: true,
       freeMode: false,
       mousewheel: false,
+      nested: true,
       pagination: {
-        el: worksRoot.querySelector('.swiper-pagination'),
+        el: paginationEl,
+        type: 'bullets',
+        dynamicBullets: false,
         clickable: true,
         renderBullet(index, className) {
           return `<span class="${className} works-swipe-dot" aria-label="Project ${index + 1}"></span>`;
@@ -193,7 +204,16 @@
       },
       on: {
         init(swiper) {
+          swiper.update();
+          if (swiper.pagination) {
+            swiper.pagination.render();
+            swiper.pagination.update();
+          }
           swiper.slideToClosest(0);
+          window.setTimeout(() => {
+            swiper.update();
+            if (swiper.pagination) swiper.pagination.update();
+          }, 120);
         },
         touchEnd(swiper) {
           swiper.slideToClosest(140);

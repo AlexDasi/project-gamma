@@ -42,7 +42,7 @@ include 'php-elements/header.php'
             <?php include 'php-pages/home.php'?>
         </div>
         <div class="swiper-slide slide-works">
-            <?php include 'php-pages/works.php'?>   
+            <?php include 'php-pages/works-mobile.php'?>   
         </div>
         <div class="swiper-slide slide-about">
             <?php include 'php-pages/about.php'?>   

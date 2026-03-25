@@ -1,7 +1,7 @@
 <div id="works">
 
     <!-- Swiper -->
-    <div class="swiper WorksSwiper WorksSwiperDesktop">
+    <div class="swiper WorksSwiper WorksSwiperMobile">
         <div class="swiper-button-prev hiddenMobile" aria-label="Previous project"></div>
         <div class="swiper-button-next hiddenMobile" aria-label="Next project"></div>
         <div class="swiper-pagination"></div>

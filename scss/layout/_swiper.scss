@@ -164,6 +164,24 @@ body {
   }
 }
 
+.WorksSwiperDesktop .swiper-pagination {
+  display: none !important;
+}
+
+.WorksSwiperMobile {
+  touch-action: pan-x !important;
+}
+
+.WorksSwiperMobile .swiper-button-prev,
+.WorksSwiperMobile .swiper-button-next {
+  display: none !important;
+}
+
+.WorksSwiperMobile .swiper-pagination {
+  display: flex !important;
+  opacity: 1 !important;
+}
+
 @media (max-width: 1280px) {
   .WorksSwiper .swiper-button-prev,
   .WorksSwiper .swiper-button-next {

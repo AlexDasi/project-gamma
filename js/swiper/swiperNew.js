@@ -105,10 +105,9 @@
     orderedSlides.forEach((slide) => wrapper.appendChild(slide));
   }
 
-  function initWorksSwiper() {
-    const worksRoots = Array.from(document.querySelectorAll('.WorksSwiper'));
-    const worksRoot =
-      worksRoots.find((root) => root.offsetParent !== null) || worksRoots[0] || null;
+  function initWorksSwiperDesktop() {
+    if (isMobile()) return null;
+    const worksRoot = document.querySelector('.WorksSwiperDesktop');
     if (!worksRoot || typeof Swiper === 'undefined') return null;
 
     const wrapper = worksRoot.querySelector('.swiper-wrapper');
@@ -121,9 +120,9 @@
       loop: false,
       rewind: false,
       grabCursor: false,
-      allowTouchMove: isMobile(),
-      simulateTouch: isMobile(),
-      centeredSlides: isMobile(),
+      allowTouchMove: false,
+      simulateTouch: false,
+      centeredSlides: false,
       slidesPerView: 'auto',
       spaceBetween: 0,
       speed: 420,
@@ -139,56 +138,13 @@
       navigation: {
         nextEl: worksRoot.querySelector('.swiper-button-next'),
         prevEl: worksRoot.querySelector('.swiper-button-prev')
-      },
-      pagination: {
-        el: worksRoot.querySelector('.swiper-pagination'),
-        clickable: true,
-        renderBullet(index, className) {
-          return `<span class="${className} works-swipe-dot" aria-label="Project ${index + 1}"></span>`;
-        }
-      },
-      breakpoints: {
-        0: {
-          speed: 360,
-          allowTouchMove: true,
-          simulateTouch: true,
-          centeredSlides: true,
-          resistanceRatio: 0.85,
-          edgeSwipeDetection: true,
-          edgeSwipeThreshold: 20,
-          momentum: true,
-          momentumBounce: true,
-          momentumBounceRatio: 0.8
-        },
-        1281: {
-          speed: 420,
-          allowTouchMove: false,
-          simulateTouch: false,
-          centeredSlides: false,
-          resistanceRatio: 0.25
-        }
-      },
-      on: {
-        init(swiper) {
-          swiper.slideToClosest(0);
-        },
-        touchEnd(swiper) {
-          if (!isMobile()) return;
-          // Fuerza snap al slide más cercano después del toque (magnetismo)
-          swiper.slideToClosest(100);
-        },
-        reachEnd(swiper) {
-          // Si alcanza el final, vuelve al inicio (pseudo-loop)
-          swiper.slideToClosest(0);
-        }
       }
     });
 
-    // Hard-block horizontal wheel gestures over Works to avoid browser back/forward swipe.
     worksRoot.addEventListener(
       'wheel',
       (event) => {
-        if (!isMobile() && Math.abs(event.deltaX) > 0) {
+        if (Math.abs(event.deltaX) > 0) {
           event.preventDefault();
         }
       },
@@ -198,11 +154,70 @@
     return worksSwiper;
   }
 
-  function boot() {
-    window.mainSwiper = initMainSwiper();
-    window.worksSwiper = initWorksSwiper();
+  function initWorksSwiperMobile() {
+    if (!isMobile()) return null;
+    const worksRoot = document.querySelector('.WorksSwiperMobile');
+    if (!worksRoot || typeof Swiper === 'undefined') return null;
 
-    // Also block horizontal wheel gestures globally while WORKS section is active.
+    const wrapper = worksRoot.querySelector('.swiper-wrapper');
+    if (!wrapper) return null;
+
+    sortWorksSlidesByNewestFirst(wrapper);
+
+    return new Swiper(worksRoot, {
+      direction: 'horizontal',
+      loop: false,
+      rewind: false,
+      grabCursor: false,
+      allowTouchMove: true,
+      simulateTouch: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      spaceBetween: 0,
+      speed: 360,
+      watchOverflow: true,
+      watchSlidesProgress: true,
+      roundLengths: true,
+      resistanceRatio: 0.85,
+      slideToClickedSlide: true,
+      observer: true,
+      observeParents: true,
+      freeMode: false,
+      mousewheel: false,
+      pagination: {
+        el: worksRoot.querySelector('.swiper-pagination'),
+        clickable: true,
+        renderBullet(index, className) {
+          return `<span class="${className} works-swipe-dot" aria-label="Project ${index + 1}"></span>`;
+        }
+      },
+      on: {
+        init(swiper) {
+          swiper.slideToClosest(0);
+        },
+        touchEnd(swiper) {
+          swiper.slideToClosest(140);
+        }
+      }
+    });
+  }
+
+  function destroySwiper(swiperInstance) {
+    if (!swiperInstance || typeof swiperInstance.destroy !== 'function') return;
+    swiperInstance.destroy(true, true);
+  }
+
+  function initAllSwipers() {
+    window.mainSwiper = initMainSwiper();
+    window.worksSwiperDesktop = initWorksSwiperDesktop();
+    window.worksSwiperMobile = initWorksSwiperMobile();
+    window.worksSwiper = isMobile() ? window.worksSwiperMobile : window.worksSwiperDesktop;
+  }
+
+  function boot() {
+    let currentMode = isMobile() ? 'mobile' : 'desktop';
+    initAllSwipers();
+
     window.addEventListener(
       'wheel',
       (event) => {
@@ -214,6 +229,27 @@
       },
       { passive: false }
     );
+
+    let resizeTimer = null;
+    window.addEventListener('resize', () => {
+      window.clearTimeout(resizeTimer);
+      resizeTimer = window.setTimeout(() => {
+        const nextMode = isMobile() ? 'mobile' : 'desktop';
+        if (nextMode === currentMode) return;
+
+        destroySwiper(window.mainSwiper);
+        destroySwiper(window.worksSwiperDesktop);
+        destroySwiper(window.worksSwiperMobile);
+
+        window.mainSwiper = null;
+        window.worksSwiperDesktop = null;
+        window.worksSwiperMobile = null;
+        window.worksSwiper = null;
+
+        currentMode = nextMode;
+        initAllSwipers();
+      }, 150);
+    });
   }
 
   if (document.readyState === 'loading') {

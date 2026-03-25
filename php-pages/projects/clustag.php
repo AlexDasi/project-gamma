@@ -66,7 +66,7 @@ include '../../php-elements/header-works.php'
 
     <p class="credits credits-left creditsDesktop">PRESS SPACE :)</p>
 
-    <p class="credits creditsMobile">Alex Dasi©2025</p>
+    <p class="credits creditsMobile">Alex Dasi©2026</p>
 
     <?php
 

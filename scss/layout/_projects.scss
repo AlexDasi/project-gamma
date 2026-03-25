@@ -192,36 +192,22 @@
         //hover effect
         
         &>a{
-            position: relative;
             font-size: 4.5rem;
             color: var(--bkg-color);
-            background: var(--accent-color);
-            z-index: $z-null;
+            background-color: var(--accent-color);
+            text-decoration: none;
+            background-image: linear-gradient(currentColor, currentColor);
+            background-position: 0 100%;
+            background-repeat: no-repeat;
+            background-size: 0 2px;
+            transition: background-size 0.22s ease;
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
 
-            // background-color: var(--accent-color);
-
-            // &::before {  
-            //     transform: scaleX(0);
-            //     transform-origin: bottom right;
-            // }
-            
-            // &:hover::before {
-            //     transform: scaleX(1);
-            //     transform-origin: bottom left;
-
-            // }
-            
-            // &::before {
-            //     content: " ";
-            //     display: block;
-            //     position: absolute;
-            //     top: 0; right: 0; bottom: 0; left: 0;
-            //     inset: 0 0 0 0;
-            //     background: var(--main-color);
-            //     transition: transform .3s ease;
-            //     z-index: $z-null;
-
-            // }
+            &:hover,
+            &:focus-visible {
+                background-size: 100% 2px;
+            }
         }
     }
 }
@@ -293,11 +279,21 @@
         }
         
         a{
-            position: relative;
             color: var(--bkg-color);
-            background: var(--accent-color);
             text-decoration: none;
-            z-index: 0;
+            background-color: var(--accent-color);
+            background-image: linear-gradient(currentColor, currentColor);
+            background-position: 0 100%;
+            background-repeat: no-repeat;
+            background-size: 0 1px;
+            transition: background-size 0.22s ease;
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+
+            &:hover,
+            &:focus-visible {
+                background-size: 100% 1px;
+            }
         }
 
     }
@@ -330,11 +326,21 @@
 
         // Links in introductory text should match quote style
         a {
-            position: relative;
             color: var(--bkg-color);
-            background: var(--accent-color);
             text-decoration: none;
-            z-index: 0;
+            background-color: var(--accent-color);
+            background-image: linear-gradient(currentColor, currentColor);
+            background-position: 0 100%;
+            background-repeat: no-repeat;
+            background-size: 0 1px;
+            transition: background-size 0.22s ease;
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+
+            &:hover,
+            &:focus-visible {
+                background-size: 100% 1px;
+            }
         }
     }
 

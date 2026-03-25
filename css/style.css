@@ -1319,11 +1319,20 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
   padding: 4vw 0;
 }
 .project-content__quote > a {
-  position: relative;
   font-size: 4.5rem;
   color: var(--bkg-color);
-  background: var(--accent-color);
-  z-index: 0;
+  background-color: var(--accent-color);
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0 2px;
+  transition: background-size 0.22s ease;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.project-content__quote > a:hover, .project-content__quote > a:focus-visible {
+  background-size: 100% 2px;
 }
 
 @media (min-width: 768px) {
@@ -1380,11 +1389,19 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
   color: var(--bkg-color);
 }
 .project-description__main .slice-infos__columns .info-column__text a {
-  position: relative;
   color: var(--bkg-color);
-  background: var(--accent-color);
   text-decoration: none;
-  z-index: 0;
+  background-color: var(--accent-color);
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0 1px;
+  transition: background-size 0.22s ease;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.project-description__main .slice-infos__columns .info-column__text a:hover, .project-description__main .slice-infos__columns .info-column__text a:focus-visible {
+  background-size: 100% 1px;
 }
 @media (min-width: 768px) {
   .project-description__main .slice-infos__columns .info-column__text {
@@ -1407,11 +1424,19 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
   margin-top: 2rem;
 }
 .project-description__main .slice-infos__text a {
-  position: relative;
   color: var(--bkg-color);
-  background: var(--accent-color);
   text-decoration: none;
-  z-index: 0;
+  background-color: var(--accent-color);
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0 1px;
+  transition: background-size 0.22s ease;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.project-description__main .slice-infos__text a:hover, .project-description__main .slice-infos__text a:focus-visible {
+  background-size: 100% 1px;
 }
 .project-description__main .slice-infos__columns {
   display: flex;

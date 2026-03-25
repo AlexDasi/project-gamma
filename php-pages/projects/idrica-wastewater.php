@@ -16,7 +16,7 @@ include '../../php-elements/header-works.php'
 
                 <h2 class="padding3 slice-infos__title">UX/UI for wastewater operations, monitoring, and decision-making</h2>
 
-                <div class="padding3 slice-infos__text"><p>While working at <a href="https://www.idrica.com/en/" target="_blank" rel="noopener noreferrer">Idrica</a>, a Valencia-based company focused on digital transformation for the water industry, I contributed to the UX/UI design of a desktop platform created to support the management of wastewater treatment plants. The product brought together monitoring, alarms, infrastructure hierarchies, maps, and operational data into a single environment designed for technical teams.</p><p>The challenge was not only functional, but structural: translating complex industrial workflows into a digital product that felt legible, efficient, and dependable. The design approach prioritized clarity, hierarchy, and calm interaction patterns, helping users move between dashboards, maps, and alert systems with less friction and better situational awareness.</p></div>
+                <div class="padding3 slice-infos__text"><p>While working at <a href="https://www.idrica.com/en/" target="_blank" rel="noopener noreferrer">Idrica</a>, I contributed to the UX/UI design of a desktop platform for wastewater treatment plant operations. The product brings monitoring, alarms, infrastructure hierarchies, maps, and operational data into one coherent environment for technical teams.</p><p>The core challenge was structural: turning complex industrial workflows into an interface that feels legible, efficient, and dependable. The design system focused on clarity, hierarchy, and calm interaction patterns so users could move across dashboards, maps, and alerts with less friction and stronger situational awareness.</p></div>
 
                 <ul class="padding3 slice-infos__columns">
                     <li class="info-column">
@@ -45,7 +45,7 @@ include '../../php-elements/header-works.php'
 
                 <img class="element project-content__image" src="../../content/pictures/projects/idrica-wastewater/idrica-wastewater-operations.jpg" alt="Idrica Wastewater operational data interface" loading="lazy" decoding="async">
 
-                <p class="padding3 project-content__quote">The interface system was shaped to support real operational contexts: dense information, multiple decision layers, and a need for fast visual parsing across dashboards, tables, and geographical views.</p>
+                <p class="padding3 project-content__quote">The interface system was shaped for real operational contexts: dense information, multiple decision layers, and the need for fast visual parsing across dashboards, tables, and geographical views.</p>
 
             </div>
         </section>

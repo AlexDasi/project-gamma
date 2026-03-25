@@ -1058,7 +1058,8 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
     width: 75vw;
     position: absolute !important;
     opacity: 1 !important;
-    top: 50px !important;
+    top: auto !important;
+    bottom: calc(10vh + 28px) !important;
     left: 10px !important;
     font-family: var(--main-font);
     display: -webkit-box;
@@ -1081,7 +1082,8 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
   .works:hover .works--info, .works:active .works--info, .works:focus .works--info {
     position: absolute !important;
     opacity: 1 !important;
-    top: 50px !important;
+    top: auto !important;
+    bottom: calc(10vh + 28px) !important;
     left: 10px !important;
     padding-top: 0 !important;
     transform: none !important;

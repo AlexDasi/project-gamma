@@ -14,7 +14,7 @@
                 <!-- info -->
                     <div class="works--info">
                         <h2 >CAMISOLA</h2>
-                        <p class="yellow-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, minima quidem, distinctio nobis magnam repudiandae consectetur perferendis quia dolores consequuntur beatae esse officia ut sed molestias? Aperiam non dicta id!</p>
+                        <p class="yellow-600">Brand identity and web design for Camisola, an experimental Hawaiian shirt concept centered on custom pieces. The site combines editorial storytelling with an interactive editor to explore patterns, color, and personality.</p>
                     </div>
                     <div class="hiddenMobile works--details">
                         <p>Branding and web design</p>
@@ -32,7 +32,7 @@
                 <!-- info -->
                     <div class="works--info">
                         <h2>CLUSTAG</h2>
-                        <p class="yellow-600">Web design for Clustag, a company specializing in RFID technology for logistics and retail optimization. The visual direction draws from industrial aesthetics—neutral tones, geometric layouts, and precise motion—to reflect the brand’s focus on innovation, efficiency, and technological sophistication.</p>
+                        <p class="yellow-600">Web design for Clustag, an RFID technology company focused on logistics and retail optimization. An industrial visual language, clear hierarchy, and precise motion were crafted to communicate efficiency and reliability.</p>
                     </div>
                     <div class="hiddenMobile works--details">
                         <p>Web Development & UX/UI Design</p>
@@ -50,7 +50,7 @@
                 <!-- info -->
                     <div class="works--info">
                         <h2>ELSA</h2>
-                        <p class="yellow-600">Web design and development for Elsa Moreno, a poet and multidisciplinary artist whose work blends performance, literature, and ecology. The site reflects her artistic sensibility through a minimalist layout, soft color palette, and rhythmic visual flow—creating a serene digital space that mirrors her poetic and performative universe.</p>
+                        <p class="yellow-600">Web design and development for Elsa Moreno, a poet and multidisciplinary artist. A minimalist structure, soft palette, and gentle visual rhythm create a calm digital space aligned with her voice and artistic practice.</p>
                     </div>
                     <div class="hiddenMobile works--details">
                         <p>Web Design, Development, Visual Language</p>
@@ -68,7 +68,7 @@
                 <!-- info -->
                     <div class="works--info">
                         <h2>KNOWADAYS</h2>
-                        <p class="yellow-600">Design applications and digital redesign work for Knowadays, a global online learning platform focused on proofreading, editing, and writing education. Multi-format delivery across web, email, social, and editorial assets.</p>
+                        <p class="yellow-600">Design production and digital redesign for Knowadays, a global online learning platform for proofreading, editing, and writing. Delivered across web, email, social, and editorial touchpoints.</p>
                     </div>
                     <div class="hiddenMobile works--details">
                         <p>UX/UI, SM, Editorial & Graphic Design</p>
@@ -86,7 +86,7 @@
                 <!-- info -->
                     <div class="works--info">
                         <h2>IDRICA</h2>
-                        <p class="yellow-600">UX/UI design for a desktop platform focused on wastewater treatment plant operations, bringing together monitoring, alarms, maps, and dense technical data into a clearer and more dependable interface system.</p>
+                        <p class="yellow-600">UX/UI design for a desktop platform used in wastewater treatment operations. Monitoring, alarms, maps, and dense technical data were shaped into a clear and dependable interface for faster operational decisions.</p>
                     </div>
                     <div class="hiddenMobile works--details">
                         <p>UX/UI Design</p>

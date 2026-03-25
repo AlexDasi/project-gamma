@@ -22,7 +22,7 @@ include '../../php-elements/header-works.php'
             
                 <h2 class="padding3 slice-infos__title">Smart RFID Solutions with Industrial Elegance</h2>
             
-                <div class="padding3 slice-infos__text"><p>Clustag is a global technology company specializing in RFID-based intralogistics solutions that optimize traceability and efficiency within warehouses and supply chains. Their systems—ranging from RFID tunnels and pallet validation to garment tracking—automate the identification and movement of goods, helping brands achieve smarter, faster, and more accurate operations.</p></div>
+                <div class="padding3 slice-infos__text"><p>Clustag is a global technology company specialized in RFID intralogistics solutions for warehouses and supply chains. From RFID tunnels and pallet validation to garment tracking, its systems automate identification and product flow to improve traceability, speed, and operational accuracy.</p></div>
             
                 <ul class="padding3 slice-infos__columns">
                     <li class="info-column">
@@ -47,14 +47,14 @@ include '../../php-elements/header-works.php'
 
                 <img class="element project-content__image" src="../../content/videos-gifs/clustag/clustag video 1.gif" alt="Clustag Platform Animation" loading="lazy" decoding="async">
 
-                <p class="padding3 project-content__quote"><a href="https://clustag.com/">The website</a> reflects this technological precision through a clean, modular layout and an industrial yet elegant visual identity.</p>
+                <p class="padding3 project-content__quote"><a href="https://clustag.com/">The website</a> translates that technical precision into a clean modular layout and an industrial yet elegant visual identity.</p>
 
                 <img class="element project-content__image" src="../../content/pictures/projects/clustag/clustag-iphone.jpg" alt="Clustag Mobile Interface" loading="lazy" decoding="async">
 
                 <img class="element project-content__image" src="../../content/pictures/projects/clustag/clustag-warehouse.jpg" alt="Clustag Environmental Context" loading="lazy" decoding="async">
 
                 <!-- Additional project content would go here -->
-                <p class="padding3 project-content__quote">Its design emphasizes clarity, data visualization, and intuitive navigation—mirroring the brand’s focus on efficiency and innovation. The visual language combines neutral tones, geometric structure, and dynamic motion elements to communicate reliability and forward-thinking engineering.</p>
+                <p class="padding3 project-content__quote">The interface prioritizes clarity, useful data visualization, and intuitive navigation. Neutral tones, geometric structure, and controlled motion help communicate reliability and a forward-thinking engineering mindset.</p>
 
             </div>
         </section>

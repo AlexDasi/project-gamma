@@ -22,7 +22,7 @@ include '../../php-elements/header-works.php'
             
                 <h2 class="padding3 slice-infos__title">Poetic Digital Spaces & Artistic Sensibility</h2>
             
-                <div class="padding3 slice-infos__text"><p>Web design and development for <a href="https://www.elsa-moreno.com" target="_blank">Elsa Moreno</a>, a poet and multidisciplinary artist whose work blends performance, literature, and ecology. The site reflects her artistic sensibility through a minimalist layout, soft color palette, and rhythmic visual flow—creating a serene digital space that mirrors her poetic and performative universe.</p></div>
+                <div class="padding3 slice-infos__text"><p>Web design and development for <a href="https://www.elsa-moreno.com" target="_blank">Elsa Moreno</a>, a poet and multidisciplinary artist whose practice moves across performance, literature, and ecology. The site uses a minimalist structure, a soft palette, and gentle pacing to create a calm space where the work can breathe.</p></div>
             
                 <ul class="padding3 slice-infos__columns">
                     <li class="info-column">
@@ -49,7 +49,7 @@ include '../../php-elements/header-works.php'
 
                 <img class="element project-content__image" src="../../content/pictures/projects/elsa/Macbook-elsa.jpg" alt="Elsa Moreno desktop website" loading="lazy" decoding="async">
 
-                <p class="padding3 project-content__quote">The minimalist layout and soft color palette create a serene digital space that mirrors her poetic and performative universe, allowing the content to breathe and flow naturally. <a href="https://www.elsa-moreno.com" target="_blank">Visit the website</a> to experience the full artistic journey.</p>
+                <p class="padding3 project-content__quote">A restrained layout and soft chromatic atmosphere let text, gesture, and visual pauses unfold with intention. <a href="https://www.elsa-moreno.com" target="_blank">Visit the website</a> to experience the project in full.</p>
 
                 <img class="element project-content__image" src="../../content/pictures/projects/elsa/Macbook-elsa 2.jpg" alt="Elsa Moreno additional view" loading="lazy" decoding="async">
 

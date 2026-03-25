@@ -591,9 +591,9 @@ body {
   .works--info{
     width: 75vw;
     position: absolute !important;
-    // bottom: 5px;
     opacity: 1 !important;
-    top: 50px !important;
+    top: auto !important;
+    bottom: calc(10vh + 28px) !important;
     left: 10px !important;
     font-family: var(--main-font);
     @include flexbox;
@@ -621,7 +621,8 @@ body {
     &:focus .works--info {
       position: absolute !important;
       opacity: 1 !important;
-      top: 50px !important;
+      top: auto !important;
+      bottom: calc(10vh + 28px) !important;
       left: 10px !important;
       padding-top: 0 !important; // Remove desktop padding-top: 30px
       transform: none !important;

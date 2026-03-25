@@ -17,9 +17,15 @@
 
   function isProjectHidden(slide) {
     const worksDiv = slide.querySelector('.works');
-    if (!worksDiv) return false;
-    const classList = Array.from(worksDiv.classList);
-    return HIDDEN_PROJECTS.some((h) => classList.some((c) => c.includes(h)));
+    const classList = worksDiv ? Array.from(worksDiv.classList) : [];
+    const projectHref = slide.getAttribute('href') || '';
+
+    return HIDDEN_PROJECTS.some(
+      (projectSlug) =>
+        classList.some((className) => className.includes(projectSlug)) ||
+        projectHref.includes(`/projects/${projectSlug}.php`) ||
+        projectHref.includes(`projects/${projectSlug}.php`)
+    );
   }
 
   function initMainSwiper() {

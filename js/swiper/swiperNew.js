@@ -120,7 +120,7 @@
       grabCursor: false,
       allowTouchMove: isMobile(),
       simulateTouch: isMobile(),
-      centeredSlides: false,
+      centeredSlides: isMobile(),
       slidesPerView: 'auto',
       spaceBetween: 0,
       speed: 420,
@@ -149,14 +149,19 @@
           speed: 360,
           allowTouchMove: true,
           simulateTouch: true,
+          centeredSlides: true,
           resistanceRatio: 0.85,
           edgeSwipeDetection: true,
-          edgeSwipeThreshold: 20
+          edgeSwipeThreshold: 20,
+          momentum: true,
+          momentumBounce: true,
+          momentumBounceRatio: 0.8
         },
         1025: {
           speed: 420,
           allowTouchMove: false,
           simulateTouch: false,
+          centeredSlides: false,
           resistanceRatio: 0.25
         }
       },

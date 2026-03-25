@@ -15,11 +15,11 @@
     opacity: 0;
     transition: opacity 0.25s ease;
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1280px) {
       opacity: 1;
     }
 
-    @media (min-width: 1025px) {
+    @media (min-width: 1281px) {
       display: none;
     }
   }

@@ -7,7 +7,7 @@
 (function () {
   'use strict';
 
-  const MOBILE_BREAKPOINT = 1024;
+  const MOBILE_BREAKPOINT = 1280;
 
   function isMobile() {
     return window.innerWidth <= MOBILE_BREAKPOINT;
@@ -15,9 +15,12 @@
 
   function initMainSwiper() {
     const mainRoot = document.querySelector('.MainSwiper');
+    if (window.innerWidth <= 1280) return null;
     if (!mainRoot || typeof Swiper === 'undefined') return null;
 
     const mainMenu = ['HOME', 'WORKS', 'ABOUT', 'CONTACT'];
+
+    const mainPaginationEl = mainRoot.querySelector(':scope > .swiper-pagination');
 
     const mainSwiper = new Swiper('.MainSwiper', {
       direction: 'vertical',
@@ -34,7 +37,7 @@
         thresholdTime: 300
       },
       pagination: {
-        el: '.swiper-pagination',
+        el: mainPaginationEl,
         clickable: true,
         renderBullet(index, className) {
           return `<span class="${className}">${mainMenu[index]}</span>`;
@@ -157,7 +160,7 @@
           momentumBounce: true,
           momentumBounceRatio: 0.8
         },
-        1025: {
+        1281: {
           speed: 420,
           allowTouchMove: false,
           simulateTouch: false,

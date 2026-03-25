@@ -159,7 +159,7 @@ body {
   touch-action: manipulation;
   
   @media (max-width: 1280px) {
-    touch-action: pan-y;
+    touch-action: pan-x;
     -webkit-touch-callout: none;
   }
 }

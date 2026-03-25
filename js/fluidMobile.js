@@ -51,7 +51,7 @@ let config = {
     PAUSED: false,
     BACK_COLOR: { r:20, g: 20, b: 21 },
     EFFECT_COLOR: randomEffectColor(),
-    EFFECT_OPACITY: 1,
+    EFFECT_OPACITY: 0.5,
     TRANSPARENT: false,
     BLOOM: false,
     BLOOM_ITERATIONS: 8,

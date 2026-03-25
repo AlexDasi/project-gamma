@@ -11,7 +11,7 @@
     CURL: 3,
     SPLAT_RADIUS: 0.25,
     SPLAT_FORCE: 6000,
-    EFFECT_OPACITY: 1,
+    EFFECT_OPACITY: 0.5,
     SHADING: true,
     BLOOM: false,
     EFFECT_COLOR: { r: 236, g: 249, b: 142 }
@@ -25,7 +25,7 @@
       CURL: 2,
       SPLAT_RADIUS: 0.22,
       SPLAT_FORCE: 4200,
-      EFFECT_OPACITY: 0.85,
+      EFFECT_OPACITY: 0.5,
       SHADING: true,
       BLOOM: false,
       EFFECT_COLOR: { r: 176, g: 214, b: 148 }
@@ -37,7 +37,7 @@
       CURL: 3,
       SPLAT_RADIUS: 0.25,
       SPLAT_FORCE: 6000,
-      EFFECT_OPACITY: 1,
+      EFFECT_OPACITY: 0.5,
       SHADING: true,
       BLOOM: false,
       EFFECT_COLOR: { r: 236, g: 249, b: 142 }
@@ -49,7 +49,7 @@
       CURL: 6,
       SPLAT_RADIUS: 0.32,
       SPLAT_FORCE: 9000,
-      EFFECT_OPACITY: 1,
+      EFFECT_OPACITY: 0.5,
       SHADING: true,
       BLOOM: true,
       EFFECT_COLOR: { r: 255, g: 140, b: 110 }
@@ -85,6 +85,9 @@
       const parsed = JSON.parse(raw);
       if (parsed && parsed.EFFECT_COLOR) {
         delete parsed.EFFECT_COLOR;
+      }
+      if (parsed && typeof parsed.EFFECT_OPACITY !== 'undefined') {
+        delete parsed.EFFECT_OPACITY;
       }
       return parsed;
     } catch (error) {

@@ -4,7 +4,7 @@
     <div class="swiper WorksSwiper">
         <div class="swiper-button-prev hiddenMobile" aria-label="Previous project"></div>
         <div class="swiper-button-next hiddenMobile" aria-label="Next project"></div>
-        <div class="swiper-pagination hiddenMobile"></div>
+        <div class="swiper-pagination"></div>
         <div class="swiper-wrapper">
             <a href="php-pages/projects/camisola.php" class="swiper-slide">
                 <div class="works works-camisola">

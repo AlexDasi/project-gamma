@@ -7,44 +7,26 @@
 (function () {
   'use strict';
 
-  // Must match the CSS breakpoint in _site.scss (@media max-width: 1280px)
-  const MOBILE_BREAKPOINT = 1280;
+  const MOBILE_BREAKPOINT = 1024;
 
   function isMobile() {
     return window.innerWidth <= MOBILE_BREAKPOINT;
   }
 
   function initMainSwiper() {
-    // Explicitly select the correct element based on viewport:
-    // On mobile (≤1280px) CSS shows .hiddenDesktop, on desktop it shows .hiddenMobile.
-    const allRoots = Array.from(document.querySelectorAll('.MainSwiper'));
-    const targetClass = isMobile() ? 'hiddenDesktop' : 'hiddenMobile';
-    const mainRoot =
-      allRoots.find((el) => el.classList.contains(targetClass)) ||
-      allRoots.find((el) => el.offsetParent !== null) ||
-      allRoots[0] ||
-      null;
+    const mainRoot = document.querySelector('.MainSwiper');
     if (!mainRoot || typeof Swiper === 'undefined') return null;
 
     const mainMenu = ['HOME', 'WORKS', 'ABOUT', 'CONTACT'];
-    const mobile = isMobile();
 
-    const mainSwiper = new Swiper(mainRoot, {
+    const mainSwiper = new Swiper('.MainSwiper', {
       direction: 'vertical',
-      speed: mobile ? 600 : 1000,
-      allowTouchMove: mobile,
-      touchReleaseOnEdges: mobile,
-      resistanceRatio: mobile ? 0.4 : 0,
-      threshold: mobile ? 10 : 0,
-      followFinger: mobile,
-      longSwipes: true,
-      longSwipesRatio: mobile ? 0.15 : 0.5,
-      longSwipesMs: mobile ? 120 : 300,
-      shortSwipes: true,
+      speed: 1000,
+      allowTouchMove: false,
       spaceBetween: 0,
-      slidesPerView: mobile ? 1 : 'auto',
-      centeredSlides: !mobile,
-      mousewheel: mobile ? false : {
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      mousewheel: {
         enabled: true,
         forceToAxis: true,
         releaseOnEdges: false,
@@ -52,15 +34,15 @@
         thresholdTime: 300
       },
       pagination: {
-        el: mainRoot.querySelector('.swiper-pagination'),
+        el: '.swiper-pagination',
         clickable: true,
         renderBullet(index, className) {
           return `<span class="${className}">${mainMenu[index]}</span>`;
         }
       },
       navigation: {
-        nextEl: mainRoot.querySelector('.slideNext-btn'),
-        prevEl: mainRoot.querySelector('.slidePrev-btn')
+        nextEl: '.slideNext-btn',
+        prevEl: '.slidePrev-btn'
       },
       on: {
         slideChange() {
@@ -138,7 +120,7 @@
       grabCursor: false,
       allowTouchMove: isMobile(),
       simulateTouch: isMobile(),
-      centeredSlides: isMobile(),
+      centeredSlides: false,
       slidesPerView: 'auto',
       spaceBetween: 0,
       speed: 420,
@@ -158,18 +140,24 @@
       pagination: {
         el: worksRoot.querySelector('.swiper-pagination'),
         clickable: true,
-        type: 'bullets'
+        renderBullet(index, className) {
+          return `<span class="${className} works-swipe-dot" aria-label="Project ${index + 1}"></span>`;
+        }
       },
       breakpoints: {
         0: {
           speed: 360,
           allowTouchMove: true,
-          simulateTouch: true
+          simulateTouch: true,
+          resistanceRatio: 0.85,
+          edgeSwipeDetection: true,
+          edgeSwipeThreshold: 20
         },
         1025: {
           speed: 420,
           allowTouchMove: false,
-          simulateTouch: false
+          simulateTouch: false,
+          resistanceRatio: 0.25
         }
       },
       on: {
@@ -178,8 +166,12 @@
         },
         touchEnd(swiper) {
           if (!isMobile()) return;
-          // Force nearest-slide snap after finger release on mobile.
-          swiper.slideToClosest(280);
+          // Fuerza snap al slide más cercano después del toque (magnetismo)
+          swiper.slideToClosest(100);
+        },
+        reachEnd(swiper) {
+          // Si alcanza el final, vuelve al inicio (pseudo-loop)
+          swiper.slideToClosest(0);
         }
       }
     });
@@ -201,19 +193,6 @@
   function boot() {
     window.mainSwiper = initMainSwiper();
     window.worksSwiper = initWorksSwiper();
-
-    // Re-initialize swipers when the mobile/desktop breakpoint is crossed (e.g. DevTools resize).
-    const _mq = window.matchMedia('(max-width: ' + MOBILE_BREAKPOINT + 'px)');
-    _mq.addEventListener('change', function () {
-      if (window.mainSwiper && typeof window.mainSwiper.destroy === 'function') {
-        window.mainSwiper.destroy(true, true);
-      }
-      if (window.worksSwiper && typeof window.worksSwiper.destroy === 'function') {
-        window.worksSwiper.destroy(true, true);
-      }
-      window.mainSwiper = initMainSwiper();
-      window.worksSwiper = initWorksSwiper();
-    });
 
     // Also block horizontal wheel gestures globally while WORKS section is active.
     window.addEventListener(

@@ -3,7 +3,6 @@
 
   const STORAGE_KEY = 'fluid-bg-controls:v1';
   const ROOT_ID = 'bg-controls';
-  const NON_PERSISTED_KEYS = ['EFFECT_COLOR'];
 
   const defaults = {
     DENSITY_DISSIPATION: 1.5,
@@ -82,16 +81,7 @@
   function loadSavedSettings() {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
-      if (!raw) return null;
-
-      const parsed = JSON.parse(raw);
-      if (!parsed || typeof parsed !== 'object') return null;
-
-      NON_PERSISTED_KEYS.forEach(function (key) {
-        delete parsed[key];
-      });
-
-      return parsed;
+      return raw ? JSON.parse(raw) : null;
     } catch (error) {
       return null;
     }
@@ -99,11 +89,7 @@
 
   function saveSettings(settings) {
     try {
-      const sanitized = Object.assign({}, settings);
-      NON_PERSISTED_KEYS.forEach(function (key) {
-        delete sanitized[key];
-      });
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(sanitized));
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(settings));
     } catch (error) {
       // Ignore persistence issues in private mode.
     }

@@ -291,27 +291,16 @@ ul {
   .hiddenMobile {
     display: none !important;
   }
-  .hiddenDesktop.swiper {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-  }
-  .hiddenDesktop.swiper {
-    touch-action: pan-x;
-  }
-  .hiddenDesktop:not(.swiper) {
+  .hiddenDesktop {
     width: 100vw;
     display: flex;
     flex-direction: column;
   }
-  .hiddenDesktop:not(.swiper) > .swiper-wrapper {
+  .hiddenDesktop > .swiper-wrapper {
     display: block;
   }
-  .hiddenDesktop:not(.swiper) > .swiper-wrapper > .swiper-slide {
+  .hiddenDesktop > .swiper-wrapper > .swiper-slide {
     height: auto;
-  }
-  .hiddenDesktop.swiper .swiper-pagination {
-    display: none;
   }
 }
 @media (min-width: 1280px) {
@@ -338,6 +327,12 @@ header {
   margin: 5vw;
   width: 90vw;
   z-index: 0;
+}
+@media (max-width: 1280px) {
+  .categories {
+    margin: 5vw;
+    width: 90vw;
+  }
 }
 .categories .categories-items {
   display: inline-block;
@@ -608,6 +603,11 @@ body {
   display: flex;
   align-items: center;
 }
+@media (max-width: 1280px) {
+  .WorksSwiper .swiper {
+    padding: 5vw;
+  }
+}
 .WorksSwiper .swiper-wrapper {
   height: 40vh;
   display: flex;
@@ -691,7 +691,13 @@ body {
 
 .WorksSwiper {
   overscroll-behavior-x: none;
-  touch-action: pan-y;
+  touch-action: manipulation;
+}
+@media (max-width: 1280px) {
+  .WorksSwiper {
+    touch-action: pan-y;
+    -webkit-touch-callout: none;
+  }
 }
 
 @media (max-width: 1280px) {
@@ -1486,12 +1492,17 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
 
 @media (max-width: 1280px) {
   .about-description {
-    width: 100%;
+    width: 90vw;
     z-index: 2;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    overflow: visible;
   }
   .about-description__main {
     height: 100%;
     width: 90vw;
+    margin-left: -5vw;
+    margin-right: -5vw;
     padding-bottom: 10vh;
   }
 }
@@ -1767,12 +1778,13 @@ body .MainSwiper .swiper-pagination-bullet-active, body .MainSwiper .swiper-pagi
   }
   #contact {
     min-height: 80vh;
-    padding-bottom: 10vh;
+    padding: 5vw;
     margin-top: 0vh;
   }
   .contact--message {
-    top: 12vh;
     position: static;
+    left: 0;
+    top: auto;
   }
   .contact--message__main {
     font-size: 20vw;
@@ -1950,11 +1962,6 @@ canvas {
   position: fixed;
   top: 0;
   left: 0;
-}
-@media (max-width: 1280px) {
-  canvas {
-    pointer-events: none;
-  }
 }
 
 @media all and (max-width: 600px) {

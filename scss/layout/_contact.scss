@@ -80,13 +80,14 @@
 
     #contact {
         min-height: 80vh; // Keep standard height, flexbox handles spacing
-        padding-bottom: 10vh; // Add bottom padding for breathing room
+        padding: 5vw;
         margin-top: 0vh;
     }
 
     .contact--message {
-        top: 12vh;
         position: static;
+        left: 0;
+        top: auto;
 
         &__main {
             font-size: 20vw;

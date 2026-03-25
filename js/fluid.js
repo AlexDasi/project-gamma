@@ -50,7 +50,7 @@ let config = {
     COLOR_UPDATE_SPEED: 10,
     PAUSED: false,
     BACK_COLOR: { r:20, g: 20, b: 21 },
-    EFFECT_COLOR: getRandomInitialEffectColor(),
+    EFFECT_COLOR: { r: 236, g: 249, b: 142 },
     EFFECT_OPACITY: 1,
     TRANSPARENT: false,
     BLOOM: false,
@@ -1506,9 +1506,9 @@ function splatPointer (pointer) {
     splat(pointer.texcoordX, pointer.texcoordY, dx, dy, pointer.color);
 }
 
-function multipleSplats (amount, forceVariedColors = false) {
+function multipleSplats (amount) {
     for (let i = 0; i < amount; i++) {
-        const color = forceVariedColors ? generateSpaceSplatColor() : generateColor();
+        const color = generateColor();
         color.r *= 10.0;
         color.g *= 10.0;
         color.b *= 10.0;
@@ -1608,10 +1608,8 @@ window.addEventListener('touchend', e => {
 window.addEventListener('keydown', e => {
     if (e.code === 'KeyP')
         config.PAUSED = !config.PAUSED;
-    if (e.code === 'Space') {
-        e.preventDefault();
-        multipleSplats(parseInt(Math.random() * 20) + 5, true);
-    }
+    if (e.key === ' ')
+        splatStack.push(parseInt(Math.random() * 20) + 5);
 });
 
 function updatePointerDownData (pointer, id, posX, posY) {
@@ -1667,23 +1665,6 @@ function generateColor () {
         r: base.r * 0.2,
         g: base.g * 0.2,
         b: base.b * 0.2
-    };
-}
-
-function generateSpaceSplatColor () {
-    let randomColor = HSVtoRGB(Math.random(), 0.95, 1.0);
-    randomColor.r *= 0.2;
-    randomColor.g *= 0.2;
-    randomColor.b *= 0.2;
-    return randomColor;
-}
-
-function getRandomInitialEffectColor () {
-    const seed = HSVtoRGB(Math.random(), 0.6 + Math.random() * 0.35, 0.88 + Math.random() * 0.12);
-    return {
-        r: Math.round(seed.r * 255),
-        g: Math.round(seed.g * 255),
-        b: Math.round(seed.b * 255)
     };
 }
 

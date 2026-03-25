@@ -94,13 +94,17 @@
 
 @media (max-width:1280px) {
     .about-description {
-        width: 100%;
+        width: 90vw;
         z-index: 2;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        overflow: visible;
 
         &__main{
             height: 100%;
             width: 90vw;
-            // margin: 5vw;
+            margin-left: -5vw;
+            margin-right: -5vw;
             padding-bottom: 10vh;
         }
     }

@@ -6,6 +6,11 @@ $pageTitle = isset($pageTitle) && is_string($pageTitle) && trim($pageTitle) !== 
 $metaDescription = isset($metaDescription) && is_string($metaDescription) && trim($metaDescription) !== ''
     ? trim($metaDescription)
     : 'Portfolio of Alex Dasi, graphic designer and web designer creating brand identities, interfaces, and digital experiences.';
+
+$assetVersion = static function (string $relativePath): string {
+    $fullPath = dirname(__DIR__) . '/' . ltrim($relativePath, '/');
+    return is_file($fullPath) ? (string) filemtime($fullPath) : '1';
+};
 ?>
 
 <!doctype html>
@@ -47,9 +52,9 @@ $metaDescription = isset($metaDescription) && is_string($metaDescription) && tri
 
 
 
-    <link rel="stylesheet" href="scss/js-style/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="/scss/js-style/swiper-bundle.min.css?v=<?php echo $assetVersion('scss/js-style/swiper-bundle.min.css'); ?>"/>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css?v=<?php echo $assetVersion('css/style.css'); ?>">
 
 
 

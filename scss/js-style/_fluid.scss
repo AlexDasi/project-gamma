@@ -7,4 +7,21 @@ canvas {
     position: fixed;
     top: 0;
     left: 0;
+    pointer-events: none;
+}
+
+@media (max-width: 1280px) {
+    canvas {
+        display: none !important;
+    }
+
+    .bg-controls {
+        display: none !important;
+    }
+}
+
+.no-fluid-mobile {
+    canvas {
+        display: none !important;
+    }
 }

@@ -10,9 +10,19 @@
   const MOBILE_BREAKPOINT = 1280;
   const MIN_VISIBLE_PROJECT_YEAR = 2021;
   const HIDDEN_PROJECTS = ['terralava'];
+  const MOBILE_WORKS_OBSERVER_MARGIN = '220px 0px';
 
   function isMobile() {
     return window.innerWidth <= MOBILE_BREAKPOINT;
+  }
+
+  function isElementNearViewport(element, offset) {
+    if (!element) return false;
+
+    const rect = element.getBoundingClientRect();
+    const buffer = typeof offset === 'number' ? offset : 0;
+
+    return rect.bottom >= -buffer && rect.top <= window.innerHeight + buffer;
   }
 
   function isProjectHidden(slide) {
@@ -102,8 +112,16 @@
     return yearMatch ? parseInt(yearMatch[0], 10) : Number.NEGATIVE_INFINITY;
   }
 
+  function getDirectSlideElements(wrapper) {
+    if (!wrapper) return [];
+
+    return Array.from(wrapper.children).filter(
+      (child) => child.classList && child.classList.contains('swiper-slide')
+    );
+  }
+
   function sortWorksSlidesByNewestFirst(wrapper) {
-    const slides = Array.from(wrapper.querySelectorAll(':scope > .swiper-slide'));
+    const slides = getDirectSlideElements(wrapper);
     if (!slides.length) return;
 
     const contentSlides = slides.filter((slide) => slide.querySelector('.works'));
@@ -119,6 +137,103 @@
 
     slides.forEach((slide) => slide.remove());
     visibleSlides.forEach((slide) => wrapper.appendChild(slide));
+  }
+
+  function hasWorkingSlides(swiperInstance) {
+    return !!(
+      swiperInstance &&
+      !swiperInstance.destroyed &&
+      swiperInstance.slides &&
+      swiperInstance.slides.length > 0 &&
+      Number.isFinite(swiperInstance.translate)
+    );
+  }
+
+  function refreshWorksSwiperMobile(swiperInstance) {
+    if (!swiperInstance || swiperInstance.destroyed) return false;
+
+    swiperInstance.update();
+
+    if (!swiperInstance.slides || !swiperInstance.slides.length) {
+      return false;
+    }
+
+    if (swiperInstance.params.loop && typeof swiperInstance.loopFix === 'function') {
+      swiperInstance.loopFix();
+    }
+
+    swiperInstance.slideToClosest(0);
+    return hasWorkingSlides(swiperInstance);
+  }
+
+  function scheduleMobileSwiperRecovery(worksRoot) {
+    if (!worksRoot) return;
+
+    const retryDelays = [120, 360, 900];
+
+    const attemptRecovery = () => {
+      const wrapper = worksRoot.querySelector('.swiper-wrapper');
+      const domSlides = getDirectSlideElements(wrapper);
+
+      if (!domSlides.length) return;
+      if (hasWorkingSlides(window.worksSwiperMobile)) return;
+
+      destroySwiper(window.worksSwiperMobile);
+      window.worksSwiperMobile = initWorksSwiperMobile();
+      window.worksSwiper = window.worksSwiperMobile;
+
+      if (window.worksSwiperMobile) {
+        refreshWorksSwiperMobile(window.worksSwiperMobile);
+      }
+    };
+
+    retryDelays.forEach((delay) => {
+      window.setTimeout(attemptRecovery, delay);
+    });
+
+    window.addEventListener(
+      'load',
+      () => {
+        window.setTimeout(attemptRecovery, 60);
+      },
+      { once: true }
+    );
+  }
+
+  function ensureMobileWorksObserver(worksRoot) {
+    if (!worksRoot || !isMobile()) return;
+    if (window.__worksMobileObserverAttached) return;
+
+    const rebuildIfNeeded = () => {
+      if (!isElementNearViewport(worksRoot, 220)) return;
+      if (hasWorkingSlides(window.worksSwiperMobile)) return;
+
+      destroySwiper(window.worksSwiperMobile);
+      window.worksSwiperMobile = initWorksSwiperMobile();
+      window.worksSwiper = window.worksSwiperMobile;
+    };
+
+    if (typeof window.IntersectionObserver === 'function') {
+      window.__worksMobileObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            rebuildIfNeeded();
+          });
+        },
+        {
+          root: null,
+          rootMargin: MOBILE_WORKS_OBSERVER_MARGIN,
+          threshold: 0.01
+        }
+      );
+
+      window.__worksMobileObserver.observe(worksRoot);
+    } else {
+      window.addEventListener('scroll', rebuildIfNeeded, { passive: true });
+    }
+
+    window.__worksMobileObserverAttached = true;
   }
 
   function initWorksSwiperDesktop() {
@@ -176,12 +291,18 @@
     const worksRoot = document.querySelector('.WorksSwiperMobile');
     if (!worksRoot || typeof Swiper === 'undefined') return null;
 
+    ensureMobileWorksObserver(worksRoot);
+
+    if (!isElementNearViewport(worksRoot, 220)) {
+      return null;
+    }
+
     const wrapper = worksRoot.querySelector('.swiper-wrapper');
     if (!wrapper) return null;
 
     sortWorksSlidesByNewestFirst(wrapper);
 
-    return new Swiper(worksRoot, {
+    const mobileSwiper = new Swiper(worksRoot, {
       direction: 'horizontal',
       loop: true,
       loopAdditionalSlides: 6,
@@ -211,13 +332,26 @@
       },
       on: {
         init(swiper) {
+          swiper.update();
           swiper.slideToClosest(0);
+
+          window.requestAnimationFrame(() => {
+            refreshWorksSwiperMobile(swiper);
+          });
         },
         touchEnd(swiper) {
           swiper.slideToClosest(140);
         }
       }
     });
+
+    window.setTimeout(() => {
+      refreshWorksSwiperMobile(mobileSwiper);
+    }, 60);
+
+    scheduleMobileSwiperRecovery(worksRoot);
+
+    return mobileSwiper;
   }
 
   function destroySwiper(swiperInstance) {

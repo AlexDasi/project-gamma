@@ -116,21 +116,24 @@ include '../../php-elements/header-works.php'
             min-width: 100%;
             scroll-snap-align: start;
             margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #0f1115;
         }
 
         .tulong-carousel__slide img {
             width: 100%;
-            height: 56vw;
-            max-height: 70vh;
+            height: auto;
+            max-height: 78vh;
             display: block;
-            object-fit: cover;
+            object-fit: contain;
             object-position: center center;
         }
 
         @media (min-width: 768px) {
             .tulong-carousel__slide img {
-                height: 28vw;
-                max-height: 60vh;
+                max-height: 72vh;
             }
         }
 

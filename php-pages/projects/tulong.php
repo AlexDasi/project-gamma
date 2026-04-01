@@ -315,6 +315,24 @@ include '../../php-elements/header-works.php'
                                 <figure class="tulong-carousel__slide">
                                     <img class="element project-content__image" src="../../content/pictures/projects/tulong/real-photos/tulong-field-photo-05.jpg" alt="Volunteers crossing a river carrying aid boxes" loading="lazy" decoding="async">
                                 </figure>
+                                <figure class="tulong-carousel__slide">
+                                    <img class="element project-content__image" src="../../content/pictures/projects/tulong/real-photos/tulong-field-photo-06.jpg" alt="Tulong field photo 06" loading="lazy" decoding="async">
+                                </figure>
+                                <figure class="tulong-carousel__slide">
+                                    <img class="element project-content__image" src="../../content/pictures/projects/tulong/real-photos/tulong-field-photo-07.jpg" alt="Tulong field photo 07" loading="lazy" decoding="async">
+                                </figure>
+                                <figure class="tulong-carousel__slide">
+                                    <img class="element project-content__image" src="../../content/pictures/projects/tulong/real-photos/tulong-field-photo-08.jpg" alt="Tulong field photo 08" loading="lazy" decoding="async">
+                                </figure>
+                                <figure class="tulong-carousel__slide">
+                                    <img class="element project-content__image" src="../../content/pictures/projects/tulong/real-photos/tulong-field-photo-09.jpg" alt="Tulong field photo 09" loading="lazy" decoding="async">
+                                </figure>
+                                <figure class="tulong-carousel__slide">
+                                    <img class="element project-content__image" src="../../content/pictures/projects/tulong/real-photos/tulong-field-photo-10.jpg" alt="Tulong field photo 10" loading="lazy" decoding="async">
+                                </figure>
+                                <figure class="tulong-carousel__slide">
+                                    <img class="element project-content__image" src="../../content/pictures/projects/tulong/real-photos/tulong-field-photo-11.jpg" alt="Tulong field photo 11" loading="lazy" decoding="async">
+                                </figure>
                             </div>
                         </div>
                         <button class="tulong-carousel__button tulong-carousel__button--next" type="button" aria-label="Next field photo">&#8250;</button>
@@ -341,16 +359,71 @@ include '../../php-elements/header-works.php'
                 return;
             }
 
+            var track = viewport.querySelector('.tulong-carousel__track');
+            if (!track) {
+                return;
+            }
+
+            var baseSlides = Array.prototype.slice.call(track.querySelectorAll('.tulong-carousel__slide'));
+            if (baseSlides.length < 2) {
+                return;
+            }
+
+            var prependClones = baseSlides.map(function (slide) {
+                return slide.cloneNode(true);
+            });
+            prependClones.reverse().forEach(function (clone) {
+                track.insertBefore(clone, track.firstChild);
+            });
+
+            baseSlides.forEach(function (slide) {
+                track.appendChild(slide.cloneNode(true));
+            });
+
+            var allSlides = Array.prototype.slice.call(track.querySelectorAll('.tulong-carousel__slide'));
+            var setSize = baseSlides.length;
+            var currentIndex = setSize;
+            var scrollTimer = null;
+
             var getStep = function () {
                 return viewport.clientWidth;
             };
 
+            var scrollToIndex = function (index, smooth) {
+                viewport.scrollTo({
+                    left: getStep() * index,
+                    behavior: smooth ? 'smooth' : 'auto'
+                });
+            };
+
+            var normalizeIndex = function () {
+                if (currentIndex >= setSize * 2) {
+                    currentIndex = currentIndex - setSize;
+                    scrollToIndex(currentIndex, false);
+                } else if (currentIndex < setSize) {
+                    currentIndex = currentIndex + setSize;
+                    scrollToIndex(currentIndex, false);
+                }
+            };
+
+            scrollToIndex(currentIndex, false);
+
             nextButton.addEventListener('click', function () {
-                viewport.scrollBy({ left: getStep(), behavior: 'smooth' });
+                currentIndex += 1;
+                scrollToIndex(currentIndex, true);
             });
 
             prevButton.addEventListener('click', function () {
-                viewport.scrollBy({ left: -getStep(), behavior: 'smooth' });
+                currentIndex -= 1;
+                scrollToIndex(currentIndex, true);
+            });
+
+            viewport.addEventListener('scroll', function () {
+                clearTimeout(scrollTimer);
+                scrollTimer = setTimeout(function () {
+                    currentIndex = Math.round(viewport.scrollLeft / getStep());
+                    normalizeIndex();
+                }, 120);
             });
         })();
     </script>

@@ -187,7 +187,7 @@ include '../../php-elements/header-works.php'
 
         <div class="project-header__image">
             <figure class="tulong-figure">
-                <img class="center project-content__image" src="../../content/pictures/projects/tulong/mockups/tulong-mockup-06.jpg" alt="Tulong platform overview mockup" loading="eager" decoding="async">
+                <img class="center project-content__image" src="../../content/pictures/projects/tulong/real-photos/tulong-field-photo-05.jpg" alt="Volunteers crossing a river carrying aid boxes" loading="eager" decoding="async">
             </figure>
         </div>
 
@@ -270,6 +270,9 @@ include '../../php-elements/header-works.php'
                     <figure class="tulong-figure tulong-figure--full">
                         <img class="element project-content__image" src="../../content/pictures/projects/tulong/screenshots/tulong-dashboard-screenshot-04.png" alt="Tulong distribution matrix with routes and dispatch status" loading="lazy" decoding="async">
                     </figure>
+                    <figure class="tulong-figure tulong-figure--full">
+                        <img class="element project-content__image" src="../../content/pictures/projects/tulong/mockups/tulong-mockup-06.jpg" alt="Tulong platform overview mockup" loading="lazy" decoding="async">
+                    </figure>
                 </section>
 
                 <!-- PLANNING / OPTIMIZATION -->
@@ -284,15 +287,15 @@ include '../../php-elements/header-works.php'
 
                 <!-- IMPACT -->
                 <section class="tulong-section">
-                    <p class="padding3 tulong-copy">Field tests showed clearer planning cycles, faster dispatch alignment, and stronger operational awareness across teams. Coordinators reported better handoff quality between planning, loading, and route execution under real constraints.</p>
+                    <p class="padding3 tulong-copy">Field testing showed clearer planning cycles, faster dispatch alignment, and stronger shared awareness across operations. Coordinators also reported better handoffs between planning, loading, and route execution under real constraints.</p>
                 </section>
 
                 <!-- ROLE -->
-                <p class="padding3 project-content__quote">I led the project end-to-end: system concept, UX architecture, interaction logic, and interface design. The work is currently evolving toward implementation for World Central Kitchen emergency response operations.</p>
+                <p class="padding3 project-content__quote">I led the project end-to-end: system concept, UX architecture, interaction logic, and interface design. Tulong is positioned as an operational proposal for World Central Kitchen emergency response scenarios.</p>
 
                 <!-- FIELD PHOTOS CAROUSEL -->
                 <section class="tulong-section">
-                    <p class="padding3 project-content__quote">Field context from active deployments and distribution routes.</p>
+                    <p class="padding3 project-content__quote">The following field scenes ground the proposal in real deployment conditions and last-mile distribution realities.</p>
                     <div class="tulong-carousel" data-tulong-carousel>
                         <button class="tulong-carousel__button tulong-carousel__button--prev" type="button" aria-label="Previous field photo">&#8249;</button>
                         <div class="tulong-carousel__viewport" data-tulong-viewport>

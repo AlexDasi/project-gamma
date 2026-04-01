@@ -200,7 +200,7 @@ include '../../php-elements/header-works.php'
                 <h2 class="padding3 slice-infos__title">Humanitarian Logistics, Operationally Clear</h2>
 
                 <div class="padding3 slice-infos__text">
-                    <p>Tulong is a humanitarian logistics control system for last-mile aid distribution. It emerged from field deployments in Valencia (DANA) and the Philippines, was developed in 2025-2026, and validated in real operational contexts to improve planning clarity, fleet coordination, and delivery visibility.</p>
+                    <p>Tulong is a humanitarian logistics control system for last-mile aid distribution. Built from real field deployments in Valencia (DANA) and the Philippines, it was developed in 2025–2026 and validated in operational contexts to improve planning clarity, fleet coordination, and delivery visibility.</p>
                 </div>
 
                 <ul class="padding3 slice-infos__columns">
@@ -222,7 +222,7 @@ include '../../php-elements/header-works.php'
                     <li class="info-column">
                         <h3 class="info-column__title title title--2">context</h3>
                         <div class="info-column__text">
-                            <p>Valencia (DANA) + Philippines<br>Field-tested deployments<br>WCK collaboration in progress</p>
+                            <p>Valencia (DANA) + Philippines<br>Field-tested deployments<br>World Central Kitchen collaboration in progress</p>
                         </div>
                     </li>
                 </ul>
@@ -284,15 +284,15 @@ include '../../php-elements/header-works.php'
 
                 <!-- IMPACT -->
                 <section class="tulong-section">
-                    <p class="padding3 tulong-copy">Field tests showed clearer planning cycles, faster dispatch alignment, and stronger operational awareness across teams. Teams reported better handoff quality between planning, loading, and route execution under real constraints.</p>
+                    <p class="padding3 tulong-copy">Field tests showed clearer planning cycles, faster dispatch alignment, and stronger operational awareness across teams. Coordinators reported better handoff quality between planning, loading, and route execution under real constraints.</p>
                 </section>
 
                 <!-- ROLE -->
-                <p class="padding3 project-content__quote">I led the project end-to-end: system concept, UX architecture, interaction logic, and interface design. The work is currently evolving toward a collaborative implementation path with World Central Kitchen.</p>
+                <p class="padding3 project-content__quote">I led the project end-to-end: system concept, UX architecture, interaction logic, and interface design. The work is currently evolving toward implementation in collaboration with World Central Kitchen.</p>
 
                 <!-- FIELD PHOTOS CAROUSEL -->
                 <section class="tulong-section">
-                    <p class="padding3 project-content__quote">Field activation context from deployments and distribution routes.</p>
+                    <p class="padding3 project-content__quote">Field context from active deployments and distribution routes.</p>
                     <div class="tulong-carousel" data-tulong-carousel>
                         <button class="tulong-carousel__button tulong-carousel__button--prev" type="button" aria-label="Previous field photo">&#8249;</button>
                         <div class="tulong-carousel__viewport" data-tulong-viewport>

@@ -222,7 +222,7 @@ include '../../php-elements/header-works.php'
                     <li class="info-column">
                         <h3 class="info-column__title title title--2">context</h3>
                         <div class="info-column__text">
-                            <p>Valencia (DANA) + Philippines<br>Field-tested deployments<br>World Central Kitchen collaboration in progress</p>
+                            <p>Valencia (DANA) + Philippines<br>Field-tested deployments<br>Designed for World Central Kitchen emergency operations</p>
                         </div>
                     </li>
                 </ul>
@@ -288,7 +288,7 @@ include '../../php-elements/header-works.php'
                 </section>
 
                 <!-- ROLE -->
-                <p class="padding3 project-content__quote">I led the project end-to-end: system concept, UX architecture, interaction logic, and interface design. The work is currently evolving toward implementation in collaboration with World Central Kitchen.</p>
+                <p class="padding3 project-content__quote">I led the project end-to-end: system concept, UX architecture, interaction logic, and interface design. The work is currently evolving toward implementation for World Central Kitchen emergency response operations.</p>
 
                 <!-- FIELD PHOTOS CAROUSEL -->
                 <section class="tulong-section">

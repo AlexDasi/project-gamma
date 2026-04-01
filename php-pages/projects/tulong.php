@@ -120,9 +120,18 @@ include '../../php-elements/header-works.php'
 
         .tulong-carousel__slide img {
             width: 100%;
-            height: auto;
+            height: 56vw;
+            max-height: 70vh;
             display: block;
-            object-fit: contain;
+            object-fit: cover;
+            object-position: center center;
+        }
+
+        @media (min-width: 768px) {
+            .tulong-carousel__slide img {
+                height: 28vw;
+                max-height: 60vh;
+            }
         }
 
         .tulong-carousel__button {
@@ -250,7 +259,7 @@ include '../../php-elements/header-works.php'
                             <img class="element project-content__image" src="../../content/pictures/projects/tulong/screenshots/tulong-dashboard-screenshot-02.png" alt="Tulong destination block planning" loading="lazy" decoding="async">
                         </figure>
                         <figure class="tulong-figure tulong-figure--full">
-                            <img class="element project-content__image tulong-mockup" src="../../content/pictures/projects/tulong/screenshots/tulong-dashboard-screenshot-03.jpg" alt="Tulong fleet assignment view" loading="lazy" decoding="async">
+                            <img class="element project-content__image" src="../../content/pictures/projects/tulong/screenshots/tulong-dashboard-screenshot-03.png" alt="Tulong fleet assignment view" loading="lazy" decoding="async">
                         </figure>
                     </div>
                 </section>
@@ -275,16 +284,11 @@ include '../../php-elements/header-works.php'
 
                 <!-- IMPACT -->
                 <section class="tulong-section">
-                    <figure class="tulong-figure tulong-figure--full">
-                        <img class="element project-content__image" src="../../content/pictures/projects/tulong/screenshots/tulong-dashboard-screenshot-02.png" alt="Tulong destination planning and allocation" loading="lazy" decoding="async">
-                    </figure>
                     <p class="padding3 tulong-copy">Field tests showed clearer planning cycles, faster dispatch alignment, and stronger operational awareness across teams. Teams reported better handoff quality between planning, loading, and route execution under real constraints.</p>
                 </section>
 
                 <!-- ROLE -->
-                <section class="tulong-section">
-                    <p class="padding3 tulong-copy">I led the project end-to-end: system concept, UX architecture, interaction logic, and interface design. The work is currently evolving toward a collaborative implementation path with World Central Kitchen.</p>
-                </section>
+                <p class="padding3 project-content__quote">I led the project end-to-end: system concept, UX architecture, interaction logic, and interface design. The work is currently evolving toward a collaborative implementation path with World Central Kitchen.</p>
 
                 <!-- FIELD PHOTOS CAROUSEL -->
                 <section class="tulong-section">

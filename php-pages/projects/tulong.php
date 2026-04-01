@@ -187,7 +187,7 @@ include '../../php-elements/header-works.php'
 
         <div class="project-header__image">
             <figure class="tulong-figure">
-                <img class="center project-content__image" src="../../content/pictures/projects/tulong/real-photos/tulong-field-photo-05.jpg" alt="Volunteers crossing a river carrying aid boxes" loading="eager" decoding="async">
+                <img class="center project-content__image" src="../../content/pictures/projects/tulong/mockups/tulong-mockup-06.jpg" alt="Tulong platform overview mockup" loading="eager" decoding="async">
             </figure>
         </div>
 

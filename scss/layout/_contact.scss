@@ -73,9 +73,22 @@
     }
 }
 
+.creditsMobile {
+    display: none;
+}
+
 @media (max-width: 1280px) {
     .creditsDesktop {
         display: none !important;
+    }
+
+    .creditsMobile {
+        display: block;
+        position: static;
+        right: auto;
+        bottom: auto;
+        margin: 3vh 5vw 2vh;
+        text-align: right;
     }
 
     #contact {

@@ -36,6 +36,7 @@ $assetVersion = static function (string $relativePath): string {
 <script src="/js/magnet.js?v=<?php echo $assetVersion('js/magnet.js'); ?>"></script>
 
 <script src="/js/active.js?v=<?php echo $assetVersion('js/active.js'); ?>"></script>
+<script src="/js/project-lightbox.js?v=<?php echo $assetVersion('js/project-lightbox.js'); ?>"></script>
 
 <!--swiper-->
 

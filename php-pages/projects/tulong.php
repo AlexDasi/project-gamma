@@ -16,7 +16,7 @@ include '../../php-elements/header-works.php'
     <header class="project-header">
 
         <div class="project-header__image">
-            <img class="center" src="../../content/pictures/projects/tulong/real-photos/tulong-field-photo-05.jpg" alt="Volunteers crossing a river carrying aid boxes" loading="eager" decoding="async">
+            <img class="center" src="../../content/pictures/thumbnails/tulong.jpg" alt="Volunteers crossing a river carrying aid boxes" loading="eager" decoding="async" style="object-fit: cover; object-position: bottom;">
         </div>
 
         <h1 class="padding3 project-header__title title title--project title--black">Tulong</h1>

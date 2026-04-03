@@ -378,3 +378,141 @@
 }
 
 
+//// TULONG PROJECT ////
+
+.tulong-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+.tulong-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.tulong-figure {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 0;
+
+    > img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+
+    &--full {
+        flex-basis: 100%;
+        width: 100%;
+    }
+}
+
+.tulong-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+
+    .tulong-figure {
+        flex-basis: 100%;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .project-content__image {
+        object-fit: contain;
+    }
+}
+
+.tulong-mockup,
+.tulong-diagram {
+    width: 100%;
+    max-height: none;
+    object-fit: contain;
+}
+
+.tulong-carousel {
+    position: relative;
+    width: 100%;
+    margin-top: 0.4rem;
+
+    &__viewport {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    &__track {
+        display: flex;
+        gap: 1rem;
+    }
+
+    &__slide {
+        min-width: 100%;
+        scroll-snap-align: start;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #0f1115;
+
+        img {
+            width: 100%;
+            height: auto;
+            max-height: 78vh;
+            display: block;
+            object-fit: contain;
+            object-position: center center;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+        border: 0;
+        background: rgba(0, 0, 0, 0.55);
+        color: #fff;
+        width: 44px;
+        height: 44px;
+        cursor: pointer;
+        font-size: 1.5rem;
+        line-height: 1;
+
+        &--prev { left: 0.75rem; }
+        &--next { right: 0.75rem; }
+    }
+}
+
+@media (min-width: 768px) {
+    .tulong-carousel__slide img {
+        max-height: 72vh;
+    }
+}
+
+@media (max-width: 1280px) {
+    .tulong-flow {
+        gap: 1.1rem;
+    }
+
+    .tulong-grid {
+        gap: 1rem;
+    }
+
+    .tulong-carousel__button {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+

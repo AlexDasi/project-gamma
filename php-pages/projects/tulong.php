@@ -8,191 +8,18 @@ include '../../php-elements/header-works.php'
 
     <?php include '../../php-elements/nav new.php'?>
 
-    <style>
-        .tulong-flow {
-            display: flex;
-            flex-direction: column;
-            gap: 1.4rem;
-        }
 
-        .tulong-section {
-            display: flex;
-            flex-direction: column;
-            gap: 0.9rem;
-        }
-
-        .slice-infos__columns {
-            list-style: none;
-            margin: 0;
-            padding-left: 0;
-        }
-
-        .tulong-copy {
-            color: var(--bkg-color);
-            line-height: 1.2;
-            font-size: 4.5rem;
-            margin: 0;
-            padding: 4vw 0;
-        }
-
-        .tulong-figure {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-            margin: 0;
-        }
-
-        .tulong-figure--full {
-            flex-basis: 100%;
-            width: 100%;
-        }
-
-        .tulong-figure > img {
-            display: block;
-            width: 100%;
-            height: auto;
-            max-width: 100%;
-        }
-
-        .tulong-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            width: 100%;
-        }
-
-        .tulong-grid .tulong-figure {
-            flex-basis: 100%;
-            width: 100%;
-            min-width: 0;
-        }
-
-        .tulong-grid .project-content__image {
-            object-fit: contain;
-        }
-
-        .project-header__image .tulong-figure > img {
-            width: 100%;
-            height: 62vh;
-            object-fit: cover;
-            object-position: center 72%;
-        }
-
-        .tulong-mockup {
-            width: 100%;
-            max-height: none;
-            object-fit: contain;
-        }
-
-        .tulong-diagram {
-            width: 100%;
-            max-height: none;
-            object-fit: contain;
-        }
-
-        .tulong-carousel {
-            position: relative;
-            width: 100%;
-            margin-top: 0.4rem;
-        }
-
-        .tulong-carousel__viewport {
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-        }
-
-        .tulong-carousel__viewport::-webkit-scrollbar {
-            display: none;
-        }
-
-        .tulong-carousel__track {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .tulong-carousel__slide {
-            min-width: 100%;
-            scroll-snap-align: start;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #0f1115;
-        }
-
-        .tulong-carousel__slide img {
-            width: 100%;
-            height: auto;
-            max-height: 78vh;
-            display: block;
-            object-fit: contain;
-            object-position: center center;
-        }
-
-        @media (min-width: 768px) {
-            .tulong-carousel__slide img {
-                max-height: 72vh;
-            }
-        }
-
-        .tulong-carousel__button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 2;
-            border: 0;
-            background: rgba(0, 0, 0, 0.55);
-            color: #fff;
-            width: 44px;
-            height: 44px;
-            cursor: pointer;
-            font-size: 1.5rem;
-            line-height: 1;
-        }
-
-        .tulong-carousel__button--prev {
-            left: 0.75rem;
-        }
-
-        .tulong-carousel__button--next {
-            right: 0.75rem;
-        }
-
-        @media (max-width: 1280px) {
-            .tulong-flow {
-                gap: 1.1rem;
-            }
-
-            .tulong-grid {
-                gap: 1rem;
-            }
-
-            .tulong-copy {
-                font-size: 2.6rem;
-                line-height: 1.22;
-            }
-
-            .tulong-carousel__button {
-                width: 38px;
-                height: 38px;
-            }
-        }
-    </style>
 
     <!-- ---------------------------------------------
          HERO
     ---------------------------------------------- -->
     <header class="project-header">
 
-        <h1 class="padding3 project-header__title title title--project title--black">Tulong</h1>
-
         <div class="project-header__image">
-            <figure class="tulong-figure">
-                <img class="center project-content__image" src="../../content/pictures/projects/tulong/real-photos/tulong-field-photo-05.jpg" alt="Volunteers crossing a river carrying aid boxes" loading="eager" decoding="async">
-            </figure>
+            <img class="center" src="../../content/pictures/projects/tulong/real-photos/tulong-field-photo-05.jpg" alt="Volunteers crossing a river carrying aid boxes" loading="eager" decoding="async">
         </div>
+
+        <h1 class="padding3 project-header__title title title--project title--black">Tulong</h1>
 
         <!-- ---------------------------------------------
              INTRO / OVERVIEW
@@ -245,7 +72,7 @@ include '../../php-elements/header-works.php'
 
                 <!-- PROBLEM / CONTEXT -->
                 <section class="tulong-section">
-                    <p class="padding3 tulong-copy">Emergency operations often run with fragmented data and parallel teams. Without a shared operational view, routing decisions, destination prioritization, and fleet usage become harder to align in real time.</p>
+                    <p class="padding3 project-content__quote">Emergency operations often run with fragmented data and parallel teams. Without a shared operational view, routing decisions, destination prioritization, and fleet usage become harder to align in real time.</p>
                     <figure class="tulong-figure tulong-figure--full">
                         <img class="element project-content__image" src="../../content/pictures/projects/tulong/screenshots/tulong-dashboard-screenshot-01.png" alt="Tulong dashboard showing fragmented logistics context" loading="lazy" decoding="async">
                     </figure>
@@ -253,7 +80,7 @@ include '../../php-elements/header-works.php'
 
                 <!-- CORE SYSTEM -->
                 <section class="tulong-section">
-                    <p class="padding3 tulong-copy">Tulong organizes response planning through three linked layers: kits, destination blocks, and fleet assignment.</p>
+                    <p class="padding3 project-content__quote">Tulong organizes response planning through three linked layers: kits, destination blocks, and fleet assignment.</p>
                     <div class="tulong-grid">
                         <figure class="tulong-figure tulong-figure--full">
                             <img class="element project-content__image tulong-mockup" src="../../content/pictures/projects/tulong/mockups/tulong-mockup-04.jpg" alt="Tulong planning calendar and logistics scheduling view" loading="lazy" decoding="async">
@@ -269,7 +96,7 @@ include '../../php-elements/header-works.php'
 
                 <!-- MAIN OPERATIONAL VIEW -->
                 <section class="tulong-section">
-                    <p class="padding3 tulong-copy">The distribution matrix acts as the single decision surface for coordinators during active operations, connecting route assignment, trip load, and destination timing in one glance.</p>
+                    <p class="padding3 project-content__quote">The distribution matrix acts as the single decision surface for coordinators during active operations, connecting route assignment, trip load, and destination timing in one glance.</p>
                     <figure class="tulong-figure tulong-figure--full">
                         <img class="element project-content__image" src="../../content/pictures/projects/tulong/screenshots/tulong-dashboard-screenshot-04.png" alt="Tulong distribution matrix with routes and dispatch status" loading="lazy" decoding="async">
                     </figure>
@@ -280,7 +107,7 @@ include '../../php-elements/header-works.php'
 
                 <!-- PLANNING / OPTIMIZATION -->
                 <section class="tulong-section">
-                    <p class="padding3 tulong-copy">Daily planning and end-of-day optimization are designed as one continuous cycle: build feasible plans, test fleet strain, and rebalance distribution before dispatch deadlines are reached.</p>
+                    <p class="padding3 project-content__quote">Daily planning and end-of-day optimization are designed as one continuous cycle: build feasible plans, test fleet strain, and rebalance distribution before dispatch deadlines are reached.</p>
                     <div class="tulong-grid">
                         <figure class="tulong-figure tulong-figure--full">
                             <img class="element project-content__image tulong-mockup" src="../../content/pictures/projects/tulong/mockups/tulong-mockup-05.jpg" alt="Tulong operational dashboard on laptop in low-light context" loading="lazy" decoding="async">
@@ -290,7 +117,7 @@ include '../../php-elements/header-works.php'
 
                 <!-- IMPACT -->
                 <section class="tulong-section">
-                    <p class="padding3 tulong-copy">Field testing showed clearer planning cycles, faster dispatch alignment, and stronger shared awareness across operations. Coordinators also reported better handoffs between planning, loading, and route execution under real constraints.</p>
+                    <p class="padding3 project-content__quote">Field testing showed clearer planning cycles, faster dispatch alignment, and stronger shared awareness across operations. Coordinators also reported better handoffs between planning, loading, and route execution under real constraints.</p>
                 </section>
 
                 <!-- ROLE -->

@@ -43,7 +43,7 @@ $assetVersion = static function (string $relativePath): string {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">    
 
-    <script type="text/javascript" src="/dat.gui.min.js"></script>
+    <script type="text/javascript" src="/js/dat.gui.min.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSXNYNQRKG"></script>
     <script>
         window.dataLayer = window.dataLayer || [];

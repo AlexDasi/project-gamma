@@ -10,11 +10,15 @@ $assetVersion = static function (string $relativePath): string {
 
 <script>
 	(function () {
-		var isDesktopFluid = window.innerWidth > 1280
-			&& typeof window.matchMedia === 'function'
-			&& window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+		var hasMatchMedia = typeof window.matchMedia === 'function';
+		var hasFinePointer = hasMatchMedia
+			? window.matchMedia('(hover: hover) and (pointer: fine)').matches
+			: false;
+		var prefersReducedMotion = hasMatchMedia
+			? window.matchMedia('(prefers-reduced-motion: reduce)').matches
+			: false;
 
-		if (!isDesktopFluid) {
+		if (prefersReducedMotion) {
 			document.documentElement.classList.add('no-fluid-mobile');
 			return;
 		}
@@ -23,9 +27,10 @@ $assetVersion = static function (string $relativePath): string {
 		var controlsScript = document.createElement('script');
 		var fluidMobileVersion = '<?php echo $assetVersion('js/fluidMobile.js'); ?>';
 		var fluidDesktopVersion = '<?php echo $assetVersion('js/fluid.js'); ?>';
-		fluidScript.src = window.innerWidth <= 1024
-			? '/js/fluidMobile.js?v=' + fluidMobileVersion
-			: '/js/fluid.js?v=' + fluidDesktopVersion;
+		var useDesktopFluid = hasFinePointer && window.innerWidth > 1280;
+		fluidScript.src = useDesktopFluid
+			? '/js/fluid.js?v=' + fluidDesktopVersion
+			: '/js/fluidMobile.js?v=' + fluidMobileVersion;
 		controlsScript.src = '/js/background-controls.js?v=<?php echo $assetVersion('js/background-controls.js'); ?>';
 		document.head.appendChild(fluidScript);
 		document.head.appendChild(controlsScript);

@@ -1,4 +1,8 @@
-if (!window.magnetMouseInstance) {
+const canUseMagnet =
+    typeof window.matchMedia === 'function' &&
+    window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+if (canUseMagnet && typeof window.MagnetMouse === 'function' && !window.magnetMouseInstance) {
     window.magnetMouseInstance = new MagnetMouse({
         magnet: {
             element: '.magnet',
@@ -12,7 +16,7 @@ if (!window.magnetMouseInstance) {
             class: 'follow-mouse-active'
             }
         });
-    
+
     window.magnetMouseInstance.init();
 }
 
@@ -20,6 +24,8 @@ const magnetfunction = window.magnetMouseInstance;
 
 // Reinitialize magnet for dynamically loaded elements
 document.addEventListener('DOMContentLoaded', function() {
+    if (!magnetfunction || typeof magnetfunction.init !== 'function') return;
+
     setTimeout(() => {
         magnetfunction.init();
     }, 100);
